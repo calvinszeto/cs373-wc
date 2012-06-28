@@ -65,15 +65,24 @@ People: Bill and Melinda Gates
 ==============
  ---------- ----------
 Name: Kenneth Feinberg
-Kind: 
-Location:
-Embedded Images:
+Kind: An American attorney, appointed by the government as administrator of the BP Deepwater Horizon Disaster Victim Compensation Fund.
+Location: United States
+Embedded Images: http://www4.pictures.zimbio.com/gi/TARP+Administrator+Kenneth+Feinberg+Testifies+uJMwFaAQy92l.jpg, http://media.cleveland.com/business_impact/photo/ken-feinberg-ac7bac2aac47727f.jpg
 Embedded Videos: http://www.youtube.com/watch?v=dUe9mCKj4A8
-Social Network:
-External Links:
-Crisis:
-Organization:
+Social Network: http://www.facebook.com/pages/Kenneth-Feinberg/143047909045042
+External Links: http://www.feinbergrozen.com/, http://en.wikipedia.org/wiki/Kenneth_Feinberg
+Crisis: Deepwater Horizon Oil Spill
+Organization: BP
  ---------- ----------
+Name: George Papandreou
+Kind: Prime Minister of Greece during the Greek Financial Crisis, holding office during the period of October 6th, 2009 to November 11th, 2011.
+Location: Greece
+Embedded Images: http://www.premierlife.ca/wp-content/uploads/2011/11/greek-prime-minister-george-papandreou-data.jpg, http://upload.wikimedia.org/wikipedia/commons/1/1c/George_Papandreou.jpg
+Embedded Videos: http://www.youtube.com/watch?v=hsq2l_tBrH8
+Social Network: http://www.facebook.com/george.a.papandreou
+External Links: http://www.papandreou.gr
+Crisis: Greek Financial Problems
+Organization:
  ---------- ----------
 Name: Michelle Obama
 Kind: She is the first African-American First Lady of the United States and wife to the 44th President of the United States, Barack Obama
