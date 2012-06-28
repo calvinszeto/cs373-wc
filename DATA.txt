@@ -1,6 +1,7 @@
-======
-Crisis
-======
+==============
+==  CRISES  ==
+==============
+ ---------- ----------
 Name:  Deepwater Horizon Oil Spill
 Kind:  Wellhead Blowout
 Location:  Gulf of Mexico
@@ -15,47 +16,8 @@ Embedded Videos:  http://www.youtube.com/watch?v=lY-PikuXTYY, http://www.youtube
 External Links:  http://en.wikipedia.org/wiki/Deepwater_Horizon_oil_spill#Consequences, http://www.restorethegulf.gov/
 People: Kenneth Feinberg
 Organization: BP
-
-============
-Organization
-============
-Name: BP
-Kind: Oil and gas company
-Location: London, United Kingdom
-History: British multinational oil and gas company which is the third-largest energy company and fourth-largest company in the world measured by 2011 revenues. It is vertically integrated and is active in every area of the oil and gas industry, including exploration and production,refining, distribution and marketing, petrochemicals, power generation and trading. It also has renewable energy activities in biofuelsand wind power. Its largest division is BP America, which is the second-largest producer of oil and gas in the United States and is headquartered in Houston, Texas. As of December 2011, BP had total proven commercial reserves of 17.75 billion barrels of oil equivalent. The name "BP" derives from the initials of one of the company's former legal names, British Petroleum.
-Embedded Images: http://www.wbrz.com/images/news/bpbiglogo.jpg
-Embedded Videos: http://www.youtube.com/watch?v=KtWoPZluI2E
-External Links: http://www.bp.com
-Crisis: Deepwater Horizon Oil Spill
-People: Kenneth Feinberg
-
-======
-Person
-======
-
-Name: Kenneth Feinberg
-Embedded Videos: http://www.youtube.com/watch?v=dUe9mCKj4A8
-
-======
-Person
-======
-Name: Michelle Obama
-Kind: She is the first African-American First Lady of the United States and wife to the 44th President of the United States, Barack Obama
-Location: Hyde Park, Chicago (Private), 1600 Pennsylvania Avenue NW, Washington DC (Official)
-Embedded Images: http://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Michelle_Obama_official_portrait_headshot.jpg/225px-Michelle_Obama_official_portrait_headshot.jpg
-http://www.issues.cc/uploads/Michelle_Obama-20110604-000109.jpg
-Embedded Video: http://www.youtube.com/watch?v=tiXU_SDirRQ
-http://www.youtube.com/watch?v=TwWPrpwhMSI
-Social Network: http://www.facebook.com/michelleobama
-https://twitter.com/#!/MichelleObama
-External Links: http://www.whitehouse.gov/administration/first-lady-michelle-obama
-http://en.wikipedia.org/wiki/Michelle_Obama
-Crisis: Childhood Obesity
-Organization: The American Academy of Pediatricians
-
-======
-Crisis
-======
+ ---------- ----------
+ ---------- ----------
 Name:  Poliomyelitis (Polio)
 Kind/Description:  Poliomyelitis is a potentially fatal viral disease that can affect nerves and can lead to partial or full paralysis
 Location:  Africa and Asia
@@ -70,10 +32,23 @@ Embedded Videos:  http://www.youtube.com/watch?v=AfmwcShVeM0
 External Links:  http://www.gatesfoundation.org/polio/pages/default.aspx
 People: Bill and Melinda Gates
 Organization: The Global Polio Eradication Initiative
+ ---------- ----------
 
-============
-Organization
-============
+==============
+==   ORGS   ==
+==============
+ ---------- ----------
+Name: BP
+Kind: Oil and gas company
+Location: London, United Kingdom
+History: British multinational oil and gas company which is the third-largest energy company and fourth-largest company in the world measured by 2011 revenues. It is vertically integrated and is active in every area of the oil and gas industry, including exploration and production,refining, distribution and marketing, petrochemicals, power generation and trading. It also has renewable energy activities in biofuelsand wind power. Its largest division is BP America, which is the second-largest producer of oil and gas in the United States and is headquartered in Houston, Texas. As of December 2011, BP had total proven commercial reserves of 17.75 billion barrels of oil equivalent. The name "BP" derives from the initials of one of the company's former legal names, British Petroleum.
+Embedded Images: http://www.wbrz.com/images/news/bpbiglogo.jpg
+Embedded Videos: http://www.youtube.com/watch?v=KtWoPZluI2E
+External Links: http://www.bp.com
+Crisis: Deepwater Horizon Oil Spill
+People: Kenneth Feinberg
+ ---------- ----------
+ ---------- ----------
 Name: The Global Polio Eradication Initiative
 Kind: The Global Polio Eradication Initiative is a public-private partnership led by national governments and spearheaded by the World Health Organization (WHO), Rotary International, the US Centers for Disease Control and Prevention (CDC), and the United Nations Children’s Fund (UNICEF).
 Location: Geneva, Switzerland.
@@ -83,10 +58,37 @@ Embedded Videos: http://www.youtube.com/watch?v=YLzUr-fnyFA
 External Links: http://www.polioeradication.org/
 Crisis: Polio
 People: Bill and Melinda Gates
+ ---------- ----------
 
-======
-Person
-======
+==============
+==  PEOPLE  ==
+==============
+ ---------- ----------
+Name: Kenneth Feinberg
+Kind: 
+Location:
+Embedded Images:
+Embedded Videos: http://www.youtube.com/watch?v=dUe9mCKj4A8
+Social Network:
+External Links:
+Crisis:
+Organization:
+ ---------- ----------
+ ---------- ----------
+Name: Michelle Obama
+Kind: She is the first African-American First Lady of the United States and wife to the 44th President of the United States, Barack Obama
+Location: Hyde Park, Chicago (Private), 1600 Pennsylvania Avenue NW, Washington DC (Official)
+Embedded Images: http://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Michelle_Obama_official_portrait_headshot.jpg/225px-Michelle_Obama_official_portrait_headshot.jpg
+http://www.issues.cc/uploads/Michelle_Obama-20110604-000109.jpg
+Embedded Video: http://www.youtube.com/watch?v=tiXU_SDirRQ
+http://www.youtube.com/watch?v=TwWPrpwhMSI
+Social Network: http://www.facebook.com/michelleobama
+https://twitter.com/#!/MichelleObama
+External Links: http://www.whitehouse.gov/administration/first-lady-michelle-obama
+http://en.wikipedia.org/wiki/Michelle_Obama
+Crisis: Childhood Obesity
+Organization: The American Academy of Pediatricians
+ ---------- ----------
 Name: Bill Gates
 Kind: He is the former chief executive and current chairman of Microsoft. Gates is one of the best-known entrepreneurs of the personal computer revolution.
 Location: Medina, Washington, U.S.
