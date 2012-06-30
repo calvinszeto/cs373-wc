@@ -160,5 +160,97 @@
 		<crisis idref = "deepwater"/>
 	    <org idref = "bp"/>
 	</person>
+
+	<person id = "Michelle Obama">
+	    <name>
+	    	<title>First Lady</title>
+	    	<first>Michelle</first>
+	    	<last>Obama</last>
+	    	<middle>LaVaughn Robinson</middle>    
+	    </name>
+		<info>
+			<type></type>
+			<birthdate>
+				<time></time>
+				<day>17</day>
+				<month>1</month>
+				<year>1964</year>
+				<misc></misc>
+			</birthdate>
+			<nationality>American</nationality>
+			<biography>Michelle LaVaughn Robinson Obama is the first African-American First Lady of the United States and wife to the 44th President of the United States, Barack Obama.</biography>    
+		</info>
+		<ref>
+			<image>
+				<title>Michelle Obama Portrait</title>
+				<url>http://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Michelle_Obama_official_portrait_headshot.jpg/225px-Michelle_Obama_official_portrait_headshot.jpg</url>
+				<description>The Official Headshot of the 44th First Lady</description>
+			</image>
+			<video>
+				<site>youtube</site>
+				<title>First Lady Michelle Obama Answers Your Twitter Questions</title>
+				<url>http://www.youtube.com/watch?v=TwWPrpwhMSI</url>
+				<description>In this video, First Lady Michelle Obama adresses questions she recieved on her Twitter account.</description>
+			</video>
+			<social>
+				<title>Michelle Obama's Facebook Page</title>
+				<url>http://www.facebook.com/michelleobama</url>
+			</social>
+			<ext>
+				<title>Michelle Obama's Wikipedia Entry</title>
+				<url>http://en.wikipedia.org/wiki/Michelle_Obama</url>
+				<description></description>
+			</ext>       
+		</ref>
+		<misc>    </misc>
+		<crisis idref = "deepwater"/>
+	    <org idref = "bp"/>
+	</person>
+
+	<person id = "Bill Gates">
+	    <name>
+	    	<title>Chairman of Microsoft</title>
+	    	<first>Bill</first>
+	    	<last>Gates</last>
+	    	<middle>Henry</middle>    
+	    </name>
+		<info>
+			<type></type>
+			<birthdate>
+				<time></time>
+				<day>28</day>
+				<month>10</month>
+				<year>1955</year>
+				<misc></misc>
+			</birthdate>
+			<nationality>American</nationality>
+			<biography>Bill Henry Gates is the former chief executive and current chairman of Microsoft. Gates is one of the best-known entrepreneurs of the personal computer revolution.</biography>    
+		</info>
+		<ref>
+			<image>
+				<title>Bill Gates Picture</title>
+				<url>http://www.freeinfosociety.com/media/images/1016.jpg</url>
+				<description>A Picture of Bill Gates</description>
+			</image>
+			<video>
+				<site>youtube</site>
+				<title>Bill Gates on energy: Innovating to zero!</title>
+				<url>http://youtu.be/JaF-fq2Zn7I</url>
+				<description>Bill Gates unveils his vision for the world's energy future.</description>
+			</video>
+			<social>
+				<title>Bill Gates' Facebook Page</title>
+				<url>http://www.facebook.com/BillGates</url>
+			</social>
+			<ext>
+				<title>Bill Gates' Wikipedia Entry</title>
+				<url>http://en.wikipedia.org/wiki/Bill_Gates</url>
+				<description></description>
+			</ext>       
+		</ref>
+		<misc>    </misc>
+		<crisis idref = "deepwater"/>
+	    <org idref = "bp"/>
+	</person>
 </worldCrises>	
 
