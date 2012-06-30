@@ -1,0 +1,12 @@
+application: calvins-cs373-wc
+version: 1
+runtime: python
+api_version: 1
+
+handlers:
+
+- url: /html
+  static_dir: html
+  
+- url: /.*
+  script: helloworld.py
