@@ -1,4 +1,4 @@
-==============
+﻿==============
 ==  CRISES  ==
 ==============
  ---------- ----------
@@ -88,13 +88,9 @@ Name: Michelle Obama
 Kind: She is the first African-American First Lady of the United States and wife to the 44th President of the United States, Barack Obama
 Location: Hyde Park, Chicago (Private), 1600 Pennsylvania Avenue NW, Washington DC (Official)
 Embedded Images: http://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Michelle_Obama_official_portrait_headshot.jpg/225px-Michelle_Obama_official_portrait_headshot.jpg
-http://www.issues.cc/uploads/Michelle_Obama-20110604-000109.jpg
-Embedded Video: http://www.youtube.com/watch?v=tiXU_SDirRQ
-http://www.youtube.com/watch?v=TwWPrpwhMSI
+Embedded Video: http://www.youtube.com/watch?v=TwWPrpwhMSI
 Social Network: http://www.facebook.com/michelleobama
-https://twitter.com/#!/MichelleObama
-External Links: http://www.whitehouse.gov/administration/first-lady-michelle-obama
-http://en.wikipedia.org/wiki/Michelle_Obama
+External Links: http://en.wikipedia.org/wiki/Michelle_Obama
 Crisis: Childhood Obesity
 Organization: The American Academy of Pediatricians
  ---------- ----------
@@ -102,12 +98,8 @@ Name: Bill Gates
 Kind: He is the former chief executive and current chairman of Microsoft. Gates is one of the best-known entrepreneurs of the personal computer revolution.
 Location: Medina, Washington, U.S.
 Embedded Images: http://www.freeinfosociety.com/media/images/1016.jpg
-http://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Bill_Gates_in_WEF_,2007.jpg/220px-Bill_Gates_in_WEF_,2007.jpg
 Embedded Video: http://youtu.be/JaF-fq2Zn7I
-http://www.youtube.com/watch?v=fkm7eMqiuSw
-Social Network: https://twitter.com/#!/BillGates/
-http://www.facebook.com/BillGates
+Social Network: http://www.facebook.com/BillGates
 External Links: http://en.wikipedia.org/wiki/Bill_Gates
-http://www.woopidoo.com/biography/bill-gates.htm
 Crisis: Polio
 Organization: Bill and Melinda Gates Foundation
