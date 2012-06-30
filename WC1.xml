@@ -1,0 +1,164 @@
+<worldCrises>
+	<!-- CRISIS -->
+
+	<crisis id = "deepwater">
+		<name>Deepwater Horizon Oil Spill</name>
+		<info>
+			<history></history>
+			<help>  Volunteering along the gulf to help clean</help>
+			<resources> Help cleaning spill and wildlife</resources> 
+			<type>Wellhead Blowout and Oil Spill</type>
+			<time>
+				<time></time>
+				<day>20</day>
+				<month>4</month>
+				<year>2010</year>
+				<misc></misc>
+			</time>
+			<loc>
+				<city></city>
+				<region>Gulf of Mexico</region>
+				<country></country>
+			</loc> 
+			<impact>
+				<human>
+					<deaths>11</deaths>
+					<displaced>0</displaced>
+					<injured>0</injured>
+					<missing>0</missing>
+					<misc></misc>
+				</human>
+				<economic>
+					<amount>30000000000</amount>
+					<currency>dollars</currency>
+					<misc></misc>
+				</economic>
+			</impact> 
+		</info>
+		<ref>
+			<image>
+				<title>Deepwater Horizon</title>
+				<url>http://www.thebuzzmedia.com/wp-content/uploads/2010/06/bp-oil-spill-bird-covered-in-oil.jpg</url>
+				<description></description>
+			</image>
+			<video>
+				<site>Youtube</site>
+				<title></title>
+				<url>http://www.youtube.com/watch?v=lY-PikuXTYY</url>
+				<description></description>
+			</video>
+			<social>
+				<title>Facebook</title>
+				<url>http://www.facebook.com/BPOilCrisisInTheGulf?ref=ts</url>
+			</social>
+			<ext>
+				<title>Wikipedia</title>
+				<url>http://en.wikipedia.org/wiki/Deepwater_Horizon_oil_spill#Consequences</url>
+				<description></description>
+			</ext>    
+		</ref>
+		<misc></misc>
+		<org idref = "bp"/>
+		<person idref = "feinberg"/>
+	</crisis>
+	
+	<!-- ORGANIZATIONS -->
+	
+	<organization id = "bp">
+		<name>BP</name>
+		<info>
+			<type>Oil and gas company</type>
+			<history>British multinational oil and gas company which is the third-largest energy company and fourth-largest company in the world measured by 2011 revenues. It is vertically integrated and is active in every area of the oil and gas industry, including exploration and production,refining, distribution and marketing, petrochemicals, power generation and trading. It also has renewable energy activities in biofuelsand wind power. Its largest division is BP America, which is the second-largest producer of oil and gas in the United States and is headquartered in Houston, Texas. As of December 2011, BP had total proven commercial reserves of 17.75 billion barrels of oil equivalent. The name "BP" derives from the initials of one of the company's former legal names, British Petroleum.</history>
+			<contact>
+				<phone></phone>
+				<email></email>
+				<mail>
+					<address></address>
+					<city></city>
+					<state></state>
+					<country></country>
+					<zip></zip>
+				</mail>
+			</contact>
+			<loc>
+				<city>London</city>
+				<region></region>
+				<country>England</country>
+			</loc>    
+		</info>
+		<ref>
+			<image>
+				<title></title>
+				<url>http://www.wbrz.com/images/news/bpbiglogo.jpg</url>
+				<description></description>
+			</image>
+			<video>
+				<site>Youtube</site>
+				<title></title>
+				<url>http://www.youtube.com/watch?v=KtWoPZluI2E</url>
+				<description></description>
+			</video>
+			<social>
+				<title></title>
+				<url></url>
+			</social>
+			<ext>
+				<title>BP</title>
+				<url>http://www.bp.com</url>
+				<description></description>
+			</ext>     
+		</ref>
+		<misc>    </misc>
+		<crisis idref = "deepwater"/>
+		<person idref = "feinberg"/>	
+	</organization>
+	
+	<!-- PERSONSSSSS -->
+	
+	<person id = "feinberg">
+	    <name>
+	    	<title></title>
+	    	<first></first>
+	    	<last></last>
+	    	<middle></middle>    
+	    </name>
+		<info>
+			<type></type>
+			<birthdate>
+				<time></time>
+				<day>0</day>
+				<month>0</month>
+				<year>0</year>
+				<misc></misc>
+			</birthdate>
+			<nationality></nationality>
+			<biography></biography>    
+		</info>
+		<ref>
+			<image>
+				<title></title>
+				<url></url>
+				<description></description>
+			</image>
+			<video>
+				<site></site>
+				<title></title>
+				<url></url>
+				<description></description>
+			</video>
+			<social>
+				<title></title>
+				<url></url>
+			</social>
+			<ext>
+				<title></title>
+				<url></url>
+				<description></description>
+			</ext>       
+		</ref>
+		<misc>    </misc>
+		<crisis idref = "deepwater"/>
+	    <org idref = "bp"/>
+	</person>
+</worldCrises>	
+
