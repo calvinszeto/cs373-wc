@@ -118,6 +118,54 @@
 	<person id = "feinberg">
 	    <name>
 	    	<title></title>
+	    	<first>Kenneth</first>
+	    	<last>Feinberg</last>
+	    	<middle></middle>    
+	    </name>
+		<info>
+			<type>Attorney</type>
+			<birthdate>
+				<time></time>
+				<day>23</day>
+				<month>10</month>
+				<year>1945</year>
+				<misc></misc>
+			</birthdate>
+			<nationality>American</nationality>
+			<biography>An American attorney with his own firm, Feinberg Rozen, Kenneth Feinberg was appointed the administrator of the BP Deepwater Horizon Disaster Victim Compensation Fund. Feinberg was subject to much controversy regarding the fund, including a conflict of interest accusation due to BP paying Feinberg to administer the fund. Additionally, the Center for Justice and Democracy sent a letter to BP raising issues about the lack of transparency regarding the fund.</biography>    
+		</info>
+		<ref>
+			<image>
+				<title>Kenneth Feinberg Speaking</title>
+				<url>http://draketoulouse.files.wordpress.com/2011/06/feinberg2.jpg</url>
+				<description>Kenneth Feinberg gesturing while speaking in a microphone.</description>
+			</image>
+			<video>
+				<site>Youtube</site>
+				<title>Kenneth Feinberg on the BP oil spill</title>
+				<url>http://www.youtube.com/watch?v=dUe9mCKj4A8
+</url>
+				<description>Kenneth Feinberg being interviewed on the controversy regarding the BP Deepwater Horizon Disaster Victim Compensation Fund.</description>
+			</video>
+			<social>
+				<title>Kenneth Feinberg Facebook</title>
+				<url>http://www.facebook.com/pages/Kenneth-Feinberg/143047909045042
+</url>
+			</social>
+			<ext>
+				<title>Feinberg Rozen</title>
+				<url>http://www.feinbergrozen.com/</url>
+				<description>The official website of Feinberg's law firm.</description>
+			</ext>       
+		</ref>
+		<misc>    </misc>
+		<crisis idref = "deepwater"/>
+	    <org idref = "bp"/>
+	</person>
+
+	<person id = "papandreou">
+	    <name>
+	    	<title></title>
 	    	<first></first>
 	    	<last></last>
 	    	<middle></middle>    
