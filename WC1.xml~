@@ -123,67 +123,6 @@
 		<person idref = "billgates"/>
 	</crisis>
 	
-	<crisis id = "childhoodobesity">
-		<name>Childhood Obesity</name>
-		<info>
-			<history>Childhood obesity has tripled in the past 30 years has both immediate and long-term effects on health and well-being.</history>
-			<help>States and communities can assess their retail food environment to better understand the current landscape and differences in accessibility to healthier foods and provide incentives to existing supermarkets and farmers' markets to establish their businesses in low-income areas or to sell healthier foods.</help>
-			<resources></resources> 
-			<type></type>
-			<time>
-				<time></time>
-				<day></day>
-				<month></month>
-				<year>2008, ongoing</year>
-				<misc></misc>
-			</time>
-			<loc>
-				<city></city>
-				<region></region>
-				<country>U.S.A.</country>
-			</loc> 
-			<impact>
-				<human>
-					<deaths></deaths>
-					<displaced></displaced>
-					<injured></injured>
-					<missing></missing>
-					<misc></misc>
-				</human>
-				<economic>
-					<amount></amount>
-					<currency></currency>
-					<misc></misc>
-				</economic>
-			</impact> 
-		</info>
-		<ref>
-			<image>
-				<title></title>
-				<url>http://moviecitynews.com/wp-content/uploads/2012/06/Fat-Kid-Rules-the-World_04.jpg</url>
-				<description></description>
-			</image>
-			<video>
-				<site></site>
-				<title></title>
-				<url>http://www.youtube.com/watch?v=dLMoFST_Lmc</url>
-				<description></description>
-			</video>
-			<social>
-				<title></title>
-				<url>https://twitter.com/CDCObesity</url>
-			</social>
-			<ext>
-				<title></title>
-				<url>http://www.cdc.gov/healthyyouth/obesity/facts.htm</url>
-				<description></description>
-			</ext>    
-		</ref>
-		<misc></misc>
-		<org idref = "cdc"/>
-		<person idref = "tomfrieden"/>
-	</crisis>
-	
 	<!-- ORGANIZATIONS -->
 	
 	<organization id = "bp">
@@ -283,56 +222,6 @@
 		<crisis idref = "polio"/>
 		<person idref = "billgates"/>	
 	</organization>
-	
-	<organization id = "cdc">
-		<name>Centers for Disease Control and Prevention</name>
-		<info>
-			<type>The CDC is one of the major operating components of the Department of Health and Human Services.</type>
-			<history>Formed in 1992 the CDC works to protect public health and safety by providing information to enhance health decisions, and it promotes health through partnerships with state health departments and other organizations. The CDC focus national attention on developing and applying disease prevention and control (especially infectious diseases and foodborne pathogens and other microbial infections), environmental health, occupational safety and health, health promotion, injury prevention and education activities designed to improve the health of the people of the United States. The CDC is the United States' national public health institute and is a founding member of the International Association of National Public Health Institutes.</history>
-			<contact>
-				<phone></phone>
-				<email></email>
-				<mail>
-					<address></address>
-					<city>Atlanta</city>
-					<state>GA</state>
-					<country>U.S.A.</country>
-					<zip></zip>
-				</mail>
-			</contact>
-			<loc>
-				<city>Atlanta</city>
-				<region></region>
-				<country></country>
-			</loc>    
-		</info>
-		<ref>
-			<image>
-				<title>CDC Logo</title>
-				<url>http://evaluation.umn.edu/wp-content/uploads/CDC-Logo.jpg</url>
-				<description>CDC Logo</description>
-			</image>
-			<video>
-				<site></site>
-				<title></title>
-				<url>http://www.youtube.com/watch?v=vCORDl4bqDE</url>
-				<description></description>
-			</video>
-			<social>
-				<title></title>
-				<url>http://twitter.com/CDCObesity</url>
-			</social>
-			<ext>
-				<title>CDC Website</title>
-				<url>http://http://www.cdc.gov/</url>
-				<description></description>
-			</ext>     
-		</ref>
-		<misc>    </misc>
-		<crisis idref = "childhoodobesity"/>
-		<person idref = "tomfrieden"/>	
-	</organization>
-	
 	
 	<!-- PERSONSSSSS -->
 	
