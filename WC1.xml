@@ -165,43 +165,43 @@
 
 	<person id = "papandreou">
 	    <name>
-	    	<title></title>
-	    	<first></first>
-	    	<last></last>
+	    	<title>Former Prime Minister of Greece</title>
+	    	<first>George</first>
+	    	<last>Papandreou</last>
 	    	<middle></middle>    
 	    </name>
 		<info>
 			<type></type>
 			<birthdate>
 				<time></time>
-				<day>0</day>
-				<month>0</month>
-				<year>0</year>
+				<day>16</day>
+				<month>6</month>
+				<year>1952</year>
 				<misc></misc>
 			</birthdate>
-			<nationality></nationality>
-			<biography></biography>    
+			<nationality>Greek</nationality>
+			<biography>As Prime Minister of Greece from October 6th, 2009 to November 11th, 2011, George Papandreou served during Greece's sovereign debt crisis. As Prime Minister, Papandreou requested financial aid via a Stand-By Agreement from the IMF. However, the demands of austerity from the IMF caused mass protests and riots in Greece, some of which turned violent.</biography>    
 		</info>
 		<ref>
 			<image>
-				<title></title>
-				<url></url>
-				<description></description>
+				<title>George Papandreou at Parliament</title>
+				<url>http://ipolitics_assets.s3.amazonaws.com/wp-content/uploads/2011/10/01538596.jpg</url>
+				<description>George Papandreous addresses members of Parliament regarding a bailout agreement.</description>
 			</image>
 			<video>
-				<site></site>
-				<title></title>
-				<url></url>
-				<description></description>
+				<site>Youtube</site>
+				<title>George Papandreou on BBC</title>
+				<url>http://www.youtube.com/watch?v=ScPGKwAbsI8</url>
+				<description>George Papandreou speaks on BBC in an interview about the Greek Financial Crisis.</description>
 			</video>
 			<social>
-				<title></title>
-				<url></url>
+				<title>George Papandreou Facebook</title>
+				<url>http://www.facebook.com/george.a.papandreou</url>
 			</social>
 			<ext>
-				<title></title>
-				<url></url>
-				<description></description>
+				<title>George Papandreou Personal Page</title>
+				<url>http://www.papandreou.gr</url>
+				<description>Personal Website of George Papandreou</description>
 			</ext>       
 		</ref>
 		<misc>    </misc>
@@ -209,7 +209,7 @@
 	    <org idref = "bp"/>
 	</person>
 
-	<person id = "Michelle Obama">
+	<person id = "michelleobama">
 	    <name>
 	    	<title>First Lady</title>
 	    	<first>Michelle</first>
@@ -255,7 +255,7 @@
 	    <org idref = "bp"/>
 	</person>
 
-	<person id = "Bill Gates">
+	<person id = "billgates">
 	    <name>
 	    	<title>Chairman of Microsoft</title>
 	    	<first>Bill</first>

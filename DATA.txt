@@ -80,7 +80,7 @@ Location: Greece
 Embedded Images: http://www.premierlife.ca/wp-content/uploads/2011/11/greek-prime-minister-george-papandreou-data.jpg, http://upload.wikimedia.org/wikipedia/commons/1/1c/George_Papandreou.jpg
 Embedded Videos: http://www.youtube.com/watch?v=hsq2l_tBrH8
 Social Network: http://www.facebook.com/george.a.papandreou
-External Links: http://www.papandreou.gr
+External Links: 
 Crisis: Greek Financial Problems
 Organization:
  ---------- ----------
