@@ -132,9 +132,9 @@
 			<type></type>
 			<time>
 				<time></time>
-				<day></day>
-				<month></month>
-				<year>2008, ongoing</year>
+				<day>1</day>
+				<month>1</month>
+				<year>2008</year>
 				<misc></misc>
 			</time>
 			<loc>
@@ -144,14 +144,14 @@
 			</loc> 
 			<impact>
 				<human>
-					<deaths></deaths>
-					<displaced></displaced>
-					<injured></injured>
-					<missing></missing>
+					<deaths>0</deaths>
+					<displaced>0</displaced>
+					<injured>0</injured>
+					<missing>0</missing>
 					<misc></misc>
 				</human>
 				<economic>
-					<amount></amount>
+					<amount>1</amount>
 					<currency></currency>
 					<misc></misc>
 				</economic>
@@ -181,7 +181,7 @@
 		</ref>
 		<misc></misc>
 		<org idref = "cdc"/>
-		<person idref = "tomfrieden"/>
+		<person idref = "michelleobama"/>
 	</crisis>
 	
 	<!-- ORGANIZATIONS -->
@@ -330,7 +330,7 @@
 		</ref>
 		<misc>    </misc>
 		<crisis idref = "childhoodobesity"/>
-		<person idref = "tomfrieden"/>	
+		<person idref = "michelleobama"/>	
 	</organization>
 	
 	
