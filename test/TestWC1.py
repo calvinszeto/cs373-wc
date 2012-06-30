@@ -1,7 +1,7 @@
 import unittest
 
 
-class Test(unittest.TestCase):
+class TestWC1(unittest.TestCase):
 
 
     def testName(self):
@@ -9,5 +9,5 @@ class Test(unittest.TestCase):
 
 
 if __name__ == "__main__":
-    #import sys;sys.argv = ['', 'Test.testName']
+    #import sys;sys.argv = ['', 'TestWC1.testName']
     unittest.main()
