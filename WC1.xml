@@ -1,4 +1,4 @@
-<worldCrises>
+﻿<worldCrises>
 	<!-- CRISIS -->
 
 	<crisis id = "deepwater">
@@ -120,7 +120,7 @@
 		</ref>
 		<misc></misc>
 		<org idref = "tgpei"/>
-		<person idref = "billgates"/>
+		<person idref = "jonassalk"/>
 	</crisis>
 	
 	<crisis id = "childhoodobesity">
@@ -342,7 +342,7 @@
 		</ref>
 		<misc>    </misc>
 		<crisis idref = "polio"/>
-		<person idref = "billgates"/>	
+		<person idref = "jonassalk"/>	
 	</organization>
 	
 	<organization id = "cdc">
@@ -586,12 +586,12 @@
 	    <org idref = "cdc"/>
 	</person>
 
-	<person id = "billgates">
+	<person id = "jonassalk">
 	    <name>
-	    	<title>Chairman of Microsoft</title>
-	    	<first>Bill</first>
-	    	<last>Gates</last>
-	    	<middle>Henry</middle>    
+	    	<title>Doctor</title>
+	    	<first>Jonas</first>
+	    	<last>Salk</last>
+	    	<middle>Edward</middle>    
 	    </name>
 		<info>
 			<type></type>
@@ -599,31 +599,31 @@
 				<time></time>
 				<day>28</day>
 				<month>10</month>
-				<year>1955</year>
+				<year>1914</year>
 				<misc></misc>
 			</birthdate>
 			<nationality>American</nationality>
-			<biography>Bill Henry Gates is the former chief executive and current chairman of Microsoft. Gates is one of the best-known entrepreneurs of the personal computer revolution.</biography>    
+			<biography>Jonas Salk was an American medical researcher and virologist know for his discovery of the first safe polio vaccine.</biography>    
 		</info>
 		<ref>
 			<image>
-				<title>Bill Gates Picture</title>
-				<url>http://www.freeinfosociety.com/media/images/1016.jpg</url>
-				<description>A Picture of Bill Gates</description>
+				<title>Jonas Salk Picture</title>
+				<url>http://themurkyfringe.com/wp-content/uploads/2010/03/jonas-salk.jpg</url>
+				<description>A Picture of Jonas Salk</description>
 			</image>
 			<video>
 				<site>youtube</site>
-				<title>Bill Gates on energy: Innovating to zero!</title>
-				<url>http://youtu.be/JaF-fq2Zn7I</url>
-				<description>Bill Gates unveils his vision for the world's energy future.</description>
+				<title>Interview With Doctor Jonas Salk</title>
+				<url>http://www.youtube.com/watch?v=liQzs6qqYQg</url>
+				<description>Interview with Doctor Jonas Salk</description>
 			</video>
 			<social>
-				<title>Bill Gates' Facebook Page</title>
-				<url>http://www.facebook.com/BillGates</url>
+				<title>Doctor Jonas Salk's Facebook Page</title>
+				<url>http://www.facebook.com/pages/Jonas-Salk/193400977367840</url>
 			</social>
 			<ext>
-				<title>Bill Gates' Wikipedia Entry</title>
-				<url>http://en.wikipedia.org/wiki/Bill_Gates</url>
+				<title>Jonas Salk's Wikipedia Entry</title>
+				<url>http://en.wikipedia.org/wiki/Jonas_Salk</url>
 				<description></description>
 			</ext>       
 		</ref>
