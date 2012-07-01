@@ -1,0 +1,106 @@
+Crisis:
+    crisis_id
+    name
+    info_ref
+    misc
+    org_idref
+    person_idref
+    (list of refs)
+
+Organization:
+    organization_id
+    name
+    info_ref
+    misc
+    crisis_idref
+    person_idref
+    (list of refs)
+
+Person:
+    person_id
+    name_ref
+    info_ref
+    misc
+    crisis_idref
+    org_idref
+    (list of refs)
+
+Info:
+    info_id
+
+    (crisis, organization)
+    history 
+    loc_ref
+
+    (all)
+    type 
+    
+    (crisis-only)
+    help
+    resources
+    time_ref
+    impact_ref
+
+    (organization-only)
+    contact_ref
+
+    (person-only)
+    birthdate_ref (time_ref)
+    nationality
+    biography
+
+Contact:
+    contact_id
+    phone
+    email
+    mail_ref
+
+Mail:
+    mail_id
+    address
+    city
+    state
+    country
+    zip
+
+Ref:
+    ref_id
+    site
+    title
+    url
+    description
+
+Time:
+    time_id
+    time
+    day
+    month
+    year
+    misc
+
+Location:
+    loc_id
+    city
+    region
+    country
+
+Impact:
+    impact_id
+    human_ref
+    economic_ref
+    
+Human:
+    human_id
+    deaths
+    displaced
+    injured
+    missing
+    misc
+
+Economic:
+    economic_id
+    amount
+    currency
+    misc
+
+    
