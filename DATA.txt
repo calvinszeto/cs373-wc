@@ -33,7 +33,38 @@ External Links:  http://www.gatesfoundation.org/polio/pages/default.aspx
 People: Bill and Melinda Gates
 Organization: The Global Polio Eradication Initiative
  ---------- ----------
-
+ ---------- ----------
+Name:  Childhood Obesity
+Kind/Description:  Childhood obesity has tripled in the past 30 years has both immediate and long-term effects on health and well-being.
+Location: U.S.A. 
+Date and Time: 
+Human Impact:  
+Economic Impact: 
+Resources Needed:  
+Ways to Help:  States and communities can assess their retail food environment to better understand the current landscape and differences in accessibility to healthier foods and provide incentives to existing supermarkets and farmers' markets to establish their businesses in low-income areas or to sell healthier foods.
+Social Network:  https://twitter.com/CDCObesity
+Embedded Images:  http://moviecitynews.com/wp-content/uploads/2012/06/Fat-Kid-Rules-the-World_04.jpg
+Embedded Videos:  http://www.youtube.com/watch?v=dLMoFST_Lmc
+External Links:  http://www.cdc.gov/healthyyouth/obesity/facts.htm
+People: Michelle Obama
+Organization: CDC
+ ---------- ----------
+ ---------- ----------
+Name:  Greek Debt Crisis
+Kind/Description: Greece was living beyond its means before adopting the Euro and after adopting the Euro public spending significantly rose. After years of overspending, Greece’s budget deficit spiraled out of control, which left Greece unprepared to handle the global economic downturn. Greece’s debt reached levels so high that it was unable to pay, so required massive loans from European partners and the IMF
+Location:  Greece
+Date and Time:  Began late 2009 and is still a current issue
+Human Impact: Riots took place between 2010 and 2012 caused by the Greek Debt Crisis, resulting in 5 deaths and over 300 injuries.
+Economic Impact: The European Union and IMF had to give Greece 2 different bailouts; one in 2010 for the sum of €110 and one earlier this year for the sum of €130
+Resources Needed:  Bailouts from EU and IMF
+Ways to Help: http://ahepa.org/dotnetnuke/Issues/ReliefforGreece.aspx
+Social Network: https://www.facebook.com/GreeceDebtFree
+Embedded Images: http://cdn.theatlantic.com/static/infocus/athens021312/s_a06_10125965.jpg
+Embedded Videos: http://www.youtube.com/watch?v=rshdJZruH_0
+External Links: http://www.cnn.com/2010/BUSINESS/02/10/greek.debt.qanda/index.html
+People: George Papandreou
+Organization: The International Monetary Fund (IMF)
+ ---------- ----------
 ==============
 ==   ORGS   ==
 ==============
@@ -59,7 +90,18 @@ External Links: http://www.polioeradication.org/
 Crisis: Polio
 People: Bill and Melinda Gates
  ---------- ----------
-
+ ---------- ----------
+Name: The International Monetary Fund
+Kind: International economic organization
+Location: Washington, D.C.
+History: The IMF was created on July 22, 1944 at the Bretton Woods Conference with the intention of rebuilding the global economic system after WWII. The IMF was formally organized on December 27, 1945 when 29 countries signed the Articles of Agreement. The IMF functions like a bank and makes sure that borrowing states can pay their debts on time. The IMF also offers member nations information on economic policies of all member nations, financial support in times of economic difficulties, and increased opportunities for trade and investment. The IMF is one of the key organizations of the international economic system. Currently, the IMF has 188 member nations and its largest borrowers are Greece, Portugal, Ireland, Romania, and Ukraine.
+Embedded Images: http://upload.wikimedia.org/wikipedia/en/thumb/7/7e/International_Monetary_Fund_logo.svg/200px-International_Monetary_Fund_logo.svg.png
+http://www.bulbul.com/imf/IMF.gif
+Embedded Videos: http://www.imf.org/external/mmedia/view.aspx?vid=1697394593001
+External Links: http://www.imf.org/external/index.htm
+Crisis: Greek Debt Crisis
+People: George Papandreou
+ ---------- ----------
 ==============
 ==  PEOPLE  ==
 ==============
@@ -92,7 +134,7 @@ Embedded Video: http://www.youtube.com/watch?v=TwWPrpwhMSI
 Social Network: http://www.facebook.com/michelleobama
 External Links: http://en.wikipedia.org/wiki/Michelle_Obama
 Crisis: Childhood Obesity
-Organization: The American Academy of Pediatricians
+Organization: CDC
  ---------- ----------
 Name: Bill Gates
 Kind: He is the former chief executive and current chairman of Microsoft. Gates is one of the best-known entrepreneurs of the personal computer revolution.

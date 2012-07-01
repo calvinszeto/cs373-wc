@@ -12,3 +12,6 @@ handlers:
   
 - url: /.*
   script: helloworld.py
+
+- url: /test.*
+script: gaeunit.py
