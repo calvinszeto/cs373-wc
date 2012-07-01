@@ -36,7 +36,14 @@
 			</impact> 
 		</info>
 		<ref>
+            <primaryImage>
+                <site></site>
+				<title></title>
+				<url></url>
+				<description></description>
+            </primaryImage>
 			<image>
+                <site></site>
 				<title>Deepwater Horizon</title>
 				<url>http://www.thebuzzmedia.com/wp-content/uploads/2010/06/bp-oil-spill-bird-covered-in-oil.jpg</url>
 				<description></description>
@@ -48,10 +55,13 @@
 				<description></description>
 			</video>
 			<social>
+                <site></site>
 				<title>Facebook</title>
 				<url>http://www.facebook.com/BPOilCrisisInTheGulf?ref=ts</url>
+                <description></description>
 			</social>
 			<ext>
+                <site></site>
 				<title>Wikipedia</title>
 				<url>http://en.wikipedia.org/wiki/Deepwater_Horizon_oil_spill#Consequences</url>
 				<description></description>
@@ -97,7 +107,14 @@
 			</impact> 
 		</info>
 		<ref>
+            <primaryImage>
+                <site></site>
+				<title></title>
+				<url></url>
+				<description></description>
+            </primaryImage>
 			<image>
+                <site></site>
 				<title></title>
 				<url></url>
 				<description></description>
@@ -109,10 +126,13 @@
 				<description></description>
 			</video>
 			<social>
+                <site></site>
 				<title></title>
 				<url>http://www.facebook.com/pages/End-Polio-Now/78976274836</url>
+				<description></description>
 			</social>
 			<ext>
+                <site></site>
 				<title></title>
 				<url>http://www.gatesfoundation.org/polio/pages/default.aspx</url>
 				<description></description>
@@ -158,7 +178,14 @@
 			</impact> 
 		</info>
 		<ref>
+            <primaryImage>
+                <site></site>
+				<title></title>
+				<url></url>
+				<description></description>
+            </primaryImage>
 			<image>
+				<site></site>
 				<title></title>
 				<url>http://moviecitynews.com/wp-content/uploads/2012/06/Fat-Kid-Rules-the-World_04.jpg</url>
 				<description></description>
@@ -170,10 +197,13 @@
 				<description></description>
 			</video>
 			<social>
+				<site></site>
 				<title></title>
 				<url>https://twitter.com/CDCObesity</url>
+				<description></description>
 			</social>
 			<ext>
+				<site></site>
 				<title></title>
 				<url>http://www.cdc.gov/healthyyouth/obesity/facts.htm</url>
 				<description></description>
@@ -219,7 +249,14 @@
 			</impact> 
 		</info>
 		<ref>
+            <primaryImage>
+                <site></site>
+				<title></title>
+				<url></url>
+				<description></description>
+            </primaryImage>
 			<image>
+				<site></site>
 				<title>Rioting in Greece</title>
 				<url>http://cdn.theatlantic.com/static/infocus/athens021312/s_a06_10125965.jpg</url>
 				<description></description>
@@ -231,10 +268,13 @@
 				<description></description>
 			</video>
 			<social>
+				<site></site>
 				<title>Facebook</title>
 				<url>https://www.facebook.com/GreeceDebtFree</url>
+				<description></description>
 			</social>
 			<ext>
+				<site></site>
 				<title>CNN</title>
 				<url>http://www.cnn.com/2010/BUSINESS/02/10/greek.debt.qanda/index.html</url>
 				<description></description>
@@ -270,7 +310,14 @@
 			</loc>    
 		</info>
 		<ref>
+            <primaryImage>
+                <site></site>
+				<title></title>
+				<url></url>
+				<description></description>
+            </primaryImage>
 			<image>
+				<site>Youtube</site>
 				<title></title>
 				<url>http://www.wbrz.com/images/news/bpbiglogo.jpg</url>
 				<description></description>
@@ -282,10 +329,13 @@
 				<description></description>
 			</video>
 			<social>
+				<site>Youtube</site>
 				<title></title>
 				<url></url>
+				<description></description>
 			</social>
 			<ext>
+				<site>Youtube</site>
 				<title>BP</title>
 				<url>http://www.bp.com</url>
 				<description></description>
@@ -319,7 +369,14 @@
 			</loc>    
 		</info>
 		<ref>
+            <primaryImage>
+                <site></site>
+				<title></title>
+				<url></url>
+				<description></description>
+            </primaryImage>
 			<image>
+				<site></site>
 				<title></title>
 				<url></url>
 				<description></description>
@@ -331,10 +388,13 @@
 				<description></description>
 			</video>
 			<social>
+				<site></site>
 				<title></title>
 				<url></url>
+				<description></description>
 			</social>
 			<ext>
+				<site></site>
 				<title></title>
 				<url></url>
 				<description></description>
@@ -368,7 +428,14 @@
 			</loc>    
 		</info>
 		<ref>
+            <primaryImage>
+                <site></site>
+				<title></title>
+				<url></url>
+				<description></description>
+            </primaryImage>
 			<image>
+                <site></site>
 				<title>AAP Logo</title>
 				<url>http://instinctmagazine.com/images/stories/blogs/jhigbee/april2012/aaop.jpg</url>
 				<description>AAP Logo</description>
@@ -380,10 +447,13 @@
 				<description>New Policy Statement from AAP</description>
 			</video>
 			<social>
+                <site></site>
 				<title>AAP News Twitter</title>
 				<url>https://twitter.com/#!/AAPNews/</url>
+				<description></description>
 			</social>
 			<ext>
+                <site></site>
 				<title>AAP Website</title>
 				<url>http://www.aap.org/</url>
 				<description></description>
@@ -417,7 +487,14 @@
 			</loc>    
 		</info>
 		<ref>
+            <primaryImage>
+                <site></site>
+				<title></title>
+				<url></url>
+				<description></description>
+            </primaryImage>
 			<image>
+                <site></site>
 				<title></title>
 				<url>http://upload.wikimedia.org/wikipedia/en/thumb/7/7e/International_Monetary_Fund_logo.svg/200px-International_Monetary_Fund_logo.svg.png</url>
 				<description></description>
@@ -429,10 +506,13 @@
 				<description></description>
 			</video>
 			<social>
+                <site></site>
 				<title></title>
 				<url></url>
+				<description></description>
 			</social>
 			<ext>
+                <site></site>
 				<title>IMF</title>
 				<url>http://www.imf.org/external/index.htm</url>
 				<description></description>
@@ -447,12 +527,7 @@
 	<!-- PERSONSSSSS -->
 	
 	<person id = "feinberg">
-	    <name>
-	    	<title></title>
-	    	<first>Kenneth</first>
-	    	<last>Feinberg</last>
-	    	<middle></middle>    
-	    </name>
+	    <name>Kenneth Feinberg</name>
 		<info>
 			<type>Attorney</type>
 			<birthdate>
@@ -466,7 +541,14 @@
 			<biography>An American attorney with his own firm, Feinberg Rozen, Kenneth Feinberg was appointed the administrator of the BP Deepwater Horizon Disaster Victim Compensation Fund. Feinberg was subject to much controversy regarding the fund, including a conflict of interest accusation due to BP paying Feinberg to administer the fund. Additionally, the Center for Justice and Democracy sent a letter to BP raising issues about the lack of transparency regarding the fund.</biography>    
 		</info>
 		<ref>
+            <primaryImage>
+                <site></site>
+				<title></title>
+				<url></url>
+				<description></description>
+            </primaryImage>
 			<image>
+                <site></site>
 				<title>Kenneth Feinberg Speaking</title>
 				<url>http://draketoulouse.files.wordpress.com/2011/06/feinberg2.jpg</url>
 				<description>Kenneth Feinberg gesturing while speaking in a microphone.</description>
@@ -479,11 +561,13 @@
 				<description>Kenneth Feinberg being interviewed on the controversy regarding the BP Deepwater Horizon Disaster Victim Compensation Fund.</description>
 			</video>
 			<social>
+                <site></site>
 				<title>Kenneth Feinberg Facebook</title>
-				<url>http://www.facebook.com/pages/Kenneth-Feinberg/143047909045042
-</url>
+				<url>http://www.facebook.com/pages/Kenneth-Feinberg/143047909045042</url>
+				<description></description>
 			</social>
 			<ext>
+                <site></site>
 				<title>Feinberg Rozen</title>
 				<url>http://www.feinbergrozen.com/</url>
 				<description>The official website of Feinberg's law firm.</description>
@@ -495,12 +579,7 @@
 	</person>
 
 	<person id = "papandreou">
-	    <name>
-	    	<title>Former Prime Minister of Greece</title>
-	    	<first>George</first>
-	    	<last>Papandreou</last>
-	    	<middle></middle>    
-	    </name>
+	    <name>Former Prime Minister of Greece George Papandreou</name>
 		<info>
 			<type></type>
 			<birthdate>
@@ -514,7 +593,14 @@
 			<biography>As Prime Minister of Greece from October 6th, 2009 to November 11th, 2011, George Papandreou served during Greece's sovereign debt crisis. As Prime Minister, Papandreou requested financial aid via a Stand-By Agreement from the IMF. However, the demands of austerity from the IMF caused mass protests and riots in Greece, some of which turned violent.</biography>    
 		</info>
 		<ref>
+            <primaryImage>
+                <site></site>
+				<title></title>
+				<url></url>
+				<description></description>
+            </primaryImage>
 			<image>
+                <site></site>
 				<title>George Papandreou at Parliament</title>
 				<url>http://ipolitics_assets.s3.amazonaws.com/wp-content/uploads/2011/10/01538596.jpg</url>
 				<description>George Papandreous addresses members of Parliament regarding a bailout agreement.</description>
@@ -526,10 +612,13 @@
 				<description>George Papandreou speaks on BBC in an interview about the Greek Financial Crisis.</description>
 			</video>
 			<social>
+                <site></site>
 				<title>George Papandreou Facebook</title>
 				<url>http://www.facebook.com/george.a.papandreou</url>
+				<description></description>
 			</social>
 			<ext>
+                <site></site>
 				<title>George Papandreou Personal Page</title>
 				<url>http://www.papandreou.gr</url>
 				<description>Personal Website of George Papandreou</description>
@@ -541,12 +630,7 @@
 	</person>
 
 	<person id = "michelleobama">
-	    <name>
-	    	<title>First Lady</title>
-	    	<first>Michelle</first>
-	    	<last>Obama</last>
-	    	<middle>LaVaughn Robinson</middle>    
-	    </name>
+	    <name>First Lady Michelle LaVaughn Robinson Obama</name>
 		<info>
 			<type></type>
 			<birthdate>
@@ -560,7 +644,14 @@
 			<biography>Michelle LaVaughn Robinson Obama is the first African-American First Lady of the United States and wife to the 44th President of the United States, Barack Obama.</biography>    
 		</info>
 		<ref>
+            <primaryImage>
+                <site></site>
+				<title></title>
+				<url></url>
+				<description></description>
+            </primaryImage>
 			<image>
+                <site></site>
 				<title>Michelle Obama Portrait</title>
 				<url>http://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Michelle_Obama_official_portrait_headshot.jpg/225px-Michelle_Obama_official_portrait_headshot.jpg</url>
 				<description>The Official Headshot of the 44th First Lady</description>
@@ -572,10 +663,13 @@
 				<description>In this video, First Lady Michelle Obama adresses questions she recieved on her Twitter account.</description>
 			</video>
 			<social>
+                <site></site>
 				<title>Michelle Obama's Facebook Page</title>
 				<url>http://www.facebook.com/michelleobama</url>
+				<description></description>
 			</social>
 			<ext>
+                <site></site>
 				<title>Michelle Obama's Wikipedia Entry</title>
 				<url>http://en.wikipedia.org/wiki/Michelle_Obama</url>
 				<description></description>
@@ -587,12 +681,7 @@
 	</person>
 
 	<person id = "jonassalk">
-	    <name>
-	    	<title>Doctor</title>
-	    	<first>Jonas</first>
-	    	<last>Salk</last>
-	    	<middle>Edward</middle>    
-	    </name>
+	    <name>Doctor Jonas Edward Salk</name>
 		<info>
 			<type></type>
 			<birthdate>
@@ -606,7 +695,14 @@
 			<biography>Jonas Salk was an American medical researcher and virologist know for his discovery of the first safe polio vaccine.</biography>    
 		</info>
 		<ref>
+            <primaryImage>
+                <site></site>
+				<title></title>
+				<url></url>
+				<description></description>
+            </primaryImage>
 			<image>
+                <site></site>
 				<title>Jonas Salk Picture</title>
 				<url>http://themurkyfringe.com/wp-content/uploads/2010/03/jonas-salk.jpg</url>
 				<description>A Picture of Jonas Salk</description>
@@ -618,10 +714,13 @@
 				<description>Interview with Doctor Jonas Salk</description>
 			</video>
 			<social>
+                <site></site>
 				<title>Doctor Jonas Salk's Facebook Page</title>
 				<url>http://www.facebook.com/pages/Jonas-Salk/193400977367840</url>
+				<description></description>
 			</social>
 			<ext>
+                <site></site>
 				<title>Jonas Salk's Wikipedia Entry</title>
 				<url>http://en.wikipedia.org/wiki/Jonas_Salk</url>
 				<description></description>
