@@ -15,7 +15,7 @@ class Organization(db.Model):
     person_ref = db.ReferenceProperty(Person)
 
 class Person(db.Model):
-    name_ref = db.ReferenceProperty(Name)
+    name = db.StringProperty()
     info_ref = db.ReferenceProperty(Info)
     misc = db.StringProperty()
     crisis_ref = db.ReferenceProperty(Crisis)

@@ -18,7 +18,7 @@ Organization:
 
 Person:
     person_id
-    name_ref
+    name
     info_ref
     misc
     crisis_idref
