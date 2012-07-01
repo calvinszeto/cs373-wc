@@ -8,9 +8,15 @@ handlers:
 - url: /import
   script: helloworld.py
 
-- url: /html
-  static_dir: html
-  
+- url: /crisis
+  static_dir: crisis  
+
+- url: /orgs
+  static_dir: orgs  
+
+- url: /people
+  static_dir: people  
+
 - url: /
-  upload: html/index.html
-  static_files: html/index.html
+  upload: index.html
+  static_files: index.html
