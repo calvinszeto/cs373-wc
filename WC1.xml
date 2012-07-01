@@ -180,7 +180,7 @@
 			</ext>    
 		</ref>
 		<misc></misc>
-		<org idref = "cdc"/>
+		<org idref = "aap"/>
 		<person idref = "michelleobama"/>
 	</crisis>
 
@@ -345,47 +345,47 @@
 		<person idref = "jonassalk"/>	
 	</organization>
 	
-	<organization id = "cdc">
-		<name>Centers for Disease Control and Prevention</name>
+	<organization id = "aap">
+		<name>The American Academy of Pediatrics</name>
 		<info>
-			<type>The CDC is one of the major operating components of the Department of Health and Human Services.</type>
-			<history>Formed in 1992 the CDC works to protect public health and safety by providing information to enhance health decisions, and it promotes health through partnerships with state health departments and other organizations. The CDC focus national attention on developing and applying disease prevention and control (especially infectious diseases and foodborne pathogens and other microbial infections), environmental health, occupational safety and health, health promotion, injury prevention and education activities designed to improve the health of the people of the United States. The CDC is the United States' national public health institute and is a founding member of the International Association of National Public Health Institutes.</history>
+			<type></type>
+			<history>Founded in 1930 by 35 pediatricians. The AAP has produced more than 480 publications in 140 countries. The AAP and its members work at the local level in hospitals, offices and clinics and in state and federal government to protect the well being of children.</history>
 			<contact>
 				<phone></phone>
 				<email></email>
 				<mail>
 					<address></address>
-					<city>Atlanta</city>
-					<state>GA</state>
+					<city>Elk Grove Villiage</city>
+					<state>IL</state>
 					<country>U.S.A.</country>
 					<zip></zip>
 				</mail>
 			</contact>
 			<loc>
-				<city>Atlanta</city>
+				<city>Elk Grove Villiage</city>
 				<region></region>
 				<country></country>
 			</loc>    
 		</info>
 		<ref>
 			<image>
-				<title>CDC Logo</title>
-				<url>http://evaluation.umn.edu/wp-content/uploads/CDC-Logo.jpg</url>
-				<description>CDC Logo</description>
+				<title>AAP Logo</title>
+				<url>http://instinctmagazine.com/images/stories/blogs/jhigbee/april2012/aaop.jpg</url>
+				<description>AAP Logo</description>
 			</image>
 			<video>
-				<site></site>
-				<title></title>
-				<url>http://www.youtube.com/watch?v=vCORDl4bqDE</url>
-				<description></description>
+				<site>youtube</site>
+				<title>2011 AAP Policy Statement - Media Use by Children Younger Than 2 Years </title>
+				<url>http://www.youtube.com/watch?v=9EuXIrWUkI0</url>
+				<description>New Policy Statement from AAP</description>
 			</video>
 			<social>
-				<title></title>
-				<url>http://twitter.com/CDCObesity</url>
+				<title>AAP News Twitter</title>
+				<url>https://twitter.com/#!/AAPNews/</url>
 			</social>
 			<ext>
-				<title>CDC Website</title>
-				<url>http://http://www.cdc.gov/</url>
+				<title>AAP Website</title>
+				<url>http://www.aap.org/</url>
 				<description></description>
 			</ext>     
 		</ref>
@@ -583,7 +583,7 @@
 		</ref>
 		<misc>    </misc>
 		<crisis idref = "childhoodobesity"/>
-	    <org idref = "cdc"/>
+	    <org idref = "aap"/>
 	</person>
 
 	<person id = "jonassalk">

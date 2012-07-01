@@ -30,7 +30,7 @@ Social Network: http://www.facebook.com/pages/End-Polio-Now/78976274836
 Embedded Images: http://www.facebook.com/photo.php?fbid=10150647107914837&set=a.10150634608744837.411824.78976274836&type=3&theater
 Embedded Videos:  http://www.youtube.com/watch?v=AfmwcShVeM0
 External Links:  http://www.gatesfoundation.org/polio/pages/default.aspx
-People: Bill and Melinda Gates
+People: Jonas Salk
 Organization: The Global Polio Eradication Initiative
  ---------- ----------
  ---------- ----------
@@ -88,7 +88,7 @@ Embedded Images: http://deskofbrian.com/wp-content/uploads/EndPolioNow.jpg
 Embedded Videos: http://www.youtube.com/watch?v=YLzUr-fnyFA
 External Links: http://www.polioeradication.org/
 Crisis: Polio
-People: Bill and Melinda Gates
+People: Jonas Salk
  ---------- ----------
  ---------- ----------
 Name: The International Monetary Fund
@@ -102,6 +102,16 @@ External Links: http://www.imf.org/external/index.htm
 Crisis: Greek Debt Crisis
 People: George Papandreou
  ---------- ----------
+ ---------- ----------
+Name: The American Academy of Pediatrics
+Kind: The AAP is the major professional association of pediatricians in the U.S.
+Location: Elk Grove Villiage, Illinois
+History: Founded in 1930 by 35 pediatricians. The AAP has produced more than 480 publications in 140 countries. The AAP and its members work at the local level in hospitals, offices and clinics and in state and federal government to protect the well being of children.
+Embedded Images: http://instinctmagazine.com/images/stories/blogs/jhigbee/april2012/aaop.jpg
+Embedded Videos: http://www.youtube.com/watch?v=9EuXIrWUkI0
+External Links: www.aap.org/
+Crisis: Childhood Obesity
+People: Michelle Obama
 ==============
 ==  PEOPLE  ==
 ==============
