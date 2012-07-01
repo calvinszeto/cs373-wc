@@ -1,5 +1,5 @@
 Crisis:
-    crisis_id
+    crisis_id (crisis.key())
     name
     info_ref
     misc

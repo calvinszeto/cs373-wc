@@ -4,14 +4,13 @@ runtime: python
 api_version: 1
 
 handlers:
-- url: /test.*
-  script: gaeunit.py
+
+- url: /import
+  script: helloworld.py
 
 - url: /html
   static_dir: html
   
-- url: /.*
-  script: helloworld.py
-
-- url: /test.*
-script: gaeunit.py
+- url: /
+  upload: html/index.html
+  static_files: html/index.html
