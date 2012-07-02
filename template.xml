@@ -44,26 +44,26 @@
             </primaryImage>
 			<image>
                 <site></site>
-				<title>{{ref1title}}</title>
-				<url>{{ref1url}}</url>
+				<title>Deepwater Horizon</title>
+				<url>http://www.thebuzzmedia.com/wp-content/uploads/2010/06/bp-oil-spill-bird-covered-in-oil.jpg</url>
 				<description></description>
 			</image>
 			<video>
-				<site>{{ref2site}}</site>
+				<site>Youtube</site>
 				<title></title>
-				<url>{{ref2url}}</url>
+				<url>http://www.youtube.com/watch?v=lY-PikuXTYY</url>
 				<description></description>
 			</video>
 			<social>
                 <site></site>
-				<title>{{ref3title}}</title>
-				<url>{{ref3url}}</url>
+				<title>Facebook</title>
+				<url>http://www.facebook.com/BPOilCrisisInTheGulf?ref=ts</url>
                 <description></description>
 			</social>
 			<ext>
                 <site></site>
-				<title>{{ref4title}}</title>
-				<url>{{ref4url}}</url>
+				<title>Wikipedia</title>
+				<url>http://en.wikipedia.org/wiki/Deepwater_Horizon_oil_spill#Consequences</url>
 				<description></description>
 			</ext>    
 		</ref>
