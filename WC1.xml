@@ -318,7 +318,7 @@
             </primaryImage>
 			<image>
 				<site>Youtube</site>
-				<title></title>
+				<title>BP's Logo</title>
 				<url>http://www.wbrz.com/images/news/bpbiglogo.jpg</url>
 				<description></description>
 			</image>
@@ -329,13 +329,13 @@
 				<description></description>
 			</video>
 			<social>
-				<site>Youtube</site>
-				<title></title>
-				<url></url>
+				<site>Facebook</site>
+				<title>BP's Facebook Page</title>
+				<url>http://facebook.com/BPAmerica</url>
 				<description></description>
 			</social>
 			<ext>
-				<site>Youtube</site>
+				<site>BP</site>
 				<title>BP</title>
 				<url>http://www.bp.com</url>
 				<description></description>
