@@ -8,6 +8,9 @@ handlers:
 - url: /import
   script: helloworld.py
 
+- url: /export
+  script: goodbyeworld.py
+
 - url: /upload
   script: helloworld.py
 

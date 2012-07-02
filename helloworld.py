@@ -76,6 +76,7 @@ class UploadHandler(blobstore_handlers.BlobstoreUploadHandler):
                     for x in ref_dict:
                         ref_dict[x] = alk.find(x).text
                     links[z] = Ref(**ref_dict)
+                cris.put()
                     
         except AttributeError:
             print "Invalid"
