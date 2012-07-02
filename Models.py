@@ -88,7 +88,6 @@ class Ref(db.Model):
     crisis = db.ReferenceProperty(Crisis, collection_name='refs')
     org= db.ReferenceProperty(Organization, collection_name='refs')
     person = db.ReferenceProperty(Person, collection_name='refs')
-    ref_type = db.StringProperty()
     site = db.StringProperty()
     title = db.StringProperty()
     url = db.StringProperty()

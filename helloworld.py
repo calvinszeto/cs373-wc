@@ -42,41 +42,60 @@ class UploadHandler(blobstore_handlers.BlobstoreUploadHandler):
                 for x in crisis_dict:
                     crisis_dict[x] = c.find(x).text
                 cris = Crisis(**crisis_dict)
+                cris.put()
                 i = c.find("info")
                 for x in info_dict:
                     info_dict[x] = i.find(x).text
                 inf = Info(**info_dict)
                 inf.info_help = i.find("help").text
                 inf.info_type = i.find("type").text
+                inf.put()
                 t = i.find("time")
                 for x in time_dict:
                     time_dict[x] = t.find(x).text
                 tim = Time(**time_dict)
+                tim.put()
                 l = i.find("loc")
                 for x in loc_dict:
                     loc_dict[x] = l.find(x).text
                 loc = Location(**loc_dict)
+                loc.put()
                 h = i.find("impact/human")
                 for x in human_dict:
                     human_dict[x] = h.find(x).text
                 hum = Human(**human_dict)
+                hum.put()
                 e = i.find("impact/economic")
                 for x in economic_dict:
                     economic_dict[x] = e.find(x).text
                 eco = Economic(**economic_dict)
-                pi = Ref()
-                ii = Ref()
-                vi = Ref()
-                si = Ref()
-                ei = Ref()
-                links = {"primaryImage":pi,"image":ii,"video":vi,"social":si,"ext":ei}
+                eco.put()
                 r = c.find("ref")
-                for z in links:
-                    alk = r.find(z)
-                    for x in ref_dict:
-                        ref_dict[x] = alk.find(x).text
-                    links[z] = Ref(**ref_dict)
-                cris.put()
+                pi = r.find("primaryImage")
+                for x in ref_dict:
+                    ref_dict[x] = pi.find(x).text
+                pir = Ref(**ref_dict)
+                pir.put()
+                ii = r.find("image")
+                for x in ref_dict:
+                    ref_dict[x] = ii.find(x).text
+                iir = Ref(**ref_dict)
+                iir.put()
+                vi = r.find("video")
+                for x in ref_dict:
+                    ref_dict[x] = vi.find(x).text
+                vir = Ref(**ref_dict)
+                vir.put()
+                si = r.find("social")
+                for x in ref_dict:
+                    ref_dict[x] = si.find(x).text
+                sir = Ref(**ref_dict)
+                sir.put()
+                ei = r.find("ext")
+                for x in ref_dict:
+                    ref_dict[x] = ei.find(x).text
+                eir = Ref(**ref_dict)
+                eir.put()
                     
         except AttributeError:
             print "Invalid"
