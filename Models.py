@@ -7,12 +7,6 @@ class Mail(db.Model):
     country = db.StringProperty()
     mail_zip = db.StringProperty()
 
-class Ref(db.Model):
-    site = db.StringProperty()
-    title = db.StringProperty()
-    url = db.StringProperty()
-    description = db.StringProperty()
-
 class Time(db.Model):
     time = db.StringProperty()
     day = db.StringProperty()
@@ -89,3 +83,13 @@ class WCObject(db.Model):
     crisis_ref = db.ReferenceProperty(Crisis)
     person_ref = db.ReferenceProperty(Person)
     org_ref = db.ReferenceProperty(Organization)
+
+class Ref(db.Model):
+    crisis = db.ReferenceProperty(Crisis, collection_name='refs')
+    org= db.ReferenceProperty(Organization, collection_name='refs')
+    person = db.ReferenceProperty(Person, collection_name='refs')
+    site = db.StringProperty()
+    title = db.StringProperty()
+    url = db.StringProperty()
+    description = db.StringProperty()
+
