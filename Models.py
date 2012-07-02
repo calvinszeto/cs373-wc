@@ -46,7 +46,7 @@ class Info(db.Model):
     info_type = db.StringProperty()
 
     # Crisis, Organization only
-    history = db.StringProperty()
+    history = db.TextProperty()
     loc_ref = db.ReferenceProperty(Location)
 
     # Crisis, Person only
