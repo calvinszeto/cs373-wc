@@ -1,19 +1,38 @@
 Course Name: CS373
 Unique: 91055
 
-First Name:
-Last Name:
-EID:
-E-mail:
-Estimated number of hours:
-Actual    number of hours:
+First Name: Calvin
+Last Name: Szeto
+EID: CS37888
+E-mail: szeto.calvin@gmail.com
+Estimated number of hours: 10
+Actual    number of hours: 20
 
-Turnin CS Username:     <the chosen one for the group>
-GitHub ID:              <the chosen one for the group>
+Turnin CS Username:     calvins
+GitHub ID:              calvinszeto
 GitHub Repository Name: cs373-wc
-Google App Engine URL:  <cs username>-cs373-wc.appspot.com
+Google App Engine URL:  calvins-cs373-wc.appspot.com
 
-<repeat for each group member>
+Group Member First Name: Kevin 
+Group Member Last Name: Jacoby
+Group Member EID:
+Group Member E-mail:
+Group Member Rating:           <from the list below>
+Group Member Point Adjustment: <only if you're leader>
+
+Group Member First Name:
+Group Member Last Name:
+Group Member EID:
+Group Member E-mail:
+Group Member Rating:           <from the list below>
+Group Member Point Adjustment: <only if you're leader>
+
+Group Member First Name:
+Group Member Last Name:
+Group Member EID:
+Group Member E-mail:
+Group Member Rating:           <from the list below>
+Group Member Point Adjustment: <only if you're leader>
 
 Group Member First Name:
 Group Member Last Name:
