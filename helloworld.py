@@ -196,19 +196,11 @@ class UploadHandler(blobstore_handlers.BlobstoreUploadHandler):
         except AttributeError:
             print "Invalid"
         self.redirect("/", permanent=True)
-            
-
-class ServeHandler(blobstore_handlers.BlobstoreDownloadHandler):
-    def get(self, resource):
-        resource = str(urllib.unquote(resource))
-        blob_info = blobstore.BlobInfo.get(resource)
-        self.send_blob(blob_info)
 
 def main():
     application = webapp.WSGIApplication(
             [('/import', MainHandler),
             ('/upload', UploadHandler),
-            ('/serve/([^/]+)?', ServeHandler),
             ], debug=True)
     run_wsgi_app(application)
 
