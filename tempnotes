@@ -1,0 +1,32 @@
+On export:
+Want to go use a loop, one for crises, one for organizations, one for people.
+Thus, template values must all be lists. Learn how to use lists in Django.
+
+-----
+
+To create parent-child relationship:
+inf = Info(parent=cris, **info_dict)
+
+Then, during export:
+crises = Crisis.all()
+infos = Info.all()
+
+for c in crises:
+    i = infos.ancestor(c).get() # returns the info for c
+
+Can you use the same infos Query for the next crisis or do you need to make a new one?
+
+How do you test this?
+
+-----
+
+On accepting multiple refs:
+1. How do we make sure there is at least one of each kind?
+    Do a findall on each type of ref; if the list is empty then it's invalid.
+    Still need a ref-type attribute for the export.
+2. For the template, we need code in the template to iterate through some list of values.
+
+-----
+
+Other:
+Make a better invalid page.
