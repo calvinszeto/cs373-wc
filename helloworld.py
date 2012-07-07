@@ -31,6 +31,10 @@ person_birth_dict = {"time":"","day":"","month":"","year":"","misc":""}
 
 class MainHandler(webapp.RequestHandler):
     def get(self):
+        """
+        Handles the import feature by posting the HTML which accepts a file.
+        Then file is stored as a blob and UploadHandler is called.
+        """
         upload_url = blobstore.create_upload_url('/upload')
         self.response.out.write('<html><body>')
         self.response.out.write('<form action="%s" method="POST" enctype="multipart/form-data">' % upload_url)
@@ -38,6 +42,10 @@ class MainHandler(webapp.RequestHandler):
 
 class UploadHandler(blobstore_handlers.BlobstoreUploadHandler):
     def post(self):
+        """
+        Handles the import of a file into the GAE Models.
+        Searches for specific tags per the Schema and quits if file is invalid.
+        """
         upload_files = self.get_uploads('file')  # 'file' is file upload field in the form
         blob_info = upload_files[0]
         tree = ElementTree()

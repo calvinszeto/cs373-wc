@@ -1,5 +1,10 @@
 from google.appengine.ext import db
 
+#
+# Models.py
+# Holds the GAE Models for world crisis app.
+#
+
 class Mail(db.Model):
     address = db.StringProperty()
     city = db.StringProperty()

@@ -1,0 +1,268 @@
+commit eba477022aceeef77bc450dbecaa8d48b2460a40
+Author: Calvin Szeto at ENS <szeto.calvin@utexas.edu>
+Date:   Mon Jul 2 01:40:02 2012 -0500
+
+    Finish phase 1.
+
+commit df71a14daf724fb04caca0b45c9213a417edc60a
+Author: Calvin Szeto at ENS <szeto.calvin@utexas.edu>
+Date:   Mon Jul 2 01:09:27 2012 -0500
+
+    Fix splash page to link to import/export.
+
+commit 6e874f9e29f1f2da251e8a04a6c475ffdf1dcc8c
+Author: Calvin Szeto at ENS <szeto.calvin@utexas.edu>
+Date:   Mon Jul 2 01:08:03 2012 -0500
+
+    Complete import function.
+
+commit e677f81410a95d94a70a65395bada5c03176e131
+Author: Calvin Szeto at ENS <szeto.calvin@utexas.edu>
+Date:   Mon Jul 2 00:43:03 2012 -0500
+
+    Finish export function.
+
+commit 25698b0957264b1644e631088eb7fa20638bb187
+Author: Calvin Szeto at ENS <szeto.calvin@utexas.edu>
+Date:   Mon Jul 2 00:19:22 2012 -0500
+
+    Update export function.
+
+commit c11f7ee935cf44e0c23894356d9e301639dd7fee
+Author: Calvin Szeto at ENS <szeto.calvin@utexas.edu>
+Date:   Sun Jul 1 23:26:05 2012 -0500
+
+    Start export script.
+
+commit 43c9325411b3c876ba5620794dc922ede80fc3fe
+Author: Calvin Szeto at ENS <szeto.calvin@utexas.edu>
+Date:   Sun Jul 1 21:30:54 2012 -0500
+
+    UploadHandler fills out one Crisis model.
+
+commit f6a44135cc2b9cb95811902c9819ff39603ef201
+Merge: 5edec4f 29291f3
+Author: Calvin Szeto at ENS <szeto.calvin@utexas.edu>
+Date:   Sun Jul 1 21:30:26 2012 -0500
+
+    Merge branch 'master' of https://github.com/calvinszeto/cs373-wc
+
+commit 29291f3e2f557b1bad8ff7988b3d674db2791461
+Author: Kevin Jacoby <cs.utexas.edu>
+Date:   Sun Jul 1 19:47:58 2012 -0500
+
+    HTML pages link correctly now
+
+commit 5edec4f746918fcd82e1c4461bf74c47dfd70b68
+Merge: 7d2b9dc 65214e3
+Author: Calvin Szeto at ENS <szeto.calvin@utexas.edu>
+Date:   Sun Jul 1 18:26:42 2012 -0500
+
+    Merge branch 'master' of https://github.com/calvinszeto/cs373-wc
+
+commit 65214e37fa88adedcafb7fdc03d83288a591b91d
+Author: Kevin Jacoby <cs.utexas.edu>
+Date:   Sun Jul 1 18:17:43 2012 -0500
+
+    Restructured directories and app.yaml file
+
+commit 7d2b9dc3d097292df192ea5b2ef81d28d90c7a73
+Author: Calvin Szeto at ENS <szeto.calvin@utexas.edu>
+Date:   Sun Jul 1 17:35:36 2012 -0500
+
+    Fix Models.py with WCObject.
+
+commit 99b7c26bf2eed467b7b9458d5692653b92abb7b3
+Author: Kevin Jacoby <cs.utexas.edu>
+Date:   Sun Jul 1 17:10:21 2012 -0500
+
+    All HTML files done
+
+commit 7efb86bfe95657ca6085121e2b0e986dda7fdd06
+Author: Calvin Szeto at ENS <szeto.calvin@utexas.edu>
+Date:   Sun Jul 1 16:53:09 2012 -0500
+
+    Change models to match new Schema.
+
+commit 85f848df55ccad2acd9909006cc221f2a1afc3d9
+Author: Calvin Szeto at ENS <szeto.calvin@utexas.edu>
+Date:   Sun Jul 1 16:47:19 2012 -0500
+
+    Fix XML to match latest Schema.
+
+commit a3728638abca345e2dcf90ec0d108a5c25ebe828
+Author: Calvin Szeto at ENS <szeto.calvin@utexas.edu>
+Date:   Sun Jul 1 16:23:48 2012 -0500
+
+    Create all Models in Models.py.
+
+commit 5cb431e9147c2f5db3324088f19b8aa45ae85369
+Author: Calvin Szeto at ENS <szeto.calvin@utexas.edu>
+Date:   Sun Jul 1 16:00:28 2012 -0500
+
+    Change app.yaml so root redirects to splash page.
+
+commit 578f649c1d3ba0113c2e59f9044b253b5f85ac25
+Author: Kevin Jacoby <cs.utexas.edu>
+Date:   Sun Jul 1 15:58:16 2012 -0500
+
+    More changes.
+
+commit 7d3bd07cf4830cdbbf7aec6e96db8d2e4aea3051
+Author: Kevin Jacoby <cs.utexas.edu>
+Date:   Sun Jul 1 15:52:10 2012 -0500
+
+    Some HTML files changed.
+
+commit 559ab7c23cd0a22e0a797dcbbff5302efe84101a
+Author: Calvin Szeto at ENS <szeto.calvin@utexas.edu>
+Date:   Sun Jul 1 15:29:51 2012 -0500
+
+    Add model plan.
+
+commit 1bcc393c8db2d0b7974e9f607502d5433a82961c
+Author: Kevin Tang <tangkevin@utexas.edu>
+Date:   Sun Jul 1 15:23:58 2012 -0500
+
+    Changed CDC to AAP.
+
+commit 0c4442294d1784148b3172a9edb2432789295ad8
+Author: Kevin Tang <tangkevin@utexas.edu>
+Date:   Sun Jul 1 14:53:20 2012 -0500
+
+    Changed Bill Gates to Jonas Salk
+
+commit 98c7b6949892e01832c85315da49bf1764d864b1
+Merge: a9a13de 854f32b
+Author: Calvin Szeto at ENS <szeto.calvin@utexas.edu>
+Date:   Sat Jun 30 19:12:53 2012 -0500
+
+    Remove gaeunit.py
+
+commit a9a13de061f2ffbd33e572c8e981cdb48c070bff
+Author: Calvin Szeto at ENS <szeto.calvin@utexas.edu>
+Date:   Sat Jun 30 19:11:05 2012 -0500
+
+    Create import.
+
+commit 854f32b8fb437a9431c78064c3b18bab76dff520
+Author: Kevin Jacoby <cs.utexas.edu>
+Date:   Sat Jun 30 18:55:20 2012 -0500
+
+    Messy HTML files
+
+commit 35de1451c54678bf50e405ed7a3534bb01678876
+Author: Kevin Tang <tangkevin@utexas.edu>
+Date:   Sat Jun 30 16:46:11 2012 -0500
+
+    Renamed Test.py to TestWC1.py
+
+commit 93012a5f84d4f159e8a6e95d454c8c0e0fd89df9
+Author: Kevin Tang <tangkevin@utexas.edu>
+Date:   Sat Jun 30 16:32:49 2012 -0500
+
+    Edited some entries
+
+commit 323d3a6eb8b94bd91b0440a32f018fc511fa4a28
+Merge: 9612a1e 396b281
+Author: Kevin Tang <tangkevin@utexas.edu>
+Date:   Sat Jun 30 16:28:02 2012 -0500
+
+    Merge branch 'master' of https://github.com/calvinszeto/cs373-wc
+
+commit 396b281bde377a0d499112336ae116fa3a802ba2
+Author: Daniel Finan <dfinan09@gmail.com>
+Date:   Sat Jun 30 16:25:40 2012 -0500
+
+    Added greece crisis and org
+
+commit 9612a1e7b24f9ae719cd5d4a8c3127ac0238db8d
+Author: Kevin Tang <tangkevin@utexas.edu>
+Date:   Sat Jun 30 16:24:45 2012 -0500
+
+    Updated DATA with the inclusion of The International Monetary Fund and the
+    Greek Debt Crisis
+
+commit c6b8448672012929c561da0f32e3abbea0d8fa41
+Author: Kevin Tang <tangkevin@utexas.edu>
+Date:   Sat Jun 30 15:47:19 2012 -0500
+
+    Setup unit tests
+
+commit a4375cff8303f8b7b5d0b0998c844787c66a6db7
+Author: Kevin Jacoby <cs.utexas.edu>
+Date:   Sat Jun 30 14:39:09 2012 -0500
+
+    Validates
+
+commit 3452aa9b2dded2fab8ac554993d776efab964d3f
+Author: Kevin Jacoby <cs.utexas.edu>
+Date:   Sat Jun 30 14:32:04 2012 -0500
+
+    Added childhood obesity to XML files
+
+commit 1d07dfc21e29236c799a53b4bdc9bb3d5a5fa222
+Author: Kevin Tang <tangkevin@utexas.edu>
+Date:   Sat Jun 30 14:05:54 2012 -0500
+
+    Removed unused links for Michelle Obama and Bill Gates
+
+commit 72e7752209e175cc003c30de2d32eba4b631f86a
+Author: Calvin Szeto at ENS <szeto.calvin@utexas.edu>
+Date:   Sat Jun 30 13:56:03 2012 -0500
+
+    Create polio and tgpei in xml file.
+
+commit 0a2679fb82557040cdd5a594e8d8c19babea9894
+Author: Calvin Szeto at ENS <szeto.calvin@utexas.edu>
+Date:   Sat Jun 30 13:31:22 2012 -0500
+
+    Set up GAE application.
+
+commit 43f84fb581c1bdcf1eeec1d23d029461e363bc3f
+Author: Calvin Szeto <szeto.calvin@gmail.com>
+Date:   Sat Jun 30 10:32:06 2012 -0500
+
+    Add George Papandreou to xml file and confirm that xml file validates.
+
+commit 16698a1c2d55d5877e7614220bcae5e1ee864457
+Author: Calvin Szeto <szeto.calvin@gmail.com>
+Date:   Sat Jun 30 10:13:09 2012 -0500
+
+    Add Kenneth Feinberg to xml file.
+
+commit 81f20ee58233af1c522b856b601cf35e30221921
+Author: Kevin Tang <tangkevin@utexas.edu>
+Date:   Sat Jun 30 09:04:29 2012 -0500
+
+    Added my data to the xml
+
+commit 2844934bb904a83f839cb3931f93f0673f3efa17
+Author: Connor Bowman <cs.utexas.edu>
+Date:   Fri Jun 29 21:02:54 2012 -0500
+
+    XML validates so ADD YOUR RESEARCH TO THE XML
+
+commit 4458c907aac29984c568df91a303e9cb149a1308
+Author: Calvin Szeto <szeto.calvin@gmail.com>
+Date:   Thu Jun 28 15:10:37 2012 -0500
+
+    Add Kenneth Feinberg and George Papandreou to DATA.txt.
+
+commit 87470267ec7d7390f2f6b77f5eb4fa3dfff0c752
+Author: Calvin Szeto <szeto.calvin@gmail.com>
+Date:   Thu Jun 28 14:53:07 2012 -0500
+
+    Reformat DATA.txt to match the one on public repository.
+
+commit 8f822a9ab5f9693a3d0a44c74a1f219ea16f8da6
+Author: Calvin Szeto <szeto.calvin@gmail.com>
+Date:   Thu Jun 28 14:31:20 2012 -0500
+
+    Create DATA.txt to hold research.
+
+commit 0c82daa9ce87e7489fb2f59f59765bc040f968c3
+Author: Calvin Szeto <szeto.calvin@gmail.com>
+Date:   Mon Jun 25 22:50:25 2012 -0500
+
+    Create README file.

@@ -1,6 +1,11 @@
 #!/usr/bin/env python
 #
 
+#
+# goodbyeworld.py
+# Handles the Export feature
+#
+
 import os
 import urllib
 from Models import *
@@ -15,6 +20,10 @@ from google.appengine.ext import db
 
 class ExportHandler(webapp.RequestHandler):
     def get(self):
+        """
+        Handles the export feature of the GAE application.
+        Called at calvins-cs373-wc.appspot.com/export
+        """
         self.response.headers.add_header('content-type','text/xml')
         crises = Crisis.all()
         infos = Info.all()
