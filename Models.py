@@ -84,17 +84,9 @@ class Person(db.Model):
     info_ref = db.ReferenceProperty(Info)
     misc = db.StringProperty()
 
-class WCObject(db.Model):
-    crisis_ref = db.ReferenceProperty(Crisis)
-    person_ref = db.ReferenceProperty(Person)
-    org_ref = db.ReferenceProperty(Organization)
-
 class Ref(db.Model):
-    crisis = db.ReferenceProperty(Crisis, collection_name='refs')
-    org= db.ReferenceProperty(Organization, collection_name='refs')
-    person = db.ReferenceProperty(Person, collection_name='refs')
+    ref_type = db.StringProperty()
     site = db.StringProperty()
     title = db.StringProperty()
     url = db.StringProperty()
     description = db.StringProperty()
-

@@ -96,80 +96,95 @@ class UploadHandler(blobstore_handlers.BlobstoreUploadHandler):
                 for x in ref_dict:
                     ref_dict[x] = pi.find(x).text
                 pir = Ref(parent=cris,**ref_dict)
+                pir.ref_type="primaryImage"
                 pir.put()
                 ii = r.find("image")
                 for x in ref_dict:
                     ref_dict[x] = ii.find(x).text
                 iir = Ref(parent=cris,**ref_dict)
+                iir.ref_type="image"
                 iir.put()
                 vi = r.find("video")
                 for x in ref_dict:
                     ref_dict[x] = vi.find(x).text
                 vir = Ref(parent=cris,**ref_dict)
+                vir.ref_type="video"
                 vir.put()
                 si = r.find("social")
                 for x in ref_dict:
                     ref_dict[x] = si.find(x).text
                 sir = Ref(parent=cris,**ref_dict)
+                sir.ref_type="social"
                 sir.put()
                 ei = r.find("ext")
                 for x in ref_dict:
                     ref_dict[x] = ei.find(x).text
                 eir = Ref(parent=cris,**ref_dict)
+                eir.ref_type="ext"
                 eir.put()
-                    
+            
             # Organizations
             for o in tree.findall("organization"):
                 for x in org_dict:
                     org_dict[x] = c.find(x).text
                 org = Organization(**org_dict)
+                org.put()
                 # Organization - Info
                 i = o.find("info")
                 for x in org_info_dict:
                     org_info_dict[x] = i.find(x).text
-                inf = Info(**org_info_dict)
+                inf = Info(parent=org,**org_info_dict)
                 inf.info_type = i.find("type").text
+                inf.put()
                 # Organization - Info - Contact
                 t = i.find("contact")
                 for x in org_contact_dict:
                     org_contact_dict[x] = t.find(x).text 
-                con = Contact(**org_contact_dict)	
+                con = Contact(parent=inf,**org_contact_dict)	
+                con.put()
                 # Organization - Info - Contact - Mail
                 m = i.find("contact/mail")
                 for x in org_mail_dict:
                     org_mail_dict[x] = m.find(x).text
-                mail = Mail(**org_mail_dict)
+                mail = Mail(parent=con,**org_mail_dict)
+                mail.put()
                 # Organization - Info - Location
                 l = i.find("loc")
                 for x in org_loc_dict:
                     org_loc_dict[x] = l.find(x).text
-                loc = Location(**org_loc_dict)
+                loc = Location(parent=inf,**org_loc_dict)
+                loc.put()
                 # Organization - Ref
                 r = c.find("ref")
                 pi = r.find("primaryImage")
                 for x in ref_dict:
                     ref_dict[x] = pi.find(x).text
-                pir = Ref(**ref_dict)
+                pir = Ref(parent=org,**ref_dict)
+                pir.ref_type="primaryImage"
                 pir.put()
                 ii = r.find("image")
                 for x in ref_dict:
                     ref_dict[x] = ii.find(x).text
-                iir = Ref(**ref_dict)
+                iir = Ref(parent=org,**ref_dict)
+                iir.ref_type="image"
                 iir.put()
                 vi = r.find("video")
                 for x in ref_dict:
                     ref_dict[x] = vi.find(x).text
-                vir = Ref(**ref_dict)
+                vir = Ref(parent=org,**ref_dict)
+                vir.ref_type="video"
                 vir.put()
                 si = r.find("social")
                 for x in ref_dict:
                     ref_dict[x] = si.find(x).text
-                sir = Ref(**ref_dict)
+                sir = Ref(parent=org,**ref_dict)
+                sir.ref_type="social"
                 sir.put()
                 ei = r.find("ext")
                 for x in ref_dict:
                     ref_dict[x] = ei.find(x).text
-                eir = Ref(**ref_dict)
+                eir = Ref(parent=org,**ref_dict)
+                eir.ref_type="ext"
                 eir.put()
 
             # Person
@@ -177,44 +192,51 @@ class UploadHandler(blobstore_handlers.BlobstoreUploadHandler):
                 for x in person_dict:
                     person_dict[x] = p.find(x).text
                 per = Person(**person_dict)
+                per.put()
                 # Person - Info
                 i = p.find("info")
                 for x in person_info_dict:
                     person_info_dict[x] = i.find(x).text
-                inf = Info(**person_info_dict)
-
+                inf = Info(parent=per,**person_info_dict)
                 inf.info_type = i.find("type").text
+                inf.put()
                 # Person - Info - Birthdate
                 b = i.find("birthdate")
                 for x in person_birth_dict:
                     person_birth_dict[x] = b.find(x).text
-                bday = Time(**person_birth_dict)
+                bday = Time(parent=inf,**person_birth_dict)
+                bday.put()
                 # Person - Ref
                 r = c.find("ref")
                 pi = r.find("primaryImage")
                 for x in ref_dict:
                     ref_dict[x] = pi.find(x).text
-                pir = Ref(**ref_dict)
+                pir = Ref(parent=per,**ref_dict)
+                pir.ref_type="primaryImage"
                 pir.put()
                 ii = r.find("image")
                 for x in ref_dict:
                     ref_dict[x] = ii.find(x).text
-                iir = Ref(**ref_dict)
+                iir = Ref(parent=per,**ref_dict)
+                iir.ref_type="image"
                 iir.put()
                 vi = r.find("video")
                 for x in ref_dict:
                     ref_dict[x] = vi.find(x).text
-                vir = Ref(**ref_dict)
+                vir = Ref(parent=per,**ref_dict)
+                vir.ref_type="video"
                 vir.put()
                 si = r.find("social")
                 for x in ref_dict:
                     ref_dict[x] = si.find(x).text
-                sir = Ref(**ref_dict)
+                sir = Ref(parent=per,**ref_dict)
+                sir.ref_type="social"
                 sir.put()
                 ei = r.find("ext")
                 for x in ref_dict:
                     ref_dict[x] = ei.find(x).text
-                eir = Ref(**ref_dict)
+                eir = Ref(parent=per,**ref_dict)
+                eir.ref_type="ext"
                 eir.put()
         except AttributeError:
             print "Invalid"

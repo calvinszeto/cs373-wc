@@ -31,6 +31,14 @@ class ExportHandler(webapp.RequestHandler):
         locs = Location.all()
         humans = Human.all()
         economics = Economic.all()
+        orgs = Organization.all()
+        peeps = Person.all()
+        template_values = {
+            'crises':crises
+            }
+        path = os.path.join(os.path.dirname(__file__), 'template.xml')
+        self.response.out.write(template.render(path, template_values))
+        """
         template_values = {
             'crisis0name': crises[0].name,
             'info0help': infos[0].info_help,
@@ -81,8 +89,7 @@ class ExportHandler(webapp.RequestHandler):
             'economic3amount': economics[3].amount,
             'economic3currency': economics[3].currency,
             }
-        path = os.path.join(os.path.dirname(__file__), 'template.xml')
-        self.response.out.write(template.render(path, template_values))
+        """
 
 
 def main():

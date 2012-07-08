@@ -1,10 +1,11 @@
 On export:
-Want to go use a loop, one for crises, one for organizations, one for people.
-Thus, template values must all be lists. Learn how to use lists in Django.
+Want to go use a loop, one for crises, one for organizations, one for people. Thus, template values must all be lists. 
+DONE.
 
 -----
 
 To create parent-child relationship:
+{
 inf = Info(parent=cris, **info_dict)
 
 Then, during export:
@@ -13,20 +14,28 @@ infos = Info.all()
 
 for c in crises:
     i = infos.ancestor(c).get() # returns the info for c
+}
+Done.
 
 Can you use the same infos Query for the next crisis or do you need to make a new one?
+YES.
 
 How do you test this?
+Don't know.
 
 -----
 
 On accepting multiple refs:
 1. How do we make sure there is at least one of each kind?
     Do a findall on each type of ref; if the list is empty then it's invalid.
+        Not done.
     Still need a ref-type attribute for the export.
+        Done.
 2. For the template, we need code in the template to iterate through some list of values.
+    Done.
 
 -----
 
 Other:
 Make a better invalid page.
+    Not done.

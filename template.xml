@@ -1,36 +1,37 @@
 <worldCrises>
 	<!-- CRISIS -->
 
+    {% for c in crises %}
 	<crisis id = "deepwater">
-		<name>{{crisis0name}}</name>
+		<name>{{c.name}}</name>
 		<info>
 			<history></history>
-			<help>{{info0help}}</help>
-			<resources>{{info0resources}}</resources> 
-			<type>{{info0type}}</type>
+			<help></help>
+			<resources></resources> 
+			<type></type>
 			<time>
 				<time></time>
-				<day>{{time0day}}</day>
-				<month>{{time0month}}</month>
-				<year>{{time0year}}</year>
+				<day></day>
+				<month></month>
+				<year></year>
 				<misc></misc>
 			</time>
 			<loc>
 				<city></city>
-				<region>{{loc0region}}</region>
+				<region></region>
 				<country></country>
 			</loc> 
 			<impact>
 				<human>
-					<deaths>{{human0deaths}}</deaths>
-					<displaced>{{human0displaced}}</displaced>
-					<injured>{{human0injured}}</injured>
-					<missing>{{human0missing}}</missing>
+					<deaths></deaths>
+					<displaced></displaced>
+					<injured></injured>
+					<missing></missing>
 					<misc></misc>
 				</human>
 				<economic>
-					<amount>{{economic0amount}}</amount>
-					<currency>{{economic0currency}}</currency>
+					<amount></amount>
+					<currency></currency>
 					<misc></misc>
 				</economic>
 			</impact> 
@@ -71,219 +72,7 @@
 		<org idref = "bp"/>
 		<person idref = "feinberg"/>
 	</crisis>
-
-	<crisis id = "polio">
-		<name>{{crisis1name}}</name>
-		<info>
-			<history></history>
-			<help></help>
-			<resources></resources> 
-			<type></type>
-			<time>
-				<time></time>
-				<day>{{time1day}}</day>
-				<month>{{time1month}}</month>
-				<year>{{time1year}}</year>
-				<misc></misc>
-			</time>
-			<loc>
-				<city></city>
-				<region></region>
-				<country></country>
-			</loc> 
-			<impact>
-				<human>
-					<deaths>{{human1deaths}}</deaths>
-					<displaced>{{human1displaced}}</displaced>
-					<injured>{{human1injured}}</injured>
-					<missing>{{human1missing}}</missing>
-					<misc></misc>
-				</human>
-				<economic>
-					<amount>{{economic1amount}}</amount>
-					<currency></currency>
-					<misc></misc>
-				</economic>
-			</impact> 
-		</info>
-		<ref>
-            <primaryImage>
-                <site></site>
-				<title></title>
-				<url></url>
-				<description></description>
-            </primaryImage>
-			<image>
-                <site></site>
-				<title></title>
-				<url></url>
-				<description></description>
-			</image>
-			<video>
-				<site></site>
-				<title></title>
-				<url>http://www.youtube.com/watch?v=AfmwcShVeM0</url>
-				<description></description>
-			</video>
-			<social>
-                <site></site>
-				<title></title>
-				<url>http://www.facebook.com/pages/End-Polio-Now/78976274836</url>
-				<description></description>
-			</social>
-			<ext>
-                <site></site>
-				<title></title>
-				<url>http://www.gatesfoundation.org/polio/pages/default.aspx</url>
-				<description></description>
-			</ext>    
-		</ref>
-		<misc></misc>
-		<org idref = "tgpei"/>
-		<person idref = "jonassalk"/>
-	</crisis>
-	
-	<crisis id = "childhoodobesity">
-		<name>{{crisis2name}}</name>
-		<info>
-			<history>{{info2history}}</history>
-			<help>{{info2help}}</help>
-			<resources></resources> 
-			<type></type>
-			<time>
-				<time></time>
-				<day>{{time2day}}</day>
-				<month>{{time2month}}</month>
-				<year>{{time2year}}</year>
-				<misc></misc>
-			</time>
-			<loc>
-				<city></city>
-				<region></region>
-				<country>{{loc2country}}</country>
-			</loc> 
-			<impact>
-				<human>
-					<deaths>{{human2deaths}}</deaths>
-					<displaced>{{human2displaced}}</displaced>
-					<injured>{{human2injured}}</injured>
-					<missing>{{human2missing}}</missing>
-					<misc></misc>
-				</human>
-				<economic>
-					<amount>{{economic2amount}}</amount>
-					<currency></currency>
-					<misc></misc>
-				</economic>
-			</impact> 
-		</info>
-		<ref>
-            <primaryImage>
-                <site></site>
-				<title></title>
-				<url></url>
-				<description></description>
-            </primaryImage>
-			<image>
-				<site></site>
-				<title></title>
-				<url>http://moviecitynews.com/wp-content/uploads/2012/06/Fat-Kid-Rules-the-World_04.jpg</url>
-				<description></description>
-			</image>
-			<video>
-				<site></site>
-				<title></title>
-				<url>http://www.youtube.com/watch?v=dLMoFST_Lmc</url>
-				<description></description>
-			</video>
-			<social>
-				<site></site>
-				<title></title>
-				<url>https://twitter.com/CDCObesity</url>
-				<description></description>
-			</social>
-			<ext>
-				<site></site>
-				<title></title>
-				<url>http://www.cdc.gov/healthyyouth/obesity/facts.htm</url>
-				<description></description>
-			</ext>    
-		</ref>
-		<misc></misc>
-		<org idref = "aap"/>
-		<person idref = "michelleobama"/>
-	</crisis>
-
-	<crisis id = "greece">
-		<name>{{crisis3name}}</name>
-		<info>
-			<history>{{info3history}}</history>
-			<help>{{info3help}}</help>
-			<resources></resources> 
-			<type>{{info3type}}</type>
-			<time>
-				<time></time>
-				<day>{{time3day}}</day>
-				<month>{{time3month}}</month>
-				<year>{{time3year}}</year>
-				<misc></misc>
-			</time>
-			<loc>
-				<city>{{loc3city}}</city>
-				<region></region>
-				<country>{{loc3country}}</country>
-			</loc> 
-			<impact>
-				<human>
-					<deaths>{{human3deaths}}</deaths>
-					<displaced>{{human3displaced}}</displaced>
-					<injured>{{human3injured}}</injured>
-					<missing>{{human3missing}}</missing>
-					<misc></misc>
-				</human>
-				<economic>
-					<amount>{{economic3amount}}</amount>
-					<currency>{{economic3currency}}</currency>
-					<misc></misc>
-				</economic>
-			</impact> 
-		</info>
-		<ref>
-            <primaryImage>
-                <site></site>
-				<title></title>
-				<url></url>
-				<description></description>
-            </primaryImage>
-			<image>
-				<site></site>
-				<title>Rioting in Greece</title>
-				<url>http://cdn.theatlantic.com/static/infocus/athens021312/s_a06_10125965.jpg</url>
-				<description></description>
-			</image>
-			<video>
-				<site>Youtube</site>
-				<title></title>
-				<url>http://www.youtube.com/watch?v=rshdJZruH_0</url>
-				<description></description>
-			</video>
-			<social>
-				<site></site>
-				<title>Facebook</title>
-				<url>https://www.facebook.com/GreeceDebtFree</url>
-				<description></description>
-			</social>
-			<ext>
-				<site></site>
-				<title>CNN</title>
-				<url>http://www.cnn.com/2010/BUSINESS/02/10/greek.debt.qanda/index.html</url>
-				<description></description>
-			</ext>    
-		</ref>
-		<misc></misc>
-		<org idref = "imf"/>
-		<person idref = "papandreou"/>
-	</crisis>
+    {% endfor %}
 	
 	<!-- ORGANIZATIONS -->
 	
