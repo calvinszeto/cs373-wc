@@ -36,6 +36,7 @@ class ExportHandler(webapp.RequestHandler):
         economics = Economic.all()
         contacts = Contact.all()
         mails = Mail.all()
+        refs = Ref.all()
 
         cris_list = []
         for c in crises:
@@ -52,6 +53,8 @@ class ExportHandler(webapp.RequestHandler):
             cris_list[index]["human"]=humans.ancestor(i).get()
             # Crisis - Info - Impact - Economic
             cris_list[index]["economic"]=economics.ancestor(i).get()
+            # Crisis - Ref
+            cris_list[index]["refs"]=refs.ancestor(c).run()
         org_list = []
         for o in orgs:
             index = len(org_list)
@@ -65,6 +68,8 @@ class ExportHandler(webapp.RequestHandler):
             org_list[index]["mail"]=mails.ancestor(i).get()
             # Organization - Location
             org_list[index]["loc"]=locs.ancestor(i).get()
+            # Organization - Ref
+            org_list[index]["refs"]=refs.ancestor(o).run()
         persons_list = []
         for p in peeps:
             index = len(persons_list)
@@ -74,6 +79,8 @@ class ExportHandler(webapp.RequestHandler):
             persons_list[index]["info"]=i
             # Person - Info - Contact
             persons_list[index]["time"]=times.ancestor(i).get()
+            # Person - Ref
+            persons_list[index]["refs"]=refs.ancestor(p).run()
             
         template_values = {
             'crises':cris_list,

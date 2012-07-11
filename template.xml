@@ -37,36 +37,14 @@
 			</impact> 
 		</info>
 		<ref>
-            <primaryImage>
-                <site></site>
-				<title></title>
-				<url></url>
-				<description></description>
-            </primaryImage>
-			<image>
-                <site></site>
-				<title>Deepwater Horizon</title>
-				<url>http://www.thebuzzmedia.com/wp-content/uploads/2010/06/bp-oil-spill-bird-covered-in-oil.jpg</url>
-				<description></description>
-			</image>
-			<video>
-				<site>Youtube</site>
-				<title></title>
-				<url>http://www.youtube.com/watch?v=lY-PikuXTYY</url>
-				<description></description>
-			</video>
-			<social>
-                <site></site>
-				<title>Facebook</title>
-				<url>http://www.facebook.com/BPOilCrisisInTheGulf?ref=ts</url>
-                <description></description>
-			</social>
-			<ext>
-                <site></site>
-				<title>Wikipedia</title>
-				<url>http://en.wikipedia.org/wiki/Deepwater_Horizon_oil_spill#Consequences</url>
-				<description></description>
-			</ext>    
+            {% for r in c.refs %}
+            <{{r.ref_type}}>
+                <site>{{r.site}}</site>
+				<title>{{r.title}}</title>
+				<url>{{r.url}}</url>
+				<description>{{r.description}}</description>
+            </{{r.ref_type}}>
+            {% endfor %}
 		</ref>
 		<misc>{{c.crisis.misc}}</misc>
         {% for o in c.crisis.orgs %}
@@ -104,36 +82,14 @@
 			</loc>    
 		</info>
 		<ref>
-            <primaryImage>
-                <site></site>
-				<title></title>
-				<url></url>
-				<description></description>
-            </primaryImage>
-			<image>
-				<site>Youtube</site>
-				<title>BP's Logo</title>
-				<url>http://www.wbrz.com/images/news/bpbiglogo.jpg</url>
-				<description></description>
-			</image>
-			<video>
-				<site>Youtube</site>
-				<title></title>
-				<url>http://www.youtube.com/watch?v=KtWoPZluI2E</url>
-				<description></description>
-			</video>
-			<social>
-				<site>Facebook</site>
-				<title>BP's Facebook Page</title>
-				<url>http://facebook.com/BPAmerica</url>
-				<description></description>
-			</social>
-			<ext>
-				<site>BP</site>
-				<title>BP</title>
-				<url>http://www.bp.com</url>
-				<description></description>
-			</ext>     
+            {% for r in o.refs %}
+            <{{r.ref_type}}>
+                <site>{{r.site}}</site>
+				<title>{{r.title}}</title>
+				<url>{{r.url}}</url>
+				<description>{{r.description}}</description>
+            </{{r.ref_type}}>
+            {% endfor %}
 		</ref>
 		<misc>{{o.org.misc}}</misc>
         {% for c in o.org.crises %}
@@ -163,37 +119,14 @@
 			<biography>{{p.info.biography}}</biography>    
 		</info>
 		<ref>
-            <primaryImage>
-                <site></site>
-				<title></title>
-				<url></url>
-				<description></description>
-            </primaryImage>
-			<image>
-                <site></site>
-				<title>Kenneth Feinberg Speaking</title>
-				<url>http://draketoulouse.files.wordpress.com/2011/06/feinberg2.jpg</url>
-				<description>Kenneth Feinberg gesturing while speaking in a microphone.</description>
-			</image>
-			<video>
-				<site>Youtube</site>
-				<title>Kenneth Feinberg on the BP oil spill</title>
-				<url>http://www.youtube.com/watch?v=dUe9mCKj4A8
-</url>
-				<description>Kenneth Feinberg being interviewed on the controversy regarding the BP Deepwater Horizon Disaster Victim Compensation Fund.</description>
-			</video>
-			<social>
-                <site></site>
-				<title>Kenneth Feinberg Facebook</title>
-				<url>http://www.facebook.com/pages/Kenneth-Feinberg/143047909045042</url>
-				<description></description>
-			</social>
-			<ext>
-                <site></site>
-				<title>Feinberg Rozen</title>
-				<url>http://www.feinbergrozen.com/</url>
-				<description>The official website of Feinberg's law firm.</description>
-			</ext>       
+            {% for r in p.refs %}
+            <{{r.ref_type}}>
+                <site>{{r.site}}</site>
+				<title>{{r.title}}</title>
+				<url>{{r.url}}</url>
+				<description>{{r.description}}</description>
+            </{{r.ref_type}}>
+            {% endfor %}
 		</ref>
 		<misc>{{p.person.misc}}</misc>
         {% for c in p.person.crises %}
