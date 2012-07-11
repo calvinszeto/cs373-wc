@@ -1,10 +1,27 @@
-On export:
-Want to go use a loop, one for crises, one for organizations, one for people. Thus, template values must all be lists. 
-DONE.
+NOT DONE:
+
+Add asserts
+
+Dynamic HTMLs
+
+Testing
+
+
+Make a better invalid page.
+
+Datastore merging (Phase 3)
+
+Add more data.
+
+With tests for the integers.
+
+Fix all the model properties
 
 -----
 
-Fix all the model properties
+On export:
+Want to go use a loop, one for crises, one for organizations, one for people. Thus, template values must all be lists. 
+DONE.
 
 -----
 
@@ -24,9 +41,6 @@ Done.
 Can you use the same infos Query for the next crisis or do you need to make a new one?
 YES.
 
-How do you test this?
-Don't know.
-
 -----
 
 On accepting multiple refs:
@@ -42,18 +56,7 @@ On accepting multiple refs:
 
 IMPORT:
 
-Instead of storing None, store ""
-
-Datastore clearing/merging
-
-Make a better invalid page.
-    Not done.
-
-Separate invalid check.
-
 Store ids/idrefs
 DONE.
 
 -----
-
-Add more data.

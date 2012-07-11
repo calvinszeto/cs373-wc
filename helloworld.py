@@ -41,227 +41,404 @@ class MainHandler(webapp.RequestHandler):
         self.response.out.write("""Upload File: <input type="file" name="file"><br> <input type="submit" name="submit" value="Submit"> </form></body></html>""")
 
 class UploadHandler(blobstore_handlers.BlobstoreUploadHandler):
-    def post(self):
+    def validate(self):
         """
-        Handles the import of a file into the GAE Models.
-        Searches for specific tags per the Schema and quits if file is invalid.
+        Validates the given XML
         """
         upload_files = self.get_uploads('file')  # 'file' is file upload field in the form
         blob_info = upload_files[0]
         tree = ElementTree()
         br = blob_info.open()
         tree.parse(br)
-        db.delete(db.Query(keys_only=True)) # Clear the datastore
         try:
             # Crises
             for c in tree.findall("crisis"):
                 for x in crisis_dict:
-                    crisis_dict[x] = c.find(x).text
-                cris = Crisis(**crisis_dict)
-                cris.crisis_id = c.attrib["id"]
+                    text = c.find(x).text
+                text = c.attrib["id"]
                 # Crisis - Org
                 for org in c.findall("org"):
-                    cris.orgs.append(org.attrib["idref"]) 
+                    text = org.attrib["idref"] 
                 # Crisis - Person
                 for person in c.findall("person"):
-                    cris.persons.append(person.attrib["idref"]) 
-                cris.put()
+                    text = person.attrib["idref"] 
                 # Crisis - Info
                 i = c.find("info")
                 for x in info_dict:
-                    info_dict[x] = i.find(x).text
-                inf = Info(parent=cris,**info_dict)
-                inf.info_help = i.find("help").text
-                inf.info_type = i.find("type").text
-                inf.put()
+                    text = i.find(x).text
+                text = i.find("help").text
+                text = i.find("type").text
                 # Crisis - Info - Time
                 t = i.find("time")
                 for x in time_dict:
-                    time_dict[x] = t.find(x).text
-                tim = Time(parent=inf,**time_dict)
-                tim.put()
+                    text = t.find(x).text
                 # Crisis - Info - Location
                 l = i.find("loc")
                 for x in loc_dict:
-                    loc_dict[x] = l.find(x).text
-                loc = Location(parent=inf,**loc_dict)
-                loc.put()
+                    text = l.find(x).text
                 # Crisis - Info - Impact/Human
                 h = i.find("impact/human")
                 for x in human_dict:
-                    human_dict[x] = h.find(x).text
-                hum = Human(parent=inf,**human_dict)
-                hum.put()
+                    text = h.find(x).text
                 # Crisis - Info - Impact/Economic
                 e = i.find("impact/economic")
                 for x in economic_dict:
-                    economic_dict[x] = e.find(x).text
-                eco = Economic(parent=inf,**economic_dict)
-                eco.put()
+                    text = e.find(x).text
                 # Crisis - Ref
                 r = c.find("ref")
                 for pi in r.findall("primaryImage"):
                     for x in ref_dict:
-                        ref_dict[x] = pi.find(x).text
-                    pir = Ref(parent=cris,**ref_dict)
-                    pir.ref_type="primaryImage"
-                    pir.put()
+                        text = pi.find(x).text
                 for ii in r.findall("image"):
                     for x in ref_dict:
-                        ref_dict[x] = ii.find(x).text
-                    iir = Ref(parent=cris,**ref_dict)
-                    iir.ref_type="image"
-                    iir.put()
+                        text = ii.find(x).text
                 for vi in r.findall("video"):
                     for x in ref_dict:
-                        ref_dict[x] = vi.find(x).text
-                    vir = Ref(parent=cris,**ref_dict)
-                    vir.ref_type="video"
-                    vir.put()
+                        text = vi.find(x).text
                 for si in r.findall("social"):
                     for x in ref_dict:
-                        ref_dict[x] = si.find(x).text
-                    sir = Ref(parent=cris,**ref_dict)
-                    sir.ref_type="social"
-                    sir.put()
+                        text = si.find(x).text
                 for ei in r.findall("ext"):
                     for x in ref_dict:
-                        ref_dict[x] = ei.find(x).text
-                    eir = Ref(parent=cris,**ref_dict)
-                    eir.ref_type="ext"
-                    eir.put()
+                        text = ei.find(x).text
             
             # Organizations
             for o in tree.findall("organization"):
                 for x in org_dict:
-                    org_dict[x] = c.find(x).text
-                org = Organization(**org_dict)
-                org.org_id = o.attrib["id"]
+                    text = c.find(x).text
+                text = o.attrib["id"]
                 # Organization - Org
                 for cris in o.findall("crisis"):
-                    org.crises.append(cris.attrib["idref"]) 
+                    text=cris.attrib["idref"] 
                 # Organization - Person
                 for person in o.findall("person"):
-                    org.persons.append(person.attrib["idref"]) 
-                org.put()
+                    text=person.attrib["idref"] 
                 # Organization - Info
                 i = o.find("info")
                 for x in org_info_dict:
-                    org_info_dict[x] = i.find(x).text
-                inf = Info(parent=org,**org_info_dict)
-                inf.info_type = i.find("type").text
-                inf.put()
+                    text = i.find(x).text
+                text = i.find("type").text
                 # Organization - Info - Contact
                 t = i.find("contact")
                 for x in org_contact_dict:
-                    org_contact_dict[x] = t.find(x).text 
-                con = Contact(parent=inf,**org_contact_dict)	
-                con.put()
+                    text = t.find(x).text 
                 # Organization - Info - Contact - Mail
                 m = i.find("contact/mail")
                 for x in org_mail_dict:
-                    org_mail_dict[x] = m.find(x).text
-                mail = Mail(parent=con,**org_mail_dict)
-                mail.put()
+                    text = m.find(x).text
                 # Organization - Info - Location
                 l = i.find("loc")
                 for x in org_loc_dict:
-                    org_loc_dict[x] = l.find(x).text
-                loc = Location(parent=inf,**org_loc_dict)
-                loc.put()
+                    text = l.find(x).text
                 # Organization - Ref
                 r = o.find("ref")
                 for pi in r.findall("primaryImage"):
                     for x in ref_dict:
-                        ref_dict[x] = pi.find(x).text
-                    pir = Ref(parent=org,**ref_dict)
-                    pir.ref_type="primaryImage"
-                    pir.put()
+                        text = pi.find(x).text
                 for ii in r.findall("image"):
                     for x in ref_dict:
-                        ref_dict[x] = ii.find(x).text
-                    iir = Ref(parent=org,**ref_dict)
-                    iir.ref_type="image"
-                    iir.put()
+                        text = ii.find(x).text
                 for vi in r.findall("video"):
                     for x in ref_dict:
-                        ref_dict[x] = vi.find(x).text
-                    vir = Ref(parent=org,**ref_dict)
-                    vir.ref_type="video"
-                    vir.put()
+                        text = vi.find(x).text
                 for si in r.findall("social"):
                     for x in ref_dict:
-                        ref_dict[x] = si.find(x).text
-                    sir = Ref(parent=org,**ref_dict)
-                    sir.ref_type="social"
-                    sir.put()
+                        text = si.find(x).text
                 for ei in r.findall("ext"):
                     for x in ref_dict:
-                        ref_dict[x] = ei.find(x).text
-                    eir = Ref(parent=org,**ref_dict)
-                    eir.ref_type="ext"
-                    eir.put()
+                        text = ei.find(x).text
 
             # Person
             for p in tree.findall("person"):
                 for x in person_dict:
-                    person_dict[x] = p.find(x).text
-                per = Person(**person_dict)
-                per.person_id = p.attrib["id"]
+                    text = p.find(x).text
+                text = p.attrib["id"]
                 # Person - Crisis
                 for cris in p.findall("crisis"):
-                    per.crises.append(cris.attrib["idref"]) 
+                    text=cris.attrib["idref"]
                 # Person - Org
                 for org in p.findall("org"):
-                    per.orgs.append(org.attrib["idref"]) 
-                per.put()
+                    text=org.attrib["idref"] 
                 # Person - Info
                 i = p.find("info")
                 for x in person_info_dict:
-                    person_info_dict[x] = i.find(x).text
-                inf = Info(parent=per,**person_info_dict)
-                inf.info_type = i.find("type").text
-                inf.put()
+                    text = i.find(x).text
+                text = i.find("type").text
                 # Person - Info - Birthdate
                 b = i.find("birthdate")
                 for x in person_birth_dict:
-                    person_birth_dict[x] = b.find(x).text
-                bday = Time(parent=inf,**person_birth_dict)
-                bday.put()
+                    text = b.find(x).text
                 # Person - Ref
                 r = p.find("ref")
                 for pi in r.findall("primaryImage"):
                     for x in ref_dict:
-                        ref_dict[x] = pi.find(x).text
-                    pir = Ref(parent=per,**ref_dict)
-                    pir.ref_type="primaryImage"
-                    pir.put()
+                        text = pi.find(x).text
                 for ii in r.findall("image"):
                     for x in ref_dict:
-                        ref_dict[x] = ii.find(x).text
-                    iir = Ref(parent=per,**ref_dict)
-                    iir.ref_type="image"
-                    iir.put()
+                        text = ii.find(x).text
                 for vi in r.findall("video"):
                     for x in ref_dict:
-                        ref_dict[x] = vi.find(x).text
-                    vir = Ref(parent=per,**ref_dict)
-                    vir.ref_type="video"
-                    vir.put()
+                        text = vi.find(x).text
                 for si in r.findall("social"):
                     for x in ref_dict:
-                        ref_dict[x] = si.find(x).text
-                    sir = Ref(parent=per,**ref_dict)
-                    sir.ref_type="social"
-                    sir.put()
+                        text = si.find(x).text
                 for ei in r.findall("ext"):
                     for x in ref_dict:
-                        ref_dict[x] = ei.find(x).text
-                    eir = Ref(parent=per,**ref_dict)
-                    eir.ref_type="ext"
-                    eir.put()
-        except AttributeError:
-            print "Invalid"
+                        text = ei.find(x).text
+        except :
+            self.response.out.write("Invalid XML")
+            return False
+        return True
+
+    def post(self):
+        """
+        Handles the import of a file into the GAE Models.
+        Searches for specific tags per the Schema and quits if file is invalid.
+        """
+        if(not self.validate()):
+            return
+        upload_files = self.get_uploads('file')  # 'file' is file upload field in the form
+        blob_info = upload_files[0]
+        tree = ElementTree()
+        br = blob_info.open()
+        tree.parse(br)
+        db.delete(db.Query(keys_only=True)) # Clear the datastore
+        # Crises
+        for c in tree.findall("crisis"):
+            for x in crisis_dict:
+                text = c.find(x).text
+                crisis_dict[x] = text if text is not None else ""
+            cris = Crisis(**crisis_dict)
+            cris.crisis_id = c.attrib["id"]
+            # Crisis - Org
+            for org in c.findall("org"):
+                cris.orgs.append(org.attrib["idref"]) 
+            # Crisis - Person
+            for person in c.findall("person"):
+                cris.persons.append(person.attrib["idref"]) 
+            cris.put()
+            # Crisis - Info
+            i = c.find("info")
+            for x in info_dict:
+                text = i.find(x).text
+                info_dict[x] = text if text is not None else ""
+            inf = Info(parent=cris,**info_dict)
+            inf.info_help = i.find("help").text
+            inf.info_type = i.find("type").text
+            inf.put()
+            # Crisis - Info - Time
+            t = i.find("time")
+            for x in time_dict:
+                text = t.find(x).text
+                time_dict[x] = text if text is not None else ""
+            tim = Time(parent=inf,**time_dict)
+            tim.put()
+            # Crisis - Info - Location
+            l = i.find("loc")
+            for x in loc_dict:
+                text = l.find(x).text
+                loc_dict[x] = text if text is not None else ""
+            loc = Location(parent=inf,**loc_dict)
+            loc.put()
+            # Crisis - Info - Impact/Human
+            h = i.find("impact/human")
+            for x in human_dict:
+                text = h.find(x).text
+                human_dict[x] = text if text is not None else ""
+            hum = Human(parent=inf,**human_dict)
+            hum.put()
+            # Crisis - Info - Impact/Economic
+            e = i.find("impact/economic")
+            for x in economic_dict:
+                text = e.find(x).text
+                economic_dict[x] = text if text is not None else ""
+            eco = Economic(parent=inf,**economic_dict)
+            eco.put()
+            # Crisis - Ref
+            r = c.find("ref")
+            for pi in r.findall("primaryImage"):
+                for x in ref_dict:
+                    text = pi.find(x).text
+                    ref_dict[x] = text if text is not None else ""
+                pir = Ref(parent=cris,**ref_dict)
+                pir.ref_type="primaryImage"
+                pir.put()
+            for ii in r.findall("image"):
+                for x in ref_dict:
+                    text = ii.find(x).text
+                    ref_dict[x] = text if text is not None else ""
+                iir = Ref(parent=cris,**ref_dict)
+                iir.ref_type="image"
+                iir.put()
+            for vi in r.findall("video"):
+                for x in ref_dict:
+                    text = vi.find(x).text
+                    ref_dict[x] = text if text is not None else ""
+                vir = Ref(parent=cris,**ref_dict)
+                vir.ref_type="video"
+                vir.put()
+            for si in r.findall("social"):
+                for x in ref_dict:
+                    text = si.find(x).text
+                    ref_dict[x] = text if text is not None else ""
+                sir = Ref(parent=cris,**ref_dict)
+                sir.ref_type="social"
+                sir.put()
+            for ei in r.findall("ext"):
+                for x in ref_dict:
+                    text = ei.find(x).text
+                    ref_dict[x] = text if text is not None else ""
+                eir = Ref(parent=cris,**ref_dict)
+                eir.ref_type="ext"
+                eir.put()
+        
+        # Organizations
+        for o in tree.findall("organization"):
+            for x in org_dict:
+                text = c.find(x).text
+                org_dict[x] = text if text is not None else ""
+            org = Organization(**org_dict)
+            org.org_id = o.attrib["id"]
+            # Organization - Org
+            for cris in o.findall("crisis"):
+                org.crises.append(cris.attrib["idref"]) 
+            # Organization - Person
+            for person in o.findall("person"):
+                org.persons.append(person.attrib["idref"]) 
+            org.put()
+            # Organization - Info
+            i = o.find("info")
+            for x in org_info_dict:
+                text = i.find(x).text
+                org_info_dict[x] = text if text is not None else ""
+            inf = Info(parent=org,**org_info_dict)
+            inf.info_type = i.find("type").text
+            inf.put()
+            # Organization - Info - Contact
+            t = i.find("contact")
+            for x in org_contact_dict:
+                text = t.find(x).text 
+                org_contact_dict[x] = text if text is not None else ""
+            con = Contact(parent=inf,**org_contact_dict)	
+            con.put()
+            # Organization - Info - Contact - Mail
+            m = i.find("contact/mail")
+            for x in org_mail_dict:
+                text = m.find(x).text
+                org_mail_dict[x] = text if text is not None else ""
+            mail = Mail(parent=con,**org_mail_dict)
+            mail.put()
+            # Organization - Info - Location
+            l = i.find("loc")
+            for x in org_loc_dict:
+                text = l.find(x).text
+                org_loc_dict[x] = text if text is not None else ""
+            loc = Location(parent=inf,**org_loc_dict)
+            loc.put()
+            # Organization - Ref
+            r = o.find("ref")
+            for pi in r.findall("primaryImage"):
+                for x in ref_dict:
+                    text = pi.find(x).text
+                    ref_dict[x] = text if text is not None else ""
+                pir = Ref(parent=org,**ref_dict)
+                pir.ref_type="primaryImage"
+                pir.put()
+            for ii in r.findall("image"):
+                for x in ref_dict:
+                    text = ii.find(x).text
+                    ref_dict[x] = text if text is not None else ""
+                iir = Ref(parent=org,**ref_dict)
+                iir.ref_type="image"
+                iir.put()
+            for vi in r.findall("video"):
+                for x in ref_dict:
+                    text = vi.find(x).text
+                    ref_dict[x] = text if text is not None else ""
+                vir = Ref(parent=org,**ref_dict)
+                vir.ref_type="video"
+                vir.put()
+            for si in r.findall("social"):
+                for x in ref_dict:
+                    text = si.find(x).text
+                    ref_dict[x] = text if text is not None else ""
+                sir = Ref(parent=org,**ref_dict)
+                sir.ref_type="social"
+                sir.put()
+            for ei in r.findall("ext"):
+                for x in ref_dict:
+                    text = ei.find(x).text
+                    ref_dict[x] = text if text is not None else ""
+                eir = Ref(parent=org,**ref_dict)
+                eir.ref_type="ext"
+                eir.put()
+
+        # Person
+        for p in tree.findall("person"):
+            for x in person_dict:
+                text = p.find(x).text
+                person_dict[x] = text if text is not None else ""
+            per = Person(**person_dict)
+            per.person_id = p.attrib["id"]
+            # Person - Crisis
+            for cris in p.findall("crisis"):
+                per.crises.append(cris.attrib["idref"]) 
+            # Person - Org
+            for org in p.findall("org"):
+                per.orgs.append(org.attrib["idref"]) 
+            per.put()
+            # Person - Info
+            i = p.find("info")
+            for x in person_info_dict:
+                text = i.find(x).text
+                person_info_dict[x] = text if text is not None else ""
+            inf = Info(parent=per,**person_info_dict)
+            inf.info_type = i.find("type").text
+            inf.put()
+            # Person - Info - Birthdate
+            b = i.find("birthdate")
+            for x in person_birth_dict:
+                text = b.find(x).text
+                person_birth_dict[x] = text if text is not None else ""
+            bday = Time(parent=inf,**person_birth_dict)
+            bday.put()
+            # Person - Ref
+            r = p.find("ref")
+            for pi in r.findall("primaryImage"):
+                for x in ref_dict:
+                    text = pi.find(x).text
+                    ref_dict[x] = text if text is not None else ""
+                pir = Ref(parent=per,**ref_dict)
+                pir.ref_type="primaryImage"
+                pir.put()
+            for ii in r.findall("image"):
+                for x in ref_dict:
+                    text = ii.find(x).text
+                    ref_dict[x] = text if text is not None else ""
+                iir = Ref(parent=per,**ref_dict)
+                iir.ref_type="image"
+                iir.put()
+            for vi in r.findall("video"):
+                for x in ref_dict:
+                    text = vi.find(x).text
+                    ref_dict[x] = text if text is not None else ""
+                vir = Ref(parent=per,**ref_dict)
+                vir.ref_type="video"
+                vir.put()
+            for si in r.findall("social"):
+                for x in ref_dict:
+                    text = si.find(x).text
+                    ref_dict[x] = text if text is not None else ""
+                sir = Ref(parent=per,**ref_dict)
+                sir.ref_type="social"
+                sir.put()
+            for ei in r.findall("ext"):
+                for x in ref_dict:
+                    text = ei.find(x).text
+                    ref_dict[x] = text if text is not None else ""
+                eir = Ref(parent=per,**ref_dict)
+                eir.ref_type="ext"
+                eir.put()
         self.redirect("/", permanent=True)
 
 def main():
