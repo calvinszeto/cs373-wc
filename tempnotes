@@ -4,6 +4,10 @@ DONE.
 
 -----
 
+Fix all the model properties
+
+-----
+
 To create parent-child relationship:
 {
 inf = Info(parent=cris, **info_dict)
@@ -28,7 +32,7 @@ Don't know.
 On accepting multiple refs:
 1. How do we make sure there is at least one of each kind?
     Do a findall on each type of ref; if the list is empty then it's invalid.
-        Not done.
+        Done.
     Still need a ref-type attribute for the export.
         Done.
 2. For the template, we need code in the template to iterate through some list of values.
@@ -36,6 +40,20 @@ On accepting multiple refs:
 
 -----
 
-Other:
+IMPORT:
+
+Instead of storing None, store ""
+
+Datastore clearing/merging
+
 Make a better invalid page.
     Not done.
+
+Separate invalid check.
+
+Store ids/idrefs
+DONE.
+
+-----
+
+Add more data.

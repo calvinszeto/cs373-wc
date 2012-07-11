@@ -36,15 +36,17 @@ class Economic(db.Model):
     currency = db.StringProperty()
     misc = db.StringProperty()
 
+"""
 class Impact(db.Model):
-    human_ref = db.ReferenceProperty(Human)
-    economic_ref = db.ReferenceProperty(Economic)
+    # human_ref = db.ReferenceProperty(Human)
+    # economic_ref = db.ReferenceProperty(Economic)
+"""
 
 
 class Contact(db.Model):
     phone = db.StringProperty() 
     email = db.StringProperty()
-    mail_ref = db.ReferenceProperty(Mail)
+    # mail_ref = db.ReferenceProperty(Mail)
 
 class Info(db.Model):
     # All
@@ -52,41 +54,50 @@ class Info(db.Model):
 
     # Crisis, Organization only
     history = db.TextProperty()
-    loc_ref = db.ReferenceProperty(Location)
+    # loc_ref = db.ReferenceProperty(Location)
 
     # Crisis, Person only
-    time = db.ReferenceProperty(Time)
+    # time = db.ReferenceProperty(Time)
 
     # Crisis only
     info_help = db.StringProperty()
     resources = db.StringProperty()
-    impact = db.ReferenceProperty(Impact)
+    # impact = db.ReferenceProperty(Impact)
 
     # Organization only
-    contact_ref = db.ReferenceProperty(Contact)
+    # contact_ref = db.ReferenceProperty(Contact)
 
     # Person only
     nationality = db.StringProperty()
     biography = db.StringProperty()
 
 class Crisis(db.Model):
+    crisis_id = db.StringProperty()
     name = db.StringProperty()
-    info_ref = db.ReferenceProperty(Info)
+    # info_ref = db.ReferenceProperty(Info)
     misc = db.StringProperty()
+    orgs = db.ListProperty(str)
+    persons = db.ListProperty(str)
 
 class Organization(db.Model):
+    org_id = db.StringProperty()
     name = db.StringProperty()
-    info_ref = db.ReferenceProperty(Info)
+    # info_ref = db.ReferenceProperty(Info)
     misc = db.StringProperty()
+    crises = db.ListProperty(str)
+    persons = db.ListProperty(str)
 
 class Person(db.Model):
+    person_id = db.StringProperty()
     name = db.StringProperty()
-    info_ref = db.ReferenceProperty(Info)
+    # info_ref = db.ReferenceProperty(Info)
     misc = db.StringProperty()
+    crises = db.ListProperty(str)
+    orgs = db.ListProperty(str)
 
 class Ref(db.Model):
     ref_type = db.StringProperty()
     site = db.StringProperty()
     title = db.StringProperty()
-    url = db.StringProperty()
+    url = db.TextProperty()
     description = db.StringProperty()
