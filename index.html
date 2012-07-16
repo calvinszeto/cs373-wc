@@ -1,40 +1,68 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="utf-8">
-  	<title>World Crises</title>
-	<link rel="SHORTCUT ICON" href=""> 
-	<meta name="description" content="" />
-  	<meta name="keywords" content="" />
-	<meta name="robots" content="" />
-  	<link rel="stylesheet" type="text/css" href="">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>World Crises</title>
+<link rel="stylesheet" type="text/css" a href="style.css" />
+<script src="scripts/typeface-0.15.js"></script>
+<script src="scripts/district_thin.typeface.js"></script>
+<script type="text/javascript" src="scripts/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="scripts/jquery.nivo.slider.js"></script>
+
+<script type="text/javascript">
+    $(window).load(function() {
+        $('#slider').nivoSlider();
+    });
+</script>
+
 </head>
+
 <body>
-    <h1>World Crises</h1>
-    <h3>Crises</h3>
-    <ul>
-	<li><a href="../crisis/deepwater.html" title = "Deepwater Horizon Oil Spill">Deepwater Horizon Oil Spill</a></li>
-        <li><a href="../crisis/polio.html" title="Polio">Polio</a></li>
-       	<li><a href="../crisis/childhoodobesity.html" title="Childhood">Childhood Obesity</a></li>
-        <li><a href="../crisis/greece.html" title="">Greece Debt Crisis</a></li>
-	</ul>
-    <h3>Organizations</h3>
-    <ul>
-	<li><a href="../orgs/bp.html" title="BP">BP</a></li>
-        <li><a href="../orgs/tgpei.html" title="The Global Polio Eradication Initiative">The Global Polio Eradication Initiative</a></li>
-       	<li><a href="../orgs/aap.html" title="The American Academy of Pediatrics">The American Academy of Pediatrics</a></li>
-        <li><a href="../orgs/imf.html" title="The International Monetary Fund">The International Monetary Fund</a></li>
-	</ul>
-    <h3>People</h3>
-    <ul>
-	<li><a href="../people/feinberg.html" title="Kenneth Feinberg">Kenneth Feinberg</a></li>
-        <li><a href="../people/papandreou.html" title="George Papandreou">George Papandreou</a></li>
-        <li><a href="../people/michelleobama.html" title="Michelle Obama">Michelle Obama</a></li>
-        <li><a href="../people/jonassalk.html" title="Jonas Salk">Jonas Salk</a></li>
-    </ul>
-    <p><a href="/import">Import</a></p>
-    <p><a href="/export">Export</a></p>
-    <p><a href="/test">Tests</a></p>
-    <h5>Made by 'Byte Me': Connor Bowman, Daniel Finnan, Kevin Jacoby, Calvin Szeto, Kevin Tang</h5>
+<div id="header-container">
+  <div id="header">
+     <div id="logo"></div>
+     <div id="title"></div>
+  </div>
+</div>
+
+<div id="navbar-container">
+   <div id="navbar">
+   	   <ul class="navbar">
+    	<li class="navbar" ><a href="index.html">Home</a></li>
+        <li class="navbar"><a href="/crises">Crises</a></li>
+       	<li class="navbar"><a href="/people">People</a></li>
+       	<li class="navbar"><a href="/orgs">Organizations</a></li>
+	   </ul>
+   </div>
+ </div>
+<!-- end header -->
+    
+ <!-- begin content -->
+<div id = "content">
+   <div id = "slider" class="poop">
+   	<a href=""><img src = "images/bp.jpeg" title="BP Deep Horizon Oil Spill"/></a>
+    <a href=""><img src = "images/co.jpeg" title="Childhood Obesity"/></a>
+    <a href=""><img src = "images/polio.jpeg" title="Polio"/></a>
+    <a href=""><img src = "images/greece.jpeg" title="Greece"/></a>
+   </div>
+</div>
+    
+    <!-- footer -->
+<div id = "footer">
+ <div id="links">
+  <ul><b>Links</b>
+  	<li><a href="">Import</a></li>
+    <li><a href="">Export</a></li>
+    <li><a href="">GAE Unit Tests</a></li>
+   </ul>
+  </div>
+  <div id ="footer-right">
+    <p>&copy; Byte Me:</br>
+      Connor, Daniel, Kevin J., Calvin, Kevin T.
+    </p>
+  </div>
+   
+</div>
+
+
 </body>
 </html>
