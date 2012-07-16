@@ -110,7 +110,7 @@
                         {% for v in persons.videos %}
                         <div class="item-box">
                             <div class="display-box">
-                                <object width="135" height="82"><param name="movie" value="{{v.url}}"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="{{v.url}}" type="application/x-shockwave-flash" width="135" height="82" allowscriptaccess="always" allowfullscreen="true"></embed></object>
+                                <iframe width="560" height="315" src="{{v.url}}" frameborder="0" allowfullscreen></iframe>
                             </div>                        
                         </div>
                         {% endfor %}
