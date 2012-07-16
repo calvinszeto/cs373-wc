@@ -197,19 +197,31 @@ class TestWC1(unittest.TestCase):
         """
         Test constructing an Info by unpacking a dict
         """
-        info_dict = {"history":"","resources":""}
+        info_dict = {"history":"1960","resources":"gold"}
+        info = Info(**info_dict)
+        self.assertTrue(info.history == "1960")
+        self.assertTrue(info.resources == "gold")
         
     def test_Model_Constructor_2 (self):
         """
         Test constructing a Human by unpacking a dict
         """
-        human_dict = {"deaths":"","displaced":"","injured":"","missing":"","misc":""}
+        human_dict = {"deaths":"1","displaced":"2","injured":"3","missing":"4","misc":"5"}
+        human = Human(**human_dict)
+        self.assertTrue(human.deaths == "1")
+        self.assertTrue(human.displaced == "2")
+        self.assertTrue(human.injured == "3")
+        self.assertTrue(human.missing == "4")
+        self.assertTrue(human.misc == "5")
 
     def test_Model_Constructor_3 (self):
         """
         Test constructing a Contact by unpacking a dict
         """
-        org_contact_dict = {"phone":"","email":""}
+        org_contact_dict = {"phone":"1","email":"1@spiderman.com"}
+        contact = Contact(**org_contact_dict)
+        self.assertTrue(contact.phone == "1")
+        self.assertTrue(contact.email == "1@spiderman.com")
 
     def test_Datastore_1 (self):
         """

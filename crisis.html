@@ -70,14 +70,14 @@
                 <ul>
          	    <li>{{c.info.info_help}}</li>
 		</ul>
-                {% for r in persons.socials %}
+                {% for r in c.socials %}
                 <h5>Social Sites</h5>
                     <ul class="capitalize">
                         <li><a href="{{r.url}}" title="{{r.title}}" target="_blank">{{r.title}}</a></li>  
                     </ul>
                 {% endfor %}
 
-                {% for r in persons.exts %}
+                {% for r in c.exts %}
                 <h5>Social Sites</h5>
                     <ul class="capitalize">
                         <li><a href="{{r.url}}" title="{{r.title}}" target="_blank">{{r.title}}</a></li>  
@@ -103,7 +103,7 @@
                     <div id="photo-box">
                         
                         <!-- begin single item -->
-                        {% for i in persons.images %}
+                        {% for i in c.images %}
                         <div class="item-box">
                             <div class="display-box">
                                     <img src="{{i.url}}" title="{{i.title}}" />
@@ -127,7 +127,7 @@
          
                         
                         <!-- begin single item -->
-                        {% for v in persons.videos %}
+                        {% for v in c.videos %}
                         <div class="item-box">
                             <div class="display-box">
                                 <iframe width="560" height="315" src="{{v.url}}" frameborder="0" allowfullscreen></iframe>
