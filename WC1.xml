@@ -26,12 +26,12 @@
 					<displaced>0</displaced>
 					<injured>0</injured>
 					<missing>0</missing>
-					<misc>Something</misc>
+					<misc>0</misc>
 				</human>
 				<economic>
 					<amount>30000000000</amount>
 					<currency>dollars</currency>
-					<misc>Something</misc>
+					<misc>0</misc>
 				</economic>
 			</impact> 
 		</info>
@@ -97,12 +97,12 @@
 					<displaced>0</displaced>
 					<injured>50000000</injured>
 					<missing>0</missing>
-					<misc>Something</misc>
+					<misc>0</misc>
 				</human>
 				<economic>
 					<amount>250000000</amount>
 					<currency>Dollar</currency>
-					<misc>Something</misc>
+					<misc>0</misc>
 				</economic>
 			</impact> 
 		</info>
@@ -155,7 +155,7 @@
 				<day>1</day>
 				<month>1</month>
 				<year>2008</year>
-				<misc>Something</misc>
+				<misc>0</misc>
 			</time>
 			<loc>
 				<city>Many Cities</city>
@@ -173,7 +173,7 @@
 				<economic>
 					<amount>10000000</amount>
 					<currency>Dollar</currency>
-					<misc>something</misc>
+					<misc>0</misc>
 				</economic>
 			</impact> 
 		</info>
@@ -631,29 +631,29 @@
 	<person id = "michelleobama">
 	    <name>First Lady Michelle LaVaughn Robinson Obama</name>
 		<info>
-			<type></type>
+			<type>Current First Lady</type>
 			<birthdate>
-				<time></time>
+				<time>12:00</time>
 				<day>17</day>
 				<month>1</month>
 				<year>1964</year>
-				<misc></misc>
+				<misc>0</misc>
 			</birthdate>
 			<nationality>American</nationality>
 			<biography>Michelle LaVaughn Robinson Obama is the first African-American First Lady of the United States and wife to the 44th President of the United States, Barack Obama.</biography>    
 		</info>
 		<ref>
             <primaryImage>
-                <site></site>
+                <site>Portrait of Michelle Obama</site>
 				<title>Michelle Obama Portrait</title>
 				<url>http://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Michelle_Obama_official_portrait_headshot.jpg/225px-Michelle_Obama_official_portrait_headshot.jpg</url>
 				<description>The Official Headshot of the 44th First Lady</description>
             </primaryImage>
 			<image>
-                <site></site>
-				<title>Michelle Obama Portrait</title>
-				<url>http://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Michelle_Obama_official_portrait_headshot.jpg/225px-Michelle_Obama_official_portrait_headshot.jpg</url>
-				<description>The Official Headshot of the 44th First Lady</description>
+                <site>Michelle Obama Smiling</site>
+				<title>Michelle Obama Smiling</title>
+				<url>http://images.politico.com/global/news/110128_michelle_obama_smiling_ap_328.jpg</url>
+				<description>Michelle Obama Smiling</description>
 			</image>
 			<video>
 				<site>youtube</site>
@@ -662,19 +662,19 @@
 				<description>In this video, First Lady Michelle Obama adresses questions she recieved on her Twitter account.</description>
 			</video>
 			<social>
-                <site></site>
+                <site>Michlle Obama's Facebook Page'</site>
 				<title>Michelle Obama's Facebook Page</title>
 				<url>http://www.facebook.com/michelleobama</url>
-				<description></description>
+				<description>Michelle Obama's Facebook Page'</description>
 			</social>
 			<ext>
-                <site></site>
+                <site>Michelle Obama's Wikipedia Entry</site>
 				<title>Michelle Obama's Wikipedia Entry</title>
 				<url>http://en.wikipedia.org/wiki/Michelle_Obama</url>
-				<description></description>
+				<description>Michelle Obama's Wikipedia Entry'</description>
 			</ext>       
 		</ref>
-		<misc>    </misc>
+		<misc>Something</misc>
 		<crisis idref = "childhoodobesity"/>
 	    <org idref = "aap"/>
 	</person>
@@ -682,29 +682,29 @@
 	<person id = "jonassalk">
 	    <name>Doctor Jonas Edward Salk</name>
 		<info>
-			<type></type>
+			<type>Medical Researcher</type>
 			<birthdate>
-				<time></time>
+				<time>12:00</time>
 				<day>28</day>
 				<month>10</month>
 				<year>1914</year>
-				<misc></misc>
+				<misc>0</misc>
 			</birthdate>
 			<nationality>American</nationality>
 			<biography>Jonas Salk was an American medical researcher and virologist know for his discovery of the first safe polio vaccine.</biography>    
 		</info>
 		<ref>
             <primaryImage>
-                <site></site>
-				<title></title>
-				<url></url>
-				<description></description>
-            </primaryImage>
-			<image>
-                <site></site>
+                <site>Jonas Salk Picture</site>
 				<title>Jonas Salk Picture</title>
 				<url>http://themurkyfringe.com/wp-content/uploads/2010/03/jonas-salk.jpg</url>
-				<description>A Picture of Jonas Salk</description>
+				<description>A picture of Jonas Salk</description>
+            </primaryImage>
+			<image>
+                <site>Jonas Salk Photo</site>
+				<title>Jonas Salk Photo</title>
+				<url>http://www.sciencephoto.com/image/228752/530wm/H4190549-Jonas_Salk,_American_microbiologist-SPL.jpg</url>
+				<description>A photo of Jonas Salk</description>
 			</image>
 			<video>
 				<site>youtube</site>
@@ -713,19 +713,19 @@
 				<description>Interview with Doctor Jonas Salk</description>
 			</video>
 			<social>
-                <site></site>
+                <site>Jonas Salk's Facebook Page</site>
 				<title>Doctor Jonas Salk's Facebook Page</title>
 				<url>http://www.facebook.com/pages/Jonas-Salk/193400977367840</url>
-				<description></description>
+				<description>Jonas Salk's Facebook Page'</description>
 			</social>
 			<ext>
-                <site></site>
+                <site>Jonas Salk's Wikipedia Entry</site>
 				<title>Jonas Salk's Wikipedia Entry</title>
 				<url>http://en.wikipedia.org/wiki/Jonas_Salk</url>
-				<description></description>
+				<description>Jonas Salk's Wikipedia entry.</description>
 			</ext>       
 		</ref>
-		<misc>    </misc>
+		<misc>Something</misc>
 		<crisis idref = "polio"/>
 	    <org idref = "tgpei"/>
 	</person>
