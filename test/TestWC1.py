@@ -194,13 +194,22 @@ class TestWC1(unittest.TestCase):
         self.assertTrue(d.text == "11")
 
     def test_Model_Constructor_1 (self):
-        pass
+        """
+        Test constructing an Info by unpacking a dict
+        """
+        info_dict = {"history":"","resources":""}
         
     def test_Model_Constructor_2 (self):
-        pass
+        """
+        Test constructing a Human by unpacking a dict
+        """
+        human_dict = {"deaths":"","displaced":"","injured":"","missing":"","misc":""}
 
     def test_Model_Constructor_3 (self):
-        pass
+        """
+        Test constructing a Contact by unpacking a dict
+        """
+        org_contact_dict = {"phone":"","email":""}
 
     def test_Datastore_1 (self):
         """
