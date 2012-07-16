@@ -4,21 +4,21 @@
 	<crisis id = "deepwater">
 		<name>Deepwater Horizon Oil Spill</name>
 		<info>
-			<history></history>
+			<history>Also known as the BP Oil Spill, Maconda Blowout, and th Gulf of Mexico Oil Spill, this is one of the largest accident in the petroleum industry with clean up a continue struggle today.</history>
 			<help>  Volunteering along the gulf to help clean</help>
 			<resources> Help cleaning spill and wildlife</resources> 
 			<type>Wellhead Blowout and Oil Spill</type>
 			<time>
-				<time></time>
+				<time>12:00</time>
 				<day>20</day>
 				<month>4</month>
 				<year>2010</year>
-				<misc></misc>
+				<misc>0</misc>
 			</time>
 			<loc>
-				<city></city>
+				<city>At Sea</city>
 				<region>Gulf of Mexico</region>
-				<country></country>
+				<country>USA</country>
 			</loc> 
 			<impact>
 				<human>
@@ -26,27 +26,27 @@
 					<displaced>0</displaced>
 					<injured>0</injured>
 					<missing>0</missing>
-					<misc></misc>
+					<misc>Something</misc>
 				</human>
 				<economic>
 					<amount>30000000000</amount>
 					<currency>dollars</currency>
-					<misc></misc>
+					<misc>Something</misc>
 				</economic>
 			</impact> 
 		</info>
 		<ref>
             <primaryImage>
-                <site></site>
-				<title></title>
-				<url></url>
-				<description></description>
-            </primaryImage>
-			<image>
-                <site></site>
+                <site>Deepwater Horizon 1</site>
 				<title>Deepwater Horizon</title>
 				<url>http://www.thebuzzmedia.com/wp-content/uploads/2010/06/bp-oil-spill-bird-covered-in-oil.jpg</url>
-				<description></description>
+				<description>Impact to the marine life at the Gulf of Mexico.</description>
+            </primaryImage>
+			<image>
+                <site>Deepwater Horizon 2</site>
+				<title>Putting Out Fire From Explosion</title>
+				<url>http://www4.pictures.zimbio.com/gi/Eleven+People+Missing+After+Explosion+Offshore+4u55Qj3S000l.jpg</url>
+				<description>Desperate to control damage.</description>
 			</image>
 			<video>
 				<site>Youtube</site>
@@ -55,19 +55,19 @@
 				<description></description>
 			</video>
 			<social>
-                <site></site>
+                <site>Facebook Page</site>
 				<title>Facebook</title>
 				<url>http://www.facebook.com/BPOilCrisisInTheGulf?ref=ts</url>
-                <description></description>
+                <description>Facebook page for the Deepwater Horizon Oil Spill.</description>
 			</social>
 			<ext>
-                <site></site>
+                <site>Wikipedia Entry</site>
 				<title>Wikipedia</title>
 				<url>http://en.wikipedia.org/wiki/Deepwater_Horizon_oil_spill#Consequences</url>
-				<description></description>
+				<description>Wikipedia entry of Deepwater Horizon Oil Spill.</description>
 			</ext>    
 		</ref>
-		<misc></misc>
+		<misc>Something</misc>
 		<org idref = "bp"/>
 		<person idref = "feinberg"/>
 	</crisis>
@@ -75,21 +75,21 @@
 	<crisis id = "polio">
 		<name>Polio</name>
 		<info>
-			<history></history>
-			<help></help>
-			<resources></resources> 
-			<type></type>
+			<history>Poliomyelitis is a potentially fatal viral disease that can affect nerves and can lead to partial or full paralysis.</history>
+			<help>Donating to eradication effort: http://www.polioeradication.org/Financing/Donate.aspx</help>
+			<resources>Global Vaccination Campaign</resources> 
+			<type>Viral Disease</type>
 			<time>
-				<time></time>
+				<time>12:00</time>
 				<day>24</day>
 				<month>10</month>
 				<year>1955</year>
-				<misc></misc>
+				<misc>0</misc>
 			</time>
 			<loc>
-				<city></city>
-				<region></region>
-				<country></country>
+				<city>Many Cities in Region</city>
+				<region>Country Wide</region>
+				<country>Asia and Africa</country>
 			</loc> 
 			<impact>
 				<human>
@@ -97,48 +97,48 @@
 					<displaced>0</displaced>
 					<injured>50000000</injured>
 					<missing>0</missing>
-					<misc></misc>
+					<misc>Something</misc>
 				</human>
 				<economic>
 					<amount>250000000</amount>
-					<currency></currency>
-					<misc></misc>
+					<currency>Dollar</currency>
+					<misc>Something</misc>
 				</economic>
 			</impact> 
 		</info>
 		<ref>
             <primaryImage>
-                <site></site>
-				<title></title>
-				<url></url>
-				<description></description>
+                <site>Photo of child recieving medication for polio</site>
+				<title>Child Giving Medication</title>
+				<url>http://sphotos-a.xx.fbcdn.net/hphotos-ash4/s720x720/419233_10150647107914837_1435806600_n.jpg</url>
+				<description>A child recieving treatment for polio.</description>
             </primaryImage>
 			<image>
-                <site></site>
-				<title></title>
-				<url></url>
-				<description></description>
+                <site>Polio Virus Render</site>
+				<title>3D Picture of the Polio Virus</title>
+				<url>http://www.npspindia.org/images/Polio-Virus.jpg</url>
+				<description>A 3 dimension rendering of the polio virus.</description>
 			</image>
 			<video>
-				<site></site>
-				<title></title>
+				<site>Polio's Last Percent'</site>
+				<title>Polio's Last Percent'</title>
 				<url>http://www.youtube.com/embed/AfmwcShVeM0</url>
-				<description></description>
+				<description>Polio</description>
 			</video>
 			<social>
-                <site></site>
-				<title></title>
+                <site>End Polio Now at Facebook</site>
+				<title>End Polio Now Facebook Page</title>
 				<url>http://www.facebook.com/pages/End-Polio-Now/78976274836</url>
-				<description></description>
+				<description>facebook page for polioi activism.</description>
 			</social>
 			<ext>
-                <site></site>
-				<title></title>
+                <site>Bill and Melinda Gates Foundation</site>
+				<title>Bill and Melinda Gates Foundation</title>
 				<url>http://www.gatesfoundation.org/polio/pages/default.aspx</url>
-				<description></description>
+				<description>A site for the Bill and Melinda Gates Foundation.</description>
 			</ext>    
 		</ref>
-		<misc></misc>
+		<misc>Something</misc>
 		<org idref = "tgpei"/>
 		<person idref = "jonassalk"/>
 	</crisis>
@@ -148,19 +148,19 @@
 		<info>
 			<history>Childhood obesity has tripled in the past 30 years has both immediate and long-term effects on health and well-being.</history>
 			<help>States and communities can assess their retail food environment to better understand the current landscape and differences in accessibility to healthier foods and provide incentives to existing supermarkets and farmers' markets to establish their businesses in low-income areas or to sell healthier foods.</help>
-			<resources></resources> 
-			<type></type>
+			<resources>Food Education</resources> 
+			<type>Health</type>
 			<time>
-				<time></time>
+				<time>12:00</time>
 				<day>1</day>
 				<month>1</month>
 				<year>2008</year>
-				<misc></misc>
+				<misc>Something</misc>
 			</time>
 			<loc>
-				<city></city>
-				<region></region>
-				<country>U.S.A.</country>
+				<city>Many Cities</city>
+				<region>Worldwide</region>
+				<country>First-world Countries</country>
 			</loc> 
 			<impact>
 				<human>
@@ -168,48 +168,48 @@
 					<displaced>0</displaced>
 					<injured>0</injured>
 					<missing>0</missing>
-					<misc></misc>
+					<misc>0</misc>
 				</human>
 				<economic>
-					<amount>1</amount>
-					<currency></currency>
-					<misc></misc>
+					<amount>10000000</amount>
+					<currency>Dollar</currency>
+					<misc>something</misc>
 				</economic>
 			</impact> 
 		</info>
 		<ref>
             <primaryImage>
-                <site></site>
-				<title></title>
-				<url></url>
-				<description></description>
+                <site>Couch-Potato</site>
+				<title>Kid Being a Couch-Potato</title>
+				<url>http://www.toptenz.net/wp-content/uploads/2011/07/childhood-obesity-300x180.jpg</url>
+				<description>Lack of exercise and junkfood</description>
             </primaryImage>
 			<image>
-				<site></site>
-				<title></title>
+				<site>Fat Kid Photo</site>
+				<title>Fat Kid</title>
 				<url>http://moviecitynews.com/wp-content/uploads/2012/06/Fat-Kid-Rules-the-World_04.jpg</url>
-				<description></description>
+				<description>Obesity</description>
 			</image>
 			<video>
-				<site></site>
-				<title></title>
+				<site>About Childhood Obesity</site>
+				<title>Childhood Obesity</title>
 				<url>http://www.youtube.com/embed/dLMoFST_Lmc</url>
-				<description></description>
+				<description>Talking about childhood obesity</description>
 			</video>
 			<social>
-				<site></site>
-				<title></title>
+				<site>Twitter Page for childhood obesity</site>
+				<title>Twitter</title>
 				<url>https://twitter.com/CDCObesity</url>
-				<description></description>
+				<description>Twitter page about childhood obesity</description>
 			</social>
 			<ext>
-				<site></site>
-				<title></title>
+				<site>CDC Information</site>
+				<title>Childhood Obesity CDC Information</title>
 				<url>http://www.cdc.gov/healthyyouth/obesity/facts.htm</url>
-				<description></description>
+				<description>CDC Information site for Childhood Obesity.</description>
 			</ext>    
 		</ref>
-		<misc></misc>
+		<misc>Something</misc>
 		<org idref = "aap"/>
 		<person idref = "michelleobama"/>
 	</crisis>
@@ -219,18 +219,18 @@
 		<info>
 			<history>Greece was living beyond its means before adopting the Euro and after adopting the Euro public spending significantly rose. After years of overspending, Greece’s budget deficit spiraled out of control, which left Greece unprepared to handle the global economic downturn. Greece’s debt reached levels so high that it was unable to pay, so required massive loans from European partners and the IMF </history>
 			<help>Bailout from IMF and EU</help>
-			<resources></resources> 
+			<resources>Bailouts from EU and IMF</resources> 
 			<type>Debt crisis that could lead to problems in the Eurozone</type>
 			<time>
-				<time></time>
+				<time>12:00</time>
 				<day>1</day>
 				<month>1</month>
 				<year>2009</year>
-				<misc></misc>
+				<misc>0</misc>
 			</time>
 			<loc>
 				<city>Athens</city>
-				<region></region>
+				<region>Attica</region>
 				<country>Greece</country>
 			</loc> 
 			<impact>
@@ -239,48 +239,48 @@
 					<displaced>0</displaced>
 					<injured>300</injured>
 					<missing>0</missing>
-					<misc></misc>
+					<misc>0</misc>
 				</human>
 				<economic>
 					<amount>240000000000</amount>
 					<currency>Euros</currency>
-					<misc></misc>
+					<misc>0</misc>
 				</economic>
 			</impact> 
 		</info>
 		<ref>
             <primaryImage>
-                <site></site>
-				<title></title>
-				<url></url>
-				<description></description>
+                <site>Political Cartoon</site>
+				<title>Political Cartoon</title>
+				<url>http://2.bp.blogspot.com/--S0bgE12ohM/TrQUIGj7NSI/AAAAAAAAAPg/5aBsjD2csgM/s1600/023-0617131539-greek-economy-crisis2.jpg</url>
+				<description>A political cartoon of the Greece Debt Crisis</description>
             </primaryImage>
 			<image>
-				<site></site>
+				<site>Riot in Greece</site>
 				<title>Rioting in Greece</title>
 				<url>http://cdn.theatlantic.com/static/infocus/athens021312/s_a06_10125965.jpg</url>
-				<description></description>
+				<description>Riot broke out in Greece.</description>
 			</image>
 			<video>
-				<site>Youtube</site>
-				<title></title>
+				<site>Youtube.com</site>
+				<title>Greece Debt Crisis Explained in 4 Minutes</title>
 				<url>http://www.youtube.com/embed/mEVqeaFHsHE</url>
-				<description></description>
+				<description>Explanation of Freece Debt Crisis</description>
 			</video>
 			<social>
-				<site></site>
+				<site>Facebook for Greece Debt Crisis</site>
 				<title>Facebook</title>
 				<url>https://www.facebook.com/GreeceDebtFree</url>
-				<description></description>
+				<description>Facebook page for the Greece Debt Crisis</description>
 			</social>
 			<ext>
-				<site></site>
+				<site>CNN</site>
 				<title>CNN</title>
 				<url>http://www.cnn.com/2010/BUSINESS/02/10/greek.debt.qanda/index.html</url>
-				<description></description>
+				<description>CNN article regarding the Greece Debt Crisis</description>
 			</ext>    
 		</ref>
-		<misc></misc>
+		<misc>Something</misc>
 		<org idref = "imf"/>
 		<person idref = "papandreou"/>
 	</crisis>
@@ -293,55 +293,55 @@
 			<type>Oil and gas company</type>
 			<history>British multinational oil and gas company which is the third-largest energy company and fourth-largest company in the world measured by 2011 revenues. It is vertically integrated and is active in every area of the oil and gas industry, including exploration and production,refining, distribution and marketing, petrochemicals, power generation and trading. It also has renewable energy activities in biofuelsand wind power. Its largest division is BP America, which is the second-largest producer of oil and gas in the United States and is headquartered in Houston, Texas. As of December 2011, BP had total proven commercial reserves of 17.75 billion barrels of oil equivalent. The name "BP" derives from the initials of one of the company's former legal names, British Petroleum.</history>
 			<contact>
-				<phone></phone>
-				<email></email>
+				<phone>866-448-5816</phone>
+				<email>bpconsum@bp.com</email>
 				<mail>
-					<address></address>
-					<city></city>
-					<state></state>
-					<country></country>
-					<zip></zip>
+					<address>28301 Ferry Road</address>
+					<city>Warrenville</city>
+					<state>IL</state>
+					<country>USA</country>
+					<zip>60555</zip>
 				</mail>
 			</contact>
 			<loc>
 				<city>London</city>
-				<region></region>
+				<region>London</region>
 				<country>England</country>
 			</loc>    
 		</info>
 		<ref>
             <primaryImage>
-                <site></site>
-				<title></title>
-				<url></url>
-				<description></description>
+                <site>Youtube</site>
+				<title>BP's Logo'</title>
+				<url>http://www.wbrz.com/images/news/bpbiglogo.jpg</url>
+				<description>BP's Logo'</description>
             </primaryImage>
 			<image>
 				<site>Youtube</site>
-				<title>BP's Logo</title>
-				<url>http://www.wbrz.com/images/news/bpbiglogo.jpg</url>
-				<description></description>
+				<title>BP</title>
+				<url>http://media.tumblr.com/tumblr_l4l8lyJRIl1qzhq18.jpg</url>
+				<description>BP</description>
 			</image>
 			<video>
 				<site>Youtube</site>
-				<title></title>
+				<title>BP Statistical Review of World Energy 2012</title>
 				<url>http://www.youtube.com/embed/KtWoPZluI2E</url>
-				<description></description>
+				<description>BP Statistical Review of World Energy 2012</description>
 			</video>
 			<social>
 				<site>Facebook</site>
 				<title>BP's Facebook Page</title>
 				<url>http://facebook.com/BPAmerica</url>
-				<description></description>
+				<description>BP's Facebook Page</description>
 			</social>
 			<ext>
 				<site>BP</site>
 				<title>BP</title>
 				<url>http://www.bp.com</url>
-				<description></description>
+				<description>BP's website'</description>
 			</ext>     
 		</ref>
-		<misc>    </misc>
+		<misc>Something</misc>
 		<crisis idref = "deepwater"/>
 		<person idref = "feinberg"/>	
 	</organization>
