@@ -411,34 +411,34 @@
 			<type></type>
 			<history>Founded in 1930 by 35 pediatricians. The AAP has produced more than 480 publications in 140 countries. The AAP and its members work at the local level in hospitals, offices and clinics and in state and federal government to protect the well being of children.</history>
 			<contact>
-				<phone></phone>
-				<email></email>
+				<phone>847-434-4000</phone>
+				<email>catch@aap.org</email>
 				<mail>
-					<address></address>
+					<address>141 Northwest Point Boulevard</address>
 					<city>Elk Grove Villiage</city>
 					<state>IL</state>
 					<country>U.S.A.</country>
-					<zip></zip>
+					<zip>60007-1098</zip>
 				</mail>
 			</contact>
 			<loc>
 				<city>Elk Grove Villiage</city>
-				<region></region>
-				<country></country>
+				<region>IL</region>
+				<country>U.S.A.</country>
 			</loc>    
 		</info>
 		<ref>
             <primaryImage>
-                <site></site>
-				<title></title>
-				<url></url>
-				<description></description>
-            </primaryImage>
-			<image>
-                <site></site>
+                <site>AAP ogo</site>
 				<title>AAP Logo</title>
 				<url>http://instinctmagazine.com/images/stories/blogs/jhigbee/april2012/aaop.jpg</url>
 				<description>AAP Logo</description>
+            </primaryImage>
+			<image>
+                <site>AAP Guide Book</site>
+				<title>AAP Guide Book</title>
+				<url>http://ecx.images-amazon.com/images/I/51NZHPDZC8L._SL500_AA300_.jpg</url>
+				<description>AAP Guide Book</description>
 			</image>
 			<video>
 				<site>youtube</site>
@@ -447,19 +447,19 @@
 				<description>New Policy Statement from AAP</description>
 			</video>
 			<social>
-                <site></site>
+                <site>AAP News Twitter</site>
 				<title>AAP News Twitter</title>
 				<url>https://twitter.com/#!/AAPNews/</url>
-				<description></description>
+				<description>AAP News Twitter</description>
 			</social>
 			<ext>
-                <site></site>
+                <site>AAP Website</site>
 				<title>AAP Website</title>
 				<url>http://www.aap.org/</url>
-				<description></description>
+				<description>AAP Website</description>
 			</ext>     
 		</ref>
-		<misc>    </misc>
+		<misc>Something</misc>
 		<crisis idref = "childhoodobesity"/>
 		<person idref = "michelleobama"/>	
 	</organization>
