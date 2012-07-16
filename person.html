@@ -21,6 +21,8 @@
    <div id = "header">
      <div id="logo"><a href="..index.html"><img src="/images/logo.jpg" /></a></div>
      <div id="title"><a href="..index.html"><img src="/images/title.png" /></a></div>
+     <div id="names"><p>&copy; 'Byte Me' 2012<br />
+          Connor, Daniel, Kevin J., Calvin, Kevin T.</p></div>
    </div>
 </div><!-- end header -->
 
@@ -77,6 +79,8 @@
         <div id="primary-content">
             <!-- begin Page Title -->
             <h1 id="page-title">{{persons.person.name}}</h1>
+            <h2>Bio</h2>
+            <p>{{persons.info.biography}}</p>
             <!-- end primary content -->
             <!-- begin media -->
             <div id="media">
@@ -113,7 +117,7 @@
                         {% for v in persons.videos %}
                         <div class="item-box">
                             <div class="display-box">
-                                <iframe width="250" height="141" src="{{v.url}}" frameborder="0" allowfullscreen></iframe>
+                                <iframe width="400" height="200" src="{{v.url}}" frameborder="0" allowfullscreen></iframe>
                             </div>                        
                         </div>
                         {% endfor %}
@@ -130,57 +134,30 @@
                 <!-- end videos -->
             </div>
             <!-- end media -->
-            <!-- Start history -->
-            <div id="summary">
-                         
-                
-                <h2>Bio</h2>
-                <p>{{persons.info.biography}}</p>
-            </div>
-            <!-- end history -->
             
             
             <!-- begin related crises -->
             <div class="crises">
                 <h2>Related Crises</h2>
-                
-                
                 <!-- begin single item -->
                 <div class="item-box">
                     <div class="display-box">
-                        <a href="/crisis/bp" title="Deepwater Horizon Oil Spill (BP)"><img src="" title="Deepwater Horizon Oil Spill (BP)"/></a>
+                        <a href="/crisis/{{persons.crisis.crisis_id}}" title="{{persons.crisis.name}}"><img src="{{persons.crisisimage.url}}" title="{{persons.crisis.name}}"/></a>
                     </div>
-                    <a href="/crisis/bp_oil_spill/" title="Deepwater Horizon Oil Spill (BP)">
-                        <span class="subtitle">Deepwater Horizon Oil Spill (BP)</span>
-                    </a>
                 </div>
                 <!-- end single item -->
-                
-                
             </div>
             <!-- end related crises -->
-            
-            
-            
-            
-            
             <!-- begin related organizations -->
             <div class="organizations">
                 <h2>Related Organizations</h2>
-                
-                
                 <!-- begin single item -->
                 <div class="item-box">
                     <div class="display-box">
-                        <a href="/orgs/" title=""><img src="" title="" /></a>
+                        <a href="/org/{{persons.org.org_id}}" title="{{persons.org.name}}"><img src="{{persons.orgimage.url}}" title="{{persons.org.name}}" /></a>
                     </div>
-                    <a href="/orgs" title="">
-                        <span class="subtitle"></span>
-                    </a>
                 </div>
                 <!-- end single item -->
-                
-                
             </div>
             <!-- end related organizations -->
             

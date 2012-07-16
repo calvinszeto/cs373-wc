@@ -16,6 +16,8 @@ class CrisisHandler(blobstore_handlers.BlobstoreDownloadHandler):
     def get(self, resource):
         crisisref = str(urllib.unquote(resource))
         cris = Crisis.all()
+        orgs = Organization.all()
+        people = Person.all()
         infos = Info.all()
         times = Time.all()
         humans = Human.all()
@@ -44,6 +46,14 @@ class CrisisHandler(blobstore_handlers.BlobstoreDownloadHandler):
         crisis_list["videos"]=refs.ancestor(p).filter('ref_type =','video').run()
         refs = Ref.all()
         crisis_list["exts"]=refs.ancestor(p).filter('ref_type =','ext').run()
+        refs = Ref.all()
+        org = orgs.filter('org_id =',p.orgs[0]).get()
+        crisis_list["org"]=org
+        crisis_list["orgimage"]=refs.ancestor(org).filter('ref_type =','primaryImage').get()
+        refs = Ref.all()
+        per = people.filter('person_id =',p.persons[0]).get()
+        crisis_list["person"]=per 
+        crisis_list["personimage"]=refs.ancestor(per).filter('ref_type =','primaryImage').get()
         template_values = {
             'c':crisis_list }
         path = os.path.join(os.path.dirname(__file__), 'crisis.html')

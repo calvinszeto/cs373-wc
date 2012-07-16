@@ -15,6 +15,21 @@ html {
 	height:100%;
 }
 
+.crises img {
+    height:200px;
+    width:300px;
+}
+
+.people img {
+    height:200px;
+    width:300px;
+}
+
+.organizations img {
+    height:200px;
+    width:300px;
+}
+
 #names {
     padding:20px;
     float:right;
@@ -183,6 +198,7 @@ html {
 
 #attributes {
 	width:200px;
+    height:1000px;
 	float:left;
 	margin-right:15px;
 }
@@ -207,14 +223,14 @@ html {
 
 #photos, #videos {
 	float:left;
-	width:300px;
+	width:400px;
 	padding-right:20px;
 	margin-bottom:20px;
 }
 
 #photos img {
-	height:141px;
-	width:250px;
+	height:200px;
+	width:400px;
 	overflow:hidden;
 }
 

@@ -297,7 +297,7 @@ class UploadHandler(blobstore_handlers.BlobstoreUploadHandler):
         # Organizations
         for o in tree.findall("organization"):
             for x in org_dict:
-                text = c.find(x).text
+                text = o.find(x).text
                 org_dict[x] = text if text is not None else ""
             org = Organization(**org_dict)
             org.org_id = o.attrib["id"]

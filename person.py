@@ -16,6 +16,8 @@ class PersonHandler(blobstore_handlers.BlobstoreDownloadHandler):
     def get(self, resource):
         personref = str(urllib.unquote(resource))
         peeps = Person.all()
+        crises = Crisis.all()
+        orgs = Organization.all()
         infos = Info.all()
         times = Time.all()
         refs = Ref.all()
@@ -38,6 +40,14 @@ class PersonHandler(blobstore_handlers.BlobstoreDownloadHandler):
         persons_list["videos"]=refs.ancestor(p).filter('ref_type =','video').run()
         refs = Ref.all()
         persons_list["exts"]=refs.ancestor(p).filter('ref_type =','ext').run()
+        refs = Ref.all()
+        org = orgs.filter('org_id =',p.orgs[0]).get()
+        persons_list["org"]=org
+        persons_list["orgimage"]=refs.ancestor(org).filter('ref_type =','primaryImage').get()
+        refs = Ref.all()
+        cris = crises.filter('crisis_id =',p.crises[0]).get()
+        persons_list["crisis"]=cris
+        persons_list["crisisimage"]=refs.ancestor(cris).filter('ref_type =','primaryImage').get()
         template_values = {
             'persons':persons_list }
         path = os.path.join(os.path.dirname(__file__), 'person.html')

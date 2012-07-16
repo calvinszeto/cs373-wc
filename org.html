@@ -16,25 +16,31 @@
 
 </head>
 
-<body>
-<div id="header-container">
-  <div id="header">
-     <div id="logo"></div>
-     <div id="title"></div>
-  </div>
-</div>
-
-<div id="navbar-container">
-   <div id="navbar">
-    <ul class="navbar">
-     <li class="navbar" ><a href="index.html">Home</a></li>
-        <li class="navbar"><a href="/crises">Crises</a></li>
-        <li class="navbar"><a href="/people">People</a></li>
-        <li class="navbar"><a href="/orgs">Organizations</a></li>
-</ul>
+<!-- begin header -->
+<div id = "header-container">
+   <div id = "header">
+     <div id="logo"><a href="..index.html"><img src="/images/logo.jpg" /></a></div>
+     <div id="title"><a href="..index.html"><img src="/images/title.png" /></a></div>
+     <div id="names"><p>&copy; 'Byte Me' 2012<br />
+          Connor, Daniel, Kevin J., Calvin, Kevin T.</p></div>
    </div>
- </div>
-<!-- end header -->
+</div><!-- end header -->
+
+<!-- begin navbar -->
+<div id="nav-container">
+   <div id ="nav">
+     <ul>
+       <li><a href="/index.html">Home</a></li>
+       <li><a href="/crises">Crises</a></li>
+       <li><a href="/people">People</a></li>
+       <li><a href="/orgs">Orgs</a></li>
+    	<li><a href="../import">Import</a></li>
+        <li><a href="../export">Export</a></li>
+        <li><a href="../test">Tests</a></li>
+	 </ul>
+   </div>
+</div><!-- end navbar -->
+<body>
     
  <!-- begin content -->
    <div id="content">
@@ -76,6 +82,8 @@
         <div id="primary-content">
             <!-- begin Page Title -->
             <h1 id="page-title">{{o.org.name}}</h1>
+            <h2>History</h2>
+            <p>{{o.info.history}}</p>
             <!-- end primary content -->
             <!-- begin media -->
             <div id="media">
@@ -112,7 +120,7 @@
                         {% for v in o.videos %}
                         <div class="item-box">
                             <div class="display-box">
-                                <iframe width="560" height="315" src="{{v.url}}" frameborder="0" allowfullscreen></iframe>
+                                <iframe width="400" height="200" src="{{v.url}}" frameborder="0" allowfullscreen></iframe>
                             </div>
                         </div>
                         {% endfor %}
@@ -129,16 +137,6 @@
                 <!-- end videos -->
             </div>
             <!-- end media -->
-            <!-- Start history -->
-            <div id="summary">
-                         
-                
-                <h2>History</h2>
-                <p>{{o.info.history}}</p>
-            </div>
-            <!-- end history -->
-            
-            
             <!-- begin related crises -->
             <div class="crises">
                 <h2>Related Crises</h2>
@@ -147,39 +145,22 @@
                 <!-- begin single item -->
                 <div class="item-box">
                     <div class="display-box">
-                        <a href="/crisis/bp" title="Deepwater Horizon Oil Spill (BP)"><img src="" title="Deepwater Horizon Oil Spill (BP)"/></a>
+                        <a href="/crisis/{{o.crisis.crisis_id}}" title="{{o.crisis.name}}"><img src="{{o.crisisimage.url}}" title="{{o.crisis.name}}"/></a>
                     </div>
-                    <a href="/crisis/bp_oil_spill/" title="Deepwater Horizon Oil Spill (BP)">
-                        <span class="subtitle">Deepwater Horizon Oil Spill (BP)</span>
-                    </a>
                 </div>
                 <!-- end single item -->
-                
-                
             </div>
             <!-- end related crises -->
-            
-            
-            
-            
-            
             <!-- begin related organizations -->
-            <div class="persons">
+            <div class="people">
                 <h2>Related People</h2>
-                
-                
                 <!-- begin single item -->
                 <div class="item-box">
                     <div class="display-box">
-                        <a href="/person/" title=""><img src="" title="" /></a>
+                        <a href="/person/{{o.person.person_id}}" title="{{o.person.name}}"><img src="{{o.personimage.url}}" title="{{o.person.name}}" /></a>
                     </div>
-                    <a href="/person" title="">
-                        <span class="subtitle"></span>
-                    </a>
                 </div>
                 <!-- end single item -->
-                
-                
             </div>
             <!-- end related organizations -->
             
@@ -188,23 +169,5 @@
         <!-- end primary content -->
     </div>
     
-    <!-- footer -->
-<div id = "footer">
- <div id="links">
-  <ul><b>Links</b>
-   <li><a href="">Import</a></li>
-    <li><a href="">Export</a></li>
-    <li><a href="">GAE Unit Tests</a></li>
-   </ul>
-  </div>
-  <div id ="footer-right">
-    <p>&copy; Byte Me:</br>
-      Connor, Daniel, Kevin J., Calvin, Kevin T.
-    </p>
-  </div>
-   
-</div>
-
-
 </body>
 </html>

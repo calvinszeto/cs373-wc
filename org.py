@@ -16,6 +16,8 @@ class OrgHandler(blobstore_handlers.BlobstoreDownloadHandler):
     def get(self, resource):
         orgref = str(urllib.unquote(resource))
         o = Organization.all()
+        persons = Person.all()
+        crises = Crisis.all()
         infos = Info.all()
         contact = Contact.all()
         mail = Mail.all()
@@ -43,6 +45,14 @@ class OrgHandler(blobstore_handlers.BlobstoreDownloadHandler):
         org_list["videos"]=refs.ancestor(p).filter('ref_type =','video').run()
         refs = Ref.all()
         org_list["exts"]=refs.ancestor(p).filter('ref_type =','ext').run()
+        refs = Ref.all()
+        per = persons.filter('person_id =',p.persons[0]).get()
+        org_list["person"]=per
+        org_list["personimage"]=refs.ancestor(per).filter('ref_type =','primaryImage').get()
+        refs = Ref.all()
+        cris = crises.filter('crisis_id =',p.crises[0]).get()
+        org_list["crisis"]=cris
+        org_list["crisisimage"]=refs.ancestor(cris).filter('ref_type =','primaryImage').get()
         template_values = {
             'o':org_list }
         path = os.path.join(os.path.dirname(__file__), 'org.html')
