@@ -104,12 +104,14 @@ html {
 	top:1008px;
 	height:90px;
 	background-color:#3399cc;
-	padding-left:200px;
+	margin:0 auto;
+	/*padding-left:200px;*/
 }
 
 
 #footer {
 	width:960px;
+	padding-left:200px;
 	margin:0 auto;
 	position:absolute;
 	bottom:0;
