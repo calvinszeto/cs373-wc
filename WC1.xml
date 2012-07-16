@@ -470,55 +470,55 @@
 			<type>International Economic Organization</type>
 			<history>The IMF was created on July 22, 1944 at the Bretton Woods Conference with the intention of rebuilding the global economic system after WWII. The IMF was formally organized on December 27, 1945 when 29 countries signed the Articles of Agreement. The IMF functions like a bank and makes sure that borrowing states can pay their debts on time. The IMF also offers member nations information on economic policies of all member nations, financial support in times of economic difficulties, and increased opportunities for trade and investment. The IMF is one of the key organizations of the international economic system. Currently, the IMF has 188 member nations and its largest borrowers are Greece, Portugal, Ireland, Romania, and Ukraine.</history>
 			<contact>
-				<phone></phone>
-				<email></email>
+				<phone>202-623-7000</phone>
+				<email>publicaffairs@imf.org</email>
 				<mail>
-					<address></address>
-					<city></city>
-					<state></state>
-					<country></country>
-					<zip></zip>
+					<address>700 19th Street</address>
+					<city>N.W.</city>
+					<state>Washington, D.C.</state>
+					<country>USA</country>
+					<zip>20431</zip>
 				</mail>
 			</contact>
 			<loc>
 				<city>Washington, DC</city>
-				<region></region>
+				<region>District of Columbia</region>
 				<country>USA</country>
 			</loc>    
 		</info>
 		<ref>
             <primaryImage>
-                <site></site>
-				<title></title>
-				<url></url>
-				<description></description>
+                <site>IMF Logo</site>
+				<title>IMF Logo</title>
+				<url>http://upload.wikimedia.org/wikipedia/en/thumb/7/7e/International_Monetary_Fund_logo.svg/200px-International_Monetary_Fund_logo.svg.png</url>
+				<description>IMF Logo</description>
             </primaryImage>
 			<image>
-                <site></site>
-				<title></title>
-				<url>http://upload.wikimedia.org/wikipedia/en/thumb/7/7e/International_Monetary_Fund_logo.svg/200px-International_Monetary_Fund_logo.svg.png</url>
-				<description></description>
+                <site>IMF HQ</site>
+				<title>Outside IMF HQ</title>
+				<url>http://worldpoliticsblog.files.wordpress.com/2011/01/imfhq.jpg</url>
+				<description>Outside IMF HQ</description>
 			</image>
 			<video>
 				<site>IMF</site>
-				<title></title>
+				<title>IMF</title>
 				<url>http://www.imf.org/external/mmedia/view.aspx?vid=1697394593001</url>
-				<description></description>
+				<description>About IMF</description>
 			</video>
 			<social>
-                <site></site>
-				<title></title>
-				<url></url>
-				<description></description>
+                <site>Facebook IMF</site>
+				<title>Facebook Page for IMF</title>
+				<url>http://www.facebook.com/pages/International-Monetary-Fund/109505255742373?rf=106386849397674</url>
+				<description>Facebook page for IMF</description>
 			</social>
 			<ext>
                 <site></site>
 				<title>IMF</title>
 				<url>http://www.imf.org/external/index.htm</url>
-				<description></description>
+				<description>IMF Website</description>
 			</ext>     
 		</ref>
-		<misc>    </misc>
+		<misc>Something</misc>
 		<crisis idref = "greece"/>
 		<person idref = "papandreou"/>	
 	</organization>
@@ -531,21 +531,21 @@
 		<info>
 			<type>Attorney</type>
 			<birthdate>
-				<time></time>
+				<time>12:00</time>
 				<day>23</day>
 				<month>10</month>
 				<year>1945</year>
-				<misc></misc>
+				<misc>0</misc>
 			</birthdate>
 			<nationality>American</nationality>
 			<biography>An American attorney with his own firm, Feinberg Rozen, Kenneth Feinberg was appointed the administrator of the BP Deepwater Horizon Disaster Victim Compensation Fund. Feinberg was subject to much controversy regarding the fund, including a conflict of interest accusation due to BP paying Feinberg to administer the fund. Additionally, the Center for Justice and Democracy sent a letter to BP raising issues about the lack of transparency regarding the fund.</biography>    
 		</info>
 		<ref>
             <primaryImage>
-                <site></site>
-				<title></title>
-				<url></url>
-				<description></description>
+                <site>Feinberg</site>
+				<title>Kenneth Feinberg</title>
+				<url>http://www.washingtonian.com/articles/images/03.01.08.Feinburg.jpg</url>
+				<description>Kenneth Feinberg Photo</description>
             </primaryImage>
 			<image>
                 <site></site>
@@ -560,10 +560,10 @@
 				<description>Kenneth Feinberg being interviewed on the controversy regarding the BP Deepwater Horizon Disaster Victim Compensation Fund.</description>
 			</video>
 			<social>
-                <site></site>
+                <site>Kenneth Feinberg Facebook</site>
 				<title>Kenneth Feinberg Facebook</title>
 				<url>http://www.facebook.com/pages/Kenneth-Feinberg/143047909045042</url>
-				<description></description>
+				<description>Kenneth Feinberg's Facebook Page'</description>
 			</social>
 			<ext>
                 <site></site>
@@ -572,7 +572,7 @@
 				<description>The official website of Feinberg's law firm.</description>
 			</ext>       
 		</ref>
-		<misc>    </misc>
+		<misc>Something</misc>
 		<crisis idref = "deepwater"/>
 	    <org idref = "bp"/>
 	</person>
@@ -580,9 +580,9 @@
 	<person id = "papandreou">
 	    <name>Former Prime Minister of Greece George Papandreou</name>
 		<info>
-			<type></type>
+			<type>Former Prime Minister</type>
 			<birthdate>
-				<time></time>
+				<time>12:00</time>
 				<day>16</day>
 				<month>6</month>
 				<year>1952</year>
@@ -593,10 +593,10 @@
 		</info>
 		<ref>
             <primaryImage>
-                <site></site>
-				<title></title>
-				<url></url>
-				<description></description>
+                <site>George Papandreou</site>
+				<title>George Papandreou</title>
+				<url>http://www.totalmortgage.com/blog/wp-content/uploads/2011/11/mortgage-rates2.jpg</url>
+				<description>Photo of George Papandreou</description>
             </primaryImage>
 			<image>
                 <site></site>
@@ -611,19 +611,19 @@
 				<description>George Papandreou speaks on BBC in an interview about the Greek Financial Crisis.</description>
 			</video>
 			<social>
-                <site></site>
+                <site>Facebook Page George Papandreou</site>
 				<title>George Papandreou Facebook</title>
 				<url>http://www.facebook.com/george.a.papandreou</url>
-				<description></description>
+				<description>Facebook page for George Papandreou</description>
 			</social>
 			<ext>
-                <site></site>
+                <site>George Papandreou Personal Page</site>
 				<title>George Papandreou Personal Page</title>
 				<url>http://www.papandreou.gr</url>
 				<description>Personal Website of George Papandreou</description>
 			</ext>       
 		</ref>
-		<misc>    </misc>
+		<misc>Something</misc>
 		<crisis idref = "greece"/>
 	    <org idref = "imf"/>
 	</person>
