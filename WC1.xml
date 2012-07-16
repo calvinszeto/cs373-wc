@@ -13,7 +13,7 @@
 				<day>20</day>
 				<month>4</month>
 				<year>2010</year>
-				<misc></misc>
+				<misc>Something</misc>
 			</time>
 			<loc>
 				<city>At Sea</city>
@@ -26,24 +26,24 @@
 					<displaced>0</displaced>
 					<injured>0</injured>
 					<missing>0</missing>
-					<misc></misc>
+					<misc>Something</misc>
 				</human>
 				<economic>
 					<amount>30000000000</amount>
 					<currency>dollars</currency>
-					<misc></misc>
+					<misc>Something</misc>
 				</economic>
 			</impact> 
 		</info>
 		<ref>
             <primaryImage>
-                <site></site>
+                <site>Deepwater Horizon 1</site>
 				<title>Deepwater Horizon</title>
 				<url>http://www.thebuzzmedia.com/wp-content/uploads/2010/06/bp-oil-spill-bird-covered-in-oil.jpg</url>
 				<description>Impact to the marine life at the Gulf of Mexico.</description>
             </primaryImage>
 			<image>
-                <site></site>
+                <site>Deepwater Horizon 2</site>
 				<title>Putting Out Fire From Explosion</title>
 				<url>http://www4.pictures.zimbio.com/gi/Eleven+People+Missing+After+Explosion+Offshore+4u55Qj3S000l.jpg</url>
 				<description>Desperate to control damage.</description>
@@ -55,19 +55,19 @@
 				<description></description>
 			</video>
 			<social>
-                <site></site>
+                <site>Facebook Page</site>
 				<title>Facebook</title>
 				<url>http://www.facebook.com/BPOilCrisisInTheGulf?ref=ts</url>
-                <description></description>
+                <description>Facebook page for the Deepwater Horizon Oil Spill.</description>
 			</social>
 			<ext>
-                <site></site>
+                <site>Wikipedia Entry</site>
 				<title>Wikipedia</title>
 				<url>http://en.wikipedia.org/wiki/Deepwater_Horizon_oil_spill#Consequences</url>
-				<description></description>
+				<description>Wikipedia entry of Deepwater Horizon Oil Spill.</description>
 			</ext>    
 		</ref>
-		<misc></misc>
+		<misc>Something</misc>
 		<org idref = "bp"/>
 		<person idref = "feinberg"/>
 	</crisis>
@@ -84,7 +84,7 @@
 				<day>24</day>
 				<month>10</month>
 				<year>1955</year>
-				<misc></misc>
+				<misc>Something</misc>
 			</time>
 			<loc>
 				<city>Many Cities in Region</city>
@@ -97,48 +97,48 @@
 					<displaced>0</displaced>
 					<injured>50000000</injured>
 					<missing>0</missing>
-					<misc></misc>
+					<misc>Something</misc>
 				</human>
 				<economic>
 					<amount>250000000</amount>
 					<currency>Dollar</currency>
-					<misc></misc>
+					<misc>Something</misc>
 				</economic>
 			</impact> 
 		</info>
 		<ref>
             <primaryImage>
-                <site></site>
+                <site>Photo of child recieving medication for polio</site>
 				<title>Child Giving Medication</title>
 				<url>http://sphotos-a.xx.fbcdn.net/hphotos-ash4/s720x720/419233_10150647107914837_1435806600_n.jpg</url>
 				<description>A child recieving treatment for polio.</description>
             </primaryImage>
 			<image>
-                <site></site>
+                <site>Polio Virus Render</site>
 				<title>3D Picture of the Polio Virus</title>
 				<url>http://www.npspindia.org/images/Polio-Virus.jpg</url>
 				<description>A 3 dimension rendering of the polio virus.</description>
 			</image>
 			<video>
-				<site>youtube</site>
+				<site>Polio's Last Percent'</site>
 				<title>Polio's Last Percent'</title>
 				<url>http://www.youtube.com/embed/AfmwcShVeM0</url>
 				<description>Polio</description>
 			</video>
 			<social>
-                <site></site>
+                <site>End Polio Now at Facebook</site>
 				<title>End Polio Now Facebook Page</title>
 				<url>http://www.facebook.com/pages/End-Polio-Now/78976274836</url>
 				<description>facebook page for polioi activism.</description>
 			</social>
 			<ext>
-                <site></site>
+                <site>Bill and Melinda Gates Foundation</site>
 				<title>Bill and Melinda Gates Foundation</title>
 				<url>http://www.gatesfoundation.org/polio/pages/default.aspx</url>
 				<description>A site for the Bill and Melinda Gates Foundation.</description>
 			</ext>    
 		</ref>
-		<misc></misc>
+		<misc>Something</misc>
 		<org idref = "tgpei"/>
 		<person idref = "jonassalk"/>
 	</crisis>
@@ -148,14 +148,14 @@
 		<info>
 			<history>Childhood obesity has tripled in the past 30 years has both immediate and long-term effects on health and well-being.</history>
 			<help>States and communities can assess their retail food environment to better understand the current landscape and differences in accessibility to healthier foods and provide incentives to existing supermarkets and farmers' markets to establish their businesses in low-income areas or to sell healthier foods.</help>
-			<resources></resources> 
-			<type></type>
+			<resources>Food Education</resources> 
+			<type>Health</type>
 			<time>
-				<time></time>
+				<time>12:00</time>
 				<day>1</day>
 				<month>1</month>
 				<year>2008</year>
-				<misc></misc>
+				<misc>Something</misc>
 			</time>
 			<loc>
 				<city></city>
