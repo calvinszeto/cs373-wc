@@ -26,12 +26,12 @@
 
 <div id="navbar-container">
    <div id="navbar">
-   	   <ul class="navbar">
-    	<li class="navbar" ><a href="/index.html">Home</a></li>
+    <ul class="navbar">
+     <li class="navbar" ><a href="index.html">Home</a></li>
         <li class="navbar"><a href="/crises">Crises</a></li>
-       	<li class="navbar"><a href="/people">People</a></li>
-       	<li class="navbar"><a href="/orgs">Organizations</a></li>
-	   </ul>
+        <li class="navbar"><a href="/people">People</a></li>
+        <li class="navbar"><a href="/orgs">Organizations</a></li>
+</ul>
    </div>
  </div>
 <!-- end header -->
@@ -41,46 +41,28 @@
         <!-- begin attributes -->
         <div id="attributes">
             <div class="primary-photo">
-                <img src="????" title="" />
+                <img src="{{o.pimage.url}}" title="" />
             </div>
-            <ul>
-         	<li><strong>Date: </strong>{{c.time.month}}/{{c.time.day}}/{{c.time.year}}</li>
-        	<li><strong>Type: </strong>{{c.info.info_type}}</li>
-        	<li><strong>Location: </strong>{{c.loc.city}} </li>
-            </ul>
             <!-- begin stats -->
             <div class="stats">
-            <h4>Economic Impact</h4>
-            <ul>
-         	<li>{{c.economic.amount}} {{c.economic.currency}}</li>
-            </ul>
-            <h4>Human Impact</h4>
                 <ul>
-                    <li><strong>Deaths: </strong>{{c.human.deaths}}</li>
-                    <li><strong>Displaced: </strong>{{c.human.displaced}}</li>
-                    <li><strong>Injured: </strong>{{c.human.injured}}</li>
-                    <li><strong>Missing: </strong>{{c.human.missing}}</li>
-                    <li><strong>Misc: </strong>{{c.human.misc}}</li>
+                    <li><strong>Type: </strong>{{o.info.info_type}}</li>
+                    <li><strong>Phone: </strong>{{o.contact.phone}}</li>
+                    <li><strong>Email: </strong>{{o.contact.email}}</li>
+                    <li><strong>Mail: </strong>{{o.mail.address}} <br>{{o.mail.city}}, {{o.mail.state}} {{o.mail.zip}} {{o.mail.country}}</li>
                 </ul>
-            <h4>Resources Needed</h4>
-                <ul>
-         	    <li>{{c.info.resources}}</li>
-		</ul>
-	    <h4>Help Needed</h4>
-                <ul>
-         	    <li>{{c.info.info_help}}</li>
-		</ul>
-                {% for r in c.socials %}
+                
+                {% for r in o.socials %}
                 <h5>Social Sites</h5>
                     <ul class="capitalize">
-                        <li><a href="{{r.url}}" title="{{r.title}}" target="_blank">{{r.title}}</a></li>  
+                        <li><a href="{{r.url}}" title="{{r.title}}" target="_blank">{{r.title}}</a></li>
                     </ul>
                 {% endfor %}
 
-                {% for r in c.exts %}
+                {% for r in o.exts %}
                 <h5>Social Sites</h5>
                     <ul class="capitalize">
-                        <li><a href="{{r.url}}" title="{{r.title}}" target="_blank">{{r.title}}</a></li>  
+                        <li><a href="{{r.url}}" title="{{r.title}}" target="_blank">{{r.title}}</a></li>
                     </ul>
                 {% endfor %}
                 
@@ -93,7 +75,7 @@
         <!-- begin primary content -->
         <div id="primary-content">
             <!-- begin Page Title -->
-            <h1 id="page-title">{{persons.person.name}}</h1>
+            <h1 id="page-title">{{o.org.name}}</h1>
             <!-- end primary content -->
             <!-- begin media -->
             <div id="media">
@@ -103,7 +85,7 @@
                     <div id="photo-box">
                         
                         <!-- begin single item -->
-                        {% for i in c.images %}
+                        {% for i in o.images %}
                         <div class="item-box">
                             <div class="display-box">
                                     <img src="{{i.url}}" title="{{i.title}}" />
@@ -127,11 +109,11 @@
          
                         
                         <!-- begin single item -->
-                        {% for v in c.videos %}
+                        {% for v in o.videos %}
                         <div class="item-box">
                             <div class="display-box">
                                 <iframe width="560" height="315" src="{{v.url}}" frameborder="0" allowfullscreen></iframe>
-                            </div>                        
+                            </div>
                         </div>
                         {% endfor %}
                         <!-- end single item -->
@@ -152,14 +134,14 @@
                          
                 
                 <h2>History</h2>
-                <p>{{c.info.history}}</p>
+                <p>{{o.info.history}}</p>
             </div>
             <!-- end history -->
             
             
-            <!-- begin related people -->
-            <div class="people">
-                <h2>Related People</h2>
+            <!-- begin related crises -->
+            <div class="crises">
+                <h2>Related Crises</h2>
                 
                 
                 <!-- begin single item -->
@@ -182,16 +164,16 @@
             
             
             <!-- begin related organizations -->
-            <div class="organizations">
-                <h2>Related Organizations</h2>
+            <div class="persons">
+                <h2>Related People</h2>
                 
                 
                 <!-- begin single item -->
                 <div class="item-box">
                     <div class="display-box">
-                        <a href="/orgs/" title=""><img src="" title="" /></a>
+                        <a href="/person/" title=""><img src="" title="" /></a>
                     </div>
-                    <a href="/orgs" title="">
+                    <a href="/person" title="">
                         <span class="subtitle"></span>
                     </a>
                 </div>
@@ -210,7 +192,7 @@
 <div id = "footer">
  <div id="links">
   <ul><b>Links</b>
-  	<li><a href="">Import</a></li>
+   <li><a href="">Import</a></li>
     <li><a href="">Export</a></li>
     <li><a href="">GAE Unit Tests</a></li>
    </ul>
@@ -226,4 +208,3 @@
 
 </body>
 </html>
-

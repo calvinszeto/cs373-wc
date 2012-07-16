@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -30,10 +31,12 @@
 <!-- begin content -->
 <div id="content">
 	<div id = "list">
-		<h3>People</h3>
-        <img src="http://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Michelle_Obama_official_portrait_headshot.jpg/225px-Michelle_Obama_official_portrait_headshot.jpg" />	<h4><a href="">Michelle Obama</a></h4><p>Michelle LaVaughn Robinson Obama is the first African-American First Lady of the United States and wife to the 44th President of the United States, Barack Obama.</p>
+		<h3>Crises</h3>
+        {% for p in persons %}
+        <img src="{{p.pimage.url}}" />	<h4><a href="/person/{{p.person.person_id}}">{{p.person.name}}</a></h4><p>{{p.info.biography}}</p>
         <hr noshade size="1">
-        <img src="http://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Michelle_Obama_official_portrait_headshot.jpg/225px-Michelle_Obama_official_portrait_headshot.jpg" />	<h4><a href="">Michelle Obama</a></h4><p>Michelle LaVaughn Robinson Obama is the first African-American First Lady of the United States and wife to the 44th President of the United States, Barack Obama.</p>
+        {% endfor %}
+
     </div>
 </div><!-- content -->
 
