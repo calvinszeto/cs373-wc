@@ -293,55 +293,55 @@
 			<type>Oil and gas company</type>
 			<history>British multinational oil and gas company which is the third-largest energy company and fourth-largest company in the world measured by 2011 revenues. It is vertically integrated and is active in every area of the oil and gas industry, including exploration and production,refining, distribution and marketing, petrochemicals, power generation and trading. It also has renewable energy activities in biofuelsand wind power. Its largest division is BP America, which is the second-largest producer of oil and gas in the United States and is headquartered in Houston, Texas. As of December 2011, BP had total proven commercial reserves of 17.75 billion barrels of oil equivalent. The name "BP" derives from the initials of one of the company's former legal names, British Petroleum.</history>
 			<contact>
-				<phone></phone>
-				<email></email>
+				<phone>866-448-5816</phone>
+				<email>bpconsum@bp.com</email>
 				<mail>
-					<address></address>
-					<city></city>
-					<state></state>
-					<country></country>
-					<zip></zip>
+					<address>28301 Ferry Road</address>
+					<city>Warrenville</city>
+					<state>IL</state>
+					<country>USA</country>
+					<zip>60555</zip>
 				</mail>
 			</contact>
 			<loc>
 				<city>London</city>
-				<region></region>
+				<region>London</region>
 				<country>England</country>
 			</loc>    
 		</info>
 		<ref>
             <primaryImage>
-                <site></site>
-				<title></title>
-				<url></url>
-				<description></description>
+                <site>Youtube</site>
+				<title>BP's Logo'</title>
+				<url>http://www.wbrz.com/images/news/bpbiglogo.jpg</url>
+				<description>BP's Logo'</description>
             </primaryImage>
 			<image>
 				<site>Youtube</site>
-				<title>BP's Logo</title>
-				<url>http://www.wbrz.com/images/news/bpbiglogo.jpg</url>
-				<description></description>
+				<title>BP</title>
+				<url>http://media.tumblr.com/tumblr_l4l8lyJRIl1qzhq18.jpg</url>
+				<description>BP</description>
 			</image>
 			<video>
 				<site>Youtube</site>
-				<title></title>
+				<title>BP Statistical Review of World Energy 2012</title>
 				<url>http://www.youtube.com/embed/KtWoPZluI2E</url>
-				<description></description>
+				<description>BP Statistical Review of World Energy 2012</description>
 			</video>
 			<social>
 				<site>Facebook</site>
 				<title>BP's Facebook Page</title>
 				<url>http://facebook.com/BPAmerica</url>
-				<description></description>
+				<description>BP's Facebook Page</description>
 			</social>
 			<ext>
 				<site>BP</site>
 				<title>BP</title>
 				<url>http://www.bp.com</url>
-				<description></description>
+				<description>BP's website'</description>
 			</ext>     
 		</ref>
-		<misc>    </misc>
+		<misc>Something</misc>
 		<crisis idref = "deepwater"/>
 		<person idref = "feinberg"/>	
 	</organization>
