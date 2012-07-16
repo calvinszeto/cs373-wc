@@ -1,72 +1,73 @@
-
+@charset "UTF-8";
+/* CSS Document */
 
 body {
 	border:0;
 	margin:0;
 	padding:0;
-  	min-width: 960px;
-  	background-color:#3399cc;
-	font-family:Arial, Helvetica, sans-serif;
+	font-family:Helvetica, Arial, sans-serif;
 	color:#fff;
+	background-color:#fff;
 }
-
-h1, h2, h3, h4, h5, h6, .capitalize {
-    text-transform: capitalize;
-}
-
 
 #header-container {
 	width:100%;
+	height:75px;
 	background-color:#000;
 }
 
 #header {
-	height:75px;
 	width:960px;
-	padding-left: 100px;
-	background-color:#000;
+	margin:0 auto;
 }
 
-
 #logo {
-	background-image:url(images/logo.jpg);
-	height: 75px;
+	width:100px;
+	height:75px;
 	float:left;
-	padding-left:100px;
+}
+
+#logo img {
+	border:0;
 }
 
 #title {
 	float:left;
-	margin-left:20px;
-	width:173px;
+	padding-left:25px;
 	height:75px;
-	background-image:url(images/title.png);
+	width:173px;
 }
 
-#navbar-container {
-	padding:0;
-	margin:0;
-	height:30px;
-	background-color:#3399cc;
+#title img {
+	border:0;
+}
+
+#nav-container {
 	width:100%;
-}
-
-
-#navbar {	
-	padding-left:60px;
-
-	width:960px;
-	height:30px;
+	height:35px;
 	background-color:#3399cc;
-
 }
 
-#navbar ul li {
-	display:inline;
-	color:#fff;
+#nav {
+	width:960px;
+	height:100%;
+	margin:0 auto;
 }
 
-#navbar ul li a {
+#nav ul {
+	margin:0;
+	margin-left: -35px;
+	padding-top:10px;
+	float:left;
+}
+
+#nav ul li {
+	display: inline-block;
+	list-style-type:none;
+	margin:0;
+}
+
+#nav ul li a {
 	text-decoration:none;
 	width:80px;
 	color:#fff;
@@ -75,121 +76,190 @@ h1, h2, h3, h4, h5, h6, .capitalize {
 	text-transform:uppercase;
 }
 
-#navbar ul li a:hover {
+#nav ul li a:hover {
 	text-decoration:underline;
 }
 
+#slider {
+	height:850px;
+}
 
+
+#footer-container {
+	width:100%;
+	height:90px;
+	background-color:#3399cc;
+	padding-left:200px;
+}
 
 #footer {
 	width:960px;
-	
+	margin:0 auto;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	text-transform:capitalize;
+	float:left;
 }
 
-#links {
+#footer a {
+	text-decoration:none;
+	color:#FFF;
+}
+#footer a:hover {
+	text-decoration:underline;
+}
+#footer a:visited{
+	text-decoration:none;
+	color:#fff;
+}
+
+#footer ul {
+	margin-left:0px;
+}
+
+#footer ul a: {
+	text-decoration:none;
+	color:#FFF;
+}
+
+#footer-left {
 	width:200px;
 	float:left;
 }
 
-#links ul {
-	list-style:none;
-	font-size:12px;
-}
-#links ul li a {
-	text-decoration:none;
-}
-#links ul li a:hover {
-	text-decoration:underline;
-}
-#links ul li a:visited {
-	color:#fff;
+#footer-left ul {
+	list-style-type:none;
 }
 
 #footer-right {
+	width:300px;
 	float:right;
-	font-size:12px;
-	margin-right:-300px;
-}
-
-
-#attributes {
-    float: left;
-    margin-right: 16px;
-    width: 200px;
-}
-
-#attributes img {
-    width: 200px;
-}
-
-.primary-photo {
-    background-position-x: center;
-    background-position-y: bottom;
-    overflow: hidden;
-    padding: 8px 8px 16px;
-    width: 184px;
-}
-.primary-photo img {
-    height: auto;
-    width: 184px;
-}
-
-#primary-content {
-    float: left;
-    width: 580px;
-}
-
-#media {
-    overflow: hidden;
-    position: relative;
-    width: 100%;
+	margin-right:-50px;
+	
 }
 
 #content {
 	width:960px;
-	background-color:#FFF;
-	padding-left:100px;
+	margin: 0 auto;
+	height:800px;
+	background-color: #fff;
+	padding-top:30px;
+	color:#000;
+}
+
+#attributes {
+	width:200px;
+	float:left;
+	margin-right:15px;
+}
+
+#attributes img {
+	width:200px;
+}
+
+#attributes ul li {
+    font-size: .9em;
+    padding: 0 0 2px 7px;
+    word-wrap: break-word;
+	list-style-image:url(images/bullet.jpg);
+	margin-left:-28px;
+}
+
+#main {
+	padding-left: 30px;
+	float:left;
+	width:540px;
 }
 
 #photos, #videos {
-    float: left;
-    overflow: hidden;
-    position: relative;
+	float:left;
+	width:250;
+	padding-right:20px;
+	margin-bottom:20px;
 }
 
-.item-box {
-    float: left;
-    padding-right: 8px;
-    width: 160px;
+#photos img {
+	height:141px;
+	width:250px;
+	overflow:hidden;
 }
 
-.display-box {
-    overflow: hidden;
-    margin-bottom: 8px;
+.rel {
+	float:left;
+	width:250;
+	padding-right:20px;
 }
 
-#media #videos .item-box, #media #videos .item-box .display-box {
-    width: 135px;
+.rel img{
+	height:100px;
+	width:100px;
+}
+
+#list {
+	width:600px;
+	margin:0 auto;
+}
+
+#list img {
+	height: 100px;
+	width: 100px;
+	margin-left: 20px;
+	float:right;
+}
+
+#list h4 {
+	margin:0;
 }
 
 
-#media .item-box .display-box, #media .item-box .display-box a {
-    display: block;
-    width: 82px;
-    height: 82px;
+
+/* Text */
+h1 {
+    font-size: 2.4em;
+	margin:0;
+	margin-bottom: 5px;
 }
 
+h2 {
+    font-size: 1.8em;
+	margin:0;
+}
 
+h3 {
+    font-size: 1.4em;
+	margin:5px 0px;
+}
 
-/*
- * jQuery Nivo Slider v3.0.1
- * http://nivo.dev7studios.com
- *
- * Copyright 2012, Dev7studios
- * Free to use and abuse under the MIT license.
- * http://www.opensource.org/licenses/mit-license.php
- */
- 
+h4 {
+    font-size: 1.3em;
+	margin:5px;
+
+}
+
+h5 {
+    font-size: 1.2em;
+	margin:0px;
+}
+
+h6 {
+    font-size: 1em;
+}
+
+p {
+    font-size: 1em;
+    font-weight: 350;
+    line-height: 1.2em;
+    margin-bottom: 1em;
+}
+
+h1, h2, h3, h4, h5, h6, .capitalize {
+    text-transform: capitalize;
+}
+
+a {
+	color:#3399cc;
+}
+
 /* The Nivo Slider styles */
 .nivoSlider {
 	position:relative;
@@ -229,32 +299,33 @@ h1, h2, h3, h4, h5, h6, .capitalize {
 	height:100%;
 	top:0;
 }
-.nivo-box {
+.nivo  {
 	display:block;
 	position:absolute;
 	z-index:5;
 	overflow:hidden;
 }
-.nivo-box img { display:block; }
+.nivo  img { display:block; }
 
 /* Caption styles */
 .nivo-caption {
 	position:absolute;
-	left:0px;
-	bottom:0px;
+	left:225px;
+	bottom:600px;
 	background:#000;
 	color:#fff;
-	width:100%;
+	width:250px;
+	height:200px;
 	z-index:8;
 	padding: 5px 10px;
-	opacity: 0.8;
+	opacity: 0.5;
 	overflow: hidden;
 	display: none;
-	-moz-opacity: 0.8;
-	filter:alpha(opacity=8);
-	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
-	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
-	box-sizing: border-box;         /* Opera/IE 8+ */
+	-moz-opacity: 0.5;
+	filter:alpha(opacity=5);
+	-webkit -sizing: border ; /* Safari/Chrome, other WebKit */
+	-moz -sizing: border ;    /* Firefox, other Gecko */
+	box-sizing: border ;         /* Opera/IE 8+ */
 }
 .nivo-caption p {
 	padding:5px;
@@ -274,11 +345,10 @@ h1, h2, h3, h4, h5, h6, .capitalize {
 	cursor:pointer;
 }
 .nivo-prevNav {
-	left:15px;
+	left:0px;
 }
 .nivo-nextNav {
-	background-position:-30px 0;
-	right:15px;
+	right:0px;
 }
 /* Control nav styles (e.g. 1,2,3...) */
 .nivo-controlNav {
@@ -290,95 +360,3 @@ h1, h2, h3, h4, h5, h6, .capitalize {
 }
 .nivo-controlNav a.active {
 	font-weight:bold;
-}
-
-.nivo-directionNav a {
-	display:block;
-	width:33px;
-	height:44px;
-	background:url('images/slider-arrow.png') no-repeat;
-	text-indent:-9999px;
-	border:0;
-}
-
-.nivo-caption {
-    font-family: Helvetica, Arial, sans-serif;
-}
-
-.theme-default .nivoSlider {
-	position:relative;
-	background:#fff url(images/loading.gif) no-repeat 50% 50%;
-    margin-bottom:50px;
-    -webkit-box-shadow: 0px 1px 5px 0px #4a4a4a;
-    -moz-box-shadow: 0px 1px 5px 0px #4a4a4a;
-    box-shadow: 0px 1px 5px 0px #4a4a4a;
-}
-.theme-default .nivoSlider img {
-	position:absolute;
-	top:0px;
-	left:0px;
-	display:none;
-}
-.theme-default .nivoSlider a {
-	border:0;
-	display:block;
-}
-
-.theme-default .nivo-controlNav {
-	text-align: center;
-	padding: 20px 0;
-}
-.theme-default .nivo-controlNav a {
-	display:inline-block;
-	width:22px;
-	height:22px;
-	background:url(images/bullets.png) no-repeat;
-	text-indent:-9999px;
-	border:0;
-	margin: 0 2px;
-}
-.theme-default .nivo-controlNav a.active {
-	background-position:0 -22px;
-}
-
-.theme-default .nivo-directionNav a {
-	display:block;
-	width:30px;
-	height:30px;
-	background:url(images/arrows.png) no-repeat;
-	text-indent:-9999px;
-	border:0;
-}
-.theme-default a.nivo-nextNav {
-	background-position:-30px 0;
-	right:15px;
-}
-.theme-default a.nivo-prevNav {
-	left:15px;
-}
-
-.theme-default .nivo-caption {
-    font-family: Helvetica, Arial, sans-serif;
-}
-.theme-default .nivo-caption a {
-    color:#fff;
-    border-bottom:1px dotted #fff;
-}
-.theme-default .nivo-caption a:hover {
-    color:#fff;
-}
-
-.theme-default .nivo-controlNav.nivo-thumbs-enabled {
-	width: 100%;
-}
-.theme-default .nivo-controlNav.nivo-thumbs-enabled a {
-	width: auto;
-	height: auto;
-	background: none;
-	margin-bottom: 5px;
-}
-.theme-default .nivo-controlNav.nivo-thumbs-enabled img {
-	display: block;
-	width: 120px;
-	height: auto;
-}
