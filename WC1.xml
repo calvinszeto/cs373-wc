@@ -13,7 +13,7 @@
 				<day>20</day>
 				<month>4</month>
 				<year>2010</year>
-				<misc>Something</misc>
+				<misc>0</misc>
 			</time>
 			<loc>
 				<city>At Sea</city>
@@ -84,7 +84,7 @@
 				<day>24</day>
 				<month>10</month>
 				<year>1955</year>
-				<misc>Something</misc>
+				<misc>0</misc>
 			</time>
 			<loc>
 				<city>Many Cities in Region</city>
@@ -158,9 +158,9 @@
 				<misc>Something</misc>
 			</time>
 			<loc>
-				<city></city>
-				<region></region>
-				<country>U.S.A.</country>
+				<city>Many Cities</city>
+				<region>Worldwide</region>
+				<country>First-world Countries</country>
 			</loc> 
 			<impact>
 				<human>
@@ -168,48 +168,48 @@
 					<displaced>0</displaced>
 					<injured>0</injured>
 					<missing>0</missing>
-					<misc></misc>
+					<misc>0</misc>
 				</human>
 				<economic>
-					<amount>1</amount>
-					<currency></currency>
-					<misc></misc>
+					<amount>10000000</amount>
+					<currency>Dollar</currency>
+					<misc>something</misc>
 				</economic>
 			</impact> 
 		</info>
 		<ref>
             <primaryImage>
-                <site></site>
-				<title></title>
-				<url></url>
-				<description></description>
+                <site>Couch-Potato</site>
+				<title>Kid Being a Couch-Potato</title>
+				<url>http://www.toptenz.net/wp-content/uploads/2011/07/childhood-obesity-300x180.jpg</url>
+				<description>Lack of exercise and junkfood</description>
             </primaryImage>
 			<image>
-				<site></site>
-				<title></title>
+				<site>Fat Kid Photo</site>
+				<title>Fat Kid</title>
 				<url>http://moviecitynews.com/wp-content/uploads/2012/06/Fat-Kid-Rules-the-World_04.jpg</url>
-				<description></description>
+				<description>Obesity</description>
 			</image>
 			<video>
-				<site></site>
-				<title></title>
+				<site>About Childhood Obesity</site>
+				<title>Childhood Obesity</title>
 				<url>http://www.youtube.com/embed/dLMoFST_Lmc</url>
-				<description></description>
+				<description>Talking about childhood obesity</description>
 			</video>
 			<social>
-				<site></site>
-				<title></title>
+				<site>Twitter Page for childhood obesity</site>
+				<title>Twitter</title>
 				<url>https://twitter.com/CDCObesity</url>
-				<description></description>
+				<description>Twitter page about childhood obesity</description>
 			</social>
 			<ext>
-				<site></site>
-				<title></title>
+				<site>CDC Information</site>
+				<title>Childhood Obesity CDC Information</title>
 				<url>http://www.cdc.gov/healthyyouth/obesity/facts.htm</url>
-				<description></description>
+				<description>CDC Information site for Childhood Obesity.</description>
 			</ext>    
 		</ref>
-		<misc></misc>
+		<misc>Something</misc>
 		<org idref = "aap"/>
 		<person idref = "michelleobama"/>
 	</crisis>
@@ -219,18 +219,18 @@
 		<info>
 			<history>Greece was living beyond its means before adopting the Euro and after adopting the Euro public spending significantly rose. After years of overspending, Greece’s budget deficit spiraled out of control, which left Greece unprepared to handle the global economic downturn. Greece’s debt reached levels so high that it was unable to pay, so required massive loans from European partners and the IMF </history>
 			<help>Bailout from IMF and EU</help>
-			<resources></resources> 
+			<resources>Bailouts from EU and IMF</resources> 
 			<type>Debt crisis that could lead to problems in the Eurozone</type>
 			<time>
-				<time></time>
+				<time>12:00</time>
 				<day>1</day>
 				<month>1</month>
 				<year>2009</year>
-				<misc></misc>
+				<misc>0</misc>
 			</time>
 			<loc>
 				<city>Athens</city>
-				<region></region>
+				<region>Attica</region>
 				<country>Greece</country>
 			</loc> 
 			<impact>
@@ -239,48 +239,48 @@
 					<displaced>0</displaced>
 					<injured>300</injured>
 					<missing>0</missing>
-					<misc></misc>
+					<misc>0</misc>
 				</human>
 				<economic>
 					<amount>240000000000</amount>
 					<currency>Euros</currency>
-					<misc></misc>
+					<misc>0</misc>
 				</economic>
 			</impact> 
 		</info>
 		<ref>
             <primaryImage>
-                <site></site>
-				<title></title>
-				<url></url>
-				<description></description>
+                <site>Political Cartoon</site>
+				<title>Political Cartoon</title>
+				<url>http://2.bp.blogspot.com/--S0bgE12ohM/TrQUIGj7NSI/AAAAAAAAAPg/5aBsjD2csgM/s1600/023-0617131539-greek-economy-crisis2.jpg</url>
+				<description>A political cartoon of the Greece Debt Crisis</description>
             </primaryImage>
 			<image>
-				<site></site>
+				<site>Riot in Greece</site>
 				<title>Rioting in Greece</title>
 				<url>http://cdn.theatlantic.com/static/infocus/athens021312/s_a06_10125965.jpg</url>
-				<description></description>
+				<description>Riot broke out in Greece.</description>
 			</image>
 			<video>
-				<site>Youtube</site>
-				<title></title>
+				<site>Youtube.com</site>
+				<title>Greece Debt Crisis Explained in 4 Minutes</title>
 				<url>http://www.youtube.com/embed/mEVqeaFHsHE</url>
-				<description></description>
+				<description>Explanation of Freece Debt Crisis</description>
 			</video>
 			<social>
-				<site></site>
+				<site>Facebook for Greece Debt Crisis</site>
 				<title>Facebook</title>
 				<url>https://www.facebook.com/GreeceDebtFree</url>
-				<description></description>
+				<description>Facebook page for the Greece Debt Crisis</description>
 			</social>
 			<ext>
-				<site></site>
+				<site>CNN</site>
 				<title>CNN</title>
 				<url>http://www.cnn.com/2010/BUSINESS/02/10/greek.debt.qanda/index.html</url>
-				<description></description>
+				<description>CNN article regarding the Greece Debt Crisis</description>
 			</ext>    
 		</ref>
-		<misc></misc>
+		<misc>Something</misc>
 		<org idref = "imf"/>
 		<person idref = "papandreou"/>
 	</crisis>
