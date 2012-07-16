@@ -1,76 +1,12 @@
 import unittest
 from helloworld import *
+from goodbyeworld import *
 from xml.etree.ElementTree import ElementTree
 import xml.etree.ElementTree
 
 
-
-class TestWC1(unittest.TestCase):
-
-
-    def testName(self):
-        self.assertTrue(True)
-
-    def test_feature_one(self):
-	cris = Crisis()
-	cris.name = "Deepwater Horizon Oil Spill"
-	self.assertTrue(cris.name == "Deepwater Horizon Oil Spill")
-    def test_feature_two(self):
-	cris = Crisis()
-	cris.misc = ""
-	self.assertTrue(cris.misc == "")
-    def test_feature_third(self):
-	org = Organization()
-	self.assertTrue(org.name != "")
-    def test_feature_fourth(self):
-	org = Organization()
-	self.assertTrue(org.name is None) 
-    def test_feature_fifth(self):
-	peps = Person()
-	peps.name = "Connor Bowman"
-	self.assertTrue(peps.name is "Connor Bowman")
-    def test_feature_six(self):
-	t = Time()
-    	t.month = "4" 
-	self.assertTrue(t.month == "4")
-    def test_feature_seven(self):
-	t = Time()
-	t.day = "30"
-	self.assertTrue(t.day == "30")
-    def test_feature_twenty(self):
-	t = Time()
-	t.year = "1970"
-	self.assertTrue(t.year == "1970")
-    def test_feature_eight(self):
-	t = Time()
-	t.time = "11:30"
-	self.assertTrue(t.time == "11:30")
-    def test_feature_nine(self):
-	m = Mail()
-	m.address = "1 Main St."
-	self.assertTrue(m.address == "1 Main St.")
-    def test_feature_ten(self):
-	m = Mail()
-	m.city = "Austin"
-	self.assertTrue(m.city == "Austin")
-    def test_feature_eleven(self):
-	m = Mail()	
-	m.state = "TX"
-	self.assertTrue(m.state == "TX")
-    def test_feature_twelve(self):
-	m = Mail()
-	m.country = "USA"
-	self.assertTrue(m.country == "USA")
-    def test_feature_thirteen(self):
-	m = Mail()
-	m.mail_zip = "78705"
-	self.assertTrue(m.mail_zip == "78705")
-    def fourteen(self):
-	l = Location()
-	l.city = "Austin"
-	self.assertTrue(l.city == "Austin")
-    def test_feature_eight(self):
-	p = xml.etree.ElementTree.fromstring("""	<crisis id = "deepwater">
+p = xml.etree.ElementTree.fromstring("""<worldcrisis>
+<crisis id = "deepwater">
 <name>Deepwater Horizon Oil Spill</name>
 <info>
 <history></history>
@@ -139,12 +75,127 @@ class TestWC1(unittest.TestCase):
 <misc></misc>
 <org idref = "bp"/>
 <person idref = "feinberg"/>
-</crisis>""")
-	d = p.find("name")
-	
-	self.assertTrue(d.text == "Deepwater Horizon Oil Spill")
-	
+</crisis>
+</worldcrisis>""")
 
+class TestWC1(unittest.TestCase):
+
+
+    def testName(self):
+        self.assertTrue(True)
+
+    def test_feature_one(self):
+        cris = Crisis()
+        cris.name = "Deepwater Horizon Oil Spill"
+        self.assertTrue(cris.name == "Deepwater Horizon Oil Spill")
+
+    def test_feature_two(self):
+        cris = Crisis()
+        cris.misc = ""
+        self.assertTrue(cris.misc == "")
+
+    def test_feature_third(self):
+        org = Organization()
+        self.assertTrue(org.name != "")
+
+    def test_feature_fourth(self):
+        org = Organization()
+        self.assertTrue(org.name is None) 
+
+    def test_feature_fifth(self):
+        peps = Person()
+        peps.name = "Connor Bowman"
+        self.assertTrue(peps.name is "Connor Bowman")
+
+    def test_feature_six(self):
+        t = Time()
+        t.month = "4" 
+        self.assertTrue(t.month == "4")
+
+    def test_feature_seven(self):
+        t = Time()
+        t.day = "30"
+        self.assertTrue(t.day == "30")
+
+    def test_feature_twenty(self):
+        t = Time()
+        t.year = "1970"
+        self.assertTrue(t.year == "1970")
+
+    def test_feature_eight(self):
+        t = Time()
+        t.time = "11:30"
+        self.assertTrue(t.time == "11:30")
+
+    def test_feature_nine(self):
+        m = Mail()
+        m.address = "1 Main St."
+        self.assertTrue(m.address == "1 Main St.")
+
+    def test_feature_ten(self):
+        m = Mail()
+        m.city = "Austin"
+        self.assertTrue(m.city == "Austin")
+
+    def test_feature_eleven(self):
+        m = Mail()	
+        m.state = "TX"
+        self.assertTrue(m.state == "TX")
+
+    def test_feature_twelve(self):
+        m = Mail()
+        m.country = "USA"
+        self.assertTrue(m.country == "USA")
+
+    def test_feature_thirteen(self):
+        m = Mail()
+        m.mail_zip = "78705"
+        self.assertTrue(m.mail_zip == "78705")
+
+    def test_feature_fourteen(self):
+        l = Location()
+        l.city = "Austin"
+        self.assertTrue(l.city == "Austin")
+
+    def test_feature_eight(self):
+        d = p.find("crisis/name")
+        self.assertTrue(d.text == "Deepwater Horizon Oil Spill")
+
+    def test_export_1 (self):
+        # Crises
+        for c in p.findall("crisis"):
+            for x in crisis_dict:
+                text = c.find(x).text
+                crisis_dict[x] = text if text is not None else ""
+            cris = Crisis(**crisis_dict)
+            cris.put()
+        crises = Crisis.all()
+        self.assertTrue(crises[0].name == "Deepwater Horizon Oil Spill")
+
+    def test_export_2 (self):
+        # Crises
+        for c in p.findall("organization"):
+            for x in org_dict:
+                text = c.find(x).text
+                org_dict[x] = text if text is not None else ""
+            cris = Crisis(**crisis_dict)
+            cris.put()
+        crises = Crisis.all()
+        self.assertTrue(crises.get() is None)
+
+    def test_export_3 (self):
+        # Crises
+        for c in p.findall("crisis"):
+            for x in crisis_dict:
+                text = c.find(x).text
+                crisis_dict[x] = text if text is not None else ""
+            cris = Crisis(**crisis_dict)
+            # Crisis - Org
+            for org in c.findall("org"):
+                cris.orgs.append(org.attrib["idref"]) 
+            cris.put()
+        crises = Crisis.all()
+        self.assertTrue(crises[0].orgs[0]== "bp")
 
 
 	

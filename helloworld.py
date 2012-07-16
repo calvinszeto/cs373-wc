@@ -29,6 +29,7 @@ person_dict = {"name":"", "misc":""}
 person_info_dict = {"nationality":"", "biography":""}
 person_birth_dict = {"time":"","day":"","month":"","year":"","misc":""}
 
+
 class MainHandler(webapp.RequestHandler):
     def get(self):
         """
@@ -47,6 +48,7 @@ class UploadHandler(blobstore_handlers.BlobstoreUploadHandler):
         """
         upload_files = self.get_uploads('file')  # 'file' is file upload field in the form
         blob_info = upload_files[0]
+        br = blob_info.open()
         tree = ElementTree()
         br = blob_info.open()
         tree.parse(br)
