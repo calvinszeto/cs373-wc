@@ -30,9 +30,9 @@
 <!-- begin content -->
 <div id="content">
 	<div id = "list">
-		<h3>People</h3>
-        {% for p in persons %}
-        <img src="{{p.pimage.url}}" />	<h4><a href="/person/{{p.person.person_id}}">{{p.person.name}}</a></h4><p>{{p.info.biography}}</p>
+		<h3>Organizations</h3>
+        {% for o in orgs %}
+        <img src="{{o.pimage.url}}" />	<h4><a href="/org/{{o.org.org_id}}">{{o.org.name}}</a></h4><p>{{o.info.history}}</p>
         <hr noshade size="1">
         {% endfor %}
 
