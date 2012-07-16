@@ -50,7 +50,6 @@ class UploadHandler(blobstore_handlers.BlobstoreUploadHandler):
         blob_info = upload_files[0]
         br = blob_info.open()
         tree = ElementTree()
-        br = blob_info.open()
         tree.parse(br)
         try:
             # Crises
@@ -205,6 +204,7 @@ class UploadHandler(blobstore_handlers.BlobstoreUploadHandler):
         br = blob_info.open()
         tree.parse(br)
         db.delete(db.Query(keys_only=True)) # Clear the datastore
+        assert(Crisis.all().get() is None)
         # Crises
         for c in tree.findall("crisis"):
             for x in crisis_dict:
@@ -293,7 +293,7 @@ class UploadHandler(blobstore_handlers.BlobstoreUploadHandler):
                 eir = Ref(parent=cris,**ref_dict)
                 eir.ref_type="ext"
                 eir.put()
-        
+        assert(Crisis.all().get() is not None) 
         # Organizations
         for o in tree.findall("organization"):
             for x in org_dict:
@@ -374,6 +374,7 @@ class UploadHandler(blobstore_handlers.BlobstoreUploadHandler):
                 eir = Ref(parent=org,**ref_dict)
                 eir.ref_type="ext"
                 eir.put()
+        assert(Organization.all().get() is not None) 
 
         # Person
         for p in tree.findall("person"):
@@ -441,6 +442,7 @@ class UploadHandler(blobstore_handlers.BlobstoreUploadHandler):
                 eir = Ref(parent=per,**ref_dict)
                 eir.ref_type="ext"
                 eir.put()
+        assert(Person.all().get() is not None) 
         self.redirect("/", permanent=True)
 
 def main():

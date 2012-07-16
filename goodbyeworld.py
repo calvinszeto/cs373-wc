@@ -27,16 +27,27 @@ class ExportHandler(webapp.RequestHandler):
         self.response.headers.add_header('content-type','text/xml')
 
         crises = Crisis.all()
+        assert(crises.get() is not None)
         orgs = Organization.all()
+        assert(orgs.get() is not None)
         peeps = Person.all()
+        assert(peeps.get() is not None)
         infos = Info.all()
+        assert(infos.get() is not None)
         times = Time.all()
+        assert(times.get() is not None)
         locs = Location.all()
+        assert(locs.get() is not None)
         humans = Human.all()
+        assert(humans.get() is not None)
         economics = Economic.all()
+        assert(economics.get() is not None)
         contacts = Contact.all()
+        assert(contacts.get() is not None)
         mails = Mail.all()
+        assert(mails.get() is not None)
         refs = Ref.all()
+        assert(refs.get() is not None)
 
         cris_list = []
         for c in crises:
