@@ -19,6 +19,7 @@ class CrisisHandler(blobstore_handlers.BlobstoreDownloadHandler):
         infos = Info.all()
         times = Time.all()
         humans = Human.all()
+        ecos = Economic.all()
         refs = Ref.all()
         cris.filter('crisis_id =',crisisref)
         p = cris.get()
@@ -31,6 +32,8 @@ class CrisisHandler(blobstore_handlers.BlobstoreDownloadHandler):
         crisis_list["time"]=times.ancestor(i).get()
         # crisis - Info - Impact - Human
         crisis_list["human"]=humans.ancestor(i).get()
+        # crisis - Info - Impact - Human
+        crisis_list["economic"]=ecos.ancestor(i).get()
         # crisis - Ref
         crisis_list["pimage"]=refs.ancestor(p).filter('ref_type =','primaryImage').get()
         refs = Ref.all()

@@ -3,8 +3,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <title>World Crises</title>
 <link rel="stylesheet" type="text/css" a href="/style/style.css" />
-<script src="scripts/typeface-0.15.js"></script>
-<script src="scripts/district_thin.typeface.js"></script>
+<script type="text/javascript" src="scripts/typeface-0.15.js"></script>
+<script type="text/javascript" src="scripts/district_thin.typeface.js"></script>
 <script type="text/javascript" src="scripts/jquery-1.7.1.min.js"></script>
 <script type="text/javascript" src="scripts/jquery.nivo.slider.js"></script>
 
@@ -15,33 +15,39 @@
 </script>
 
 </head>
+<!-- begin header -->
+<div id = "header-container">
+   <div id = "header">
+     <div id="logo"><a href="..index.html"><img src="/images/logo.jpg" /></a></div>
+     <div id="title"><a href="..index.html"><img src="/images/title.png" /></a></div>
+     <div id="names"><p>&copy; 'Byte Me' 2012<br />
+          Connor, Daniel, Kevin J., Calvin, Kevin T.</p></div>
+   </div>
+</div><!-- end header -->
+
+<!-- begin navbar -->
+<div id="nav-container">
+   <div id ="nav">
+     <ul>
+       <li><a href="/index.html">Home</a></li>
+       <li><a href="/crises">Crises</a></li>
+       <li><a href="/people">People</a></li>
+       <li><a href="/orgs">Orgs</a></li>
+    	<li><a href="../import">Import</a></li>
+        <li><a href="../export">Export</a></li>
+        <li><a href="../test">Tests</a></li>
+	 </ul>
+   </div>
+</div><!-- end navbar -->
 
 <body>
-<div id="header-container">
-  <div id="header">
-     <div id="logo"></div>
-     <div id="title"></div>
-  </div>
-</div>
-
-<div id="navbar-container">
-   <div id="navbar">
-   	   <ul class="navbar">
-    	<li class="navbar" ><a href="/index.html">Home</a></li>
-        <li class="navbar"><a href="/crises">Crises</a></li>
-       	<li class="navbar"><a href="/people">People</a></li>
-       	<li class="navbar"><a href="/orgs">Organizations</a></li>
-	   </ul>
-   </div>
- </div>
-<!-- end header -->
     
  <!-- begin content -->
    <div id="content">
         <!-- begin attributes -->
         <div id="attributes">
             <div class="primary-photo">
-                <img src="????" title="" />
+                <img src="{{c.pimage.url}}" title="{{c.pimage.title}}" />
             </div>
             <ul>
          	<li><strong>Date: </strong>{{c.time.month}}/{{c.time.day}}/{{c.time.year}}</li>
@@ -101,7 +107,6 @@
                 <div id="photos" class="half">
                     <h3>Photos</h3>
                     <div id="photo-box">
-                        
                         <!-- begin single item -->
                         {% for i in c.images %}
                         <div class="item-box">
@@ -111,11 +116,7 @@
                         </div>
                         {% endfor %}
                         <!-- end single item -->
-                        
                     </div>
-                    <!-- begin more link -->
-                    
-                    <!-- end more link -->
                 </div>
                 <!-- end photos -->
                 <!-- begin videos -->
@@ -123,45 +124,31 @@
                     <h3>Videos</h3>
                     <div id="video-box">
                         <!-- Video width: 135px, height: 82px -->
-                        
-         
-                        
                         <!-- begin single item -->
                         {% for v in c.videos %}
                         <div class="item-box">
                             <div class="display-box">
-                                <iframe width="560" height="315" src="{{v.url}}" frameborder="0" allowfullscreen></iframe>
+                                <iframe width="250" height="141" src="{{v.url}}" frameborder="0" allowfullscreen></iframe>
                             </div>                        
                         </div>
                         {% endfor %}
                         <!-- end single item -->
-                        
-                        
-                        
                     </div>
-                    
-                    <!-- begin more link -->
-                    
-                    <!-- end more link -->
                 </div>
                 <!-- end videos -->
             </div>
             <!-- end media -->
             <!-- Start history -->
-            <div id="summary">
-                         
-                
-                <h2>History</h2>
-                <p>{{c.info.history}}</p>
+            <div>
+                <div id="summary">
+                    <h2>History</h2>
+                    <p>{{c.info.history}}</p>
+                </div>
             </div>
             <!-- end history -->
-            
-            
             <!-- begin related people -->
             <div class="people">
                 <h2>Related People</h2>
-                
-                
                 <!-- begin single item -->
                 <div class="item-box">
                     <div class="display-box">
@@ -172,20 +159,11 @@
                     </a>
                 </div>
                 <!-- end single item -->
-                
-                
             </div>
             <!-- end related crises -->
-            
-            
-            
-            
-            
             <!-- begin related organizations -->
             <div class="organizations">
                 <h2>Related Organizations</h2>
-                
-                
                 <!-- begin single item -->
                 <div class="item-box">
                     <div class="display-box">
@@ -196,34 +174,11 @@
                     </a>
                 </div>
                 <!-- end single item -->
-                
-                
             </div>
             <!-- end related organizations -->
-            
-            
         </div>
         <!-- end primary content -->
     </div>
-    
-    <!-- footer -->
-<div id = "footer">
- <div id="links">
-  <ul><b>Links</b>
-  	<li><a href="">Import</a></li>
-    <li><a href="">Export</a></li>
-    <li><a href="">GAE Unit Tests</a></li>
-   </ul>
-  </div>
-  <div id ="footer-right">
-    <p>&copy; Byte Me:</br>
-      Connor, Daniel, Kevin J., Calvin, Kevin T.
-    </p>
-  </div>
-   
-</div>
-
-
 </body>
 </html>
 

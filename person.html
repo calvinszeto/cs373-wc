@@ -15,27 +15,30 @@
 </script>
 
 </head>
-
-<body>
-<div id="header-container">
-  <div id="header">
-     <div id="logo"></div>
-     <div id="title"></div>
-  </div>
-</div>
-
-<div id="navbar-container">
-   <div id="navbar">
-   	   <ul class="navbar">
-    	<li class="navbar" ><a href="/index.html">Home</a></li>
-        <li class="navbar"><a href="/crises">Crises</a></li>
-       	<li class="navbar"><a href="/people">People</a></li>
-       	<li class="navbar"><a href="/orgs">Organizations</a></li>
-	   </ul>
-   </div>
- </div>
-<!-- end header -->
     
+<!-- begin header -->
+<div id = "header-container">
+   <div id = "header">
+     <div id="logo"><a href="..index.html"><img src="/images/logo.jpg" /></a></div>
+     <div id="title"><a href="..index.html"><img src="/images/title.png" /></a></div>
+   </div>
+</div><!-- end header -->
+
+<!-- begin navbar -->
+<div id="nav-container">
+   <div id ="nav">
+     <ul>
+       <li><a href="/index.html">Home</a></li>
+       <li><a href="/crises">Crises</a></li>
+       <li><a href="/people">People</a></li>
+       <li><a href="/orgs">Orgs</a></li>
+    	<li><a href="../import">Import</a></li>
+        <li><a href="../export">Export</a></li>
+        <li><a href="../test">Tests</a></li>
+	 </ul>
+   </div>
+</div><!-- end navbar -->
+
  <!-- begin content -->
    <div id="content">
         <!-- begin attributes -->
@@ -110,7 +113,7 @@
                         {% for v in persons.videos %}
                         <div class="item-box">
                             <div class="display-box">
-                                <iframe width="560" height="315" src="{{v.url}}" frameborder="0" allowfullscreen></iframe>
+                                <iframe width="250" height="141" src="{{v.url}}" frameborder="0" allowfullscreen></iframe>
                             </div>                        
                         </div>
                         {% endfor %}
@@ -185,24 +188,6 @@
         </div>
         <!-- end primary content -->
     </div>
-    
-    <!-- footer -->
-<div id = "footer">
- <div id="links">
-  <ul><b>Links</b>
-  	<li><a href="">Import</a></li>
-    <li><a href="">Export</a></li>
-    <li><a href="">GAE Unit Tests</a></li>
-   </ul>
-  </div>
-  <div id ="footer-right">
-    <p>&copy; Byte Me:</br>
-      Connor, Daniel, Kevin J., Calvin, Kevin T.
-    </p>
-  </div>
-   
-</div>
-
 
 </body>
 </html>

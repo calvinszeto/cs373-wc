@@ -73,11 +73,13 @@ class ExportHandler(webapp.RequestHandler):
             # Organization - Info
             i = infos.ancestor(c).get()
             org_list[index]["info"]=i
+            """
             # Organization - Info - Contact
             con = contacts.ancestor(i).get()
             org_list[index]["contact"]=con
             # Organization - Info - Mail 
             org_list[index]["mail"]=mails.ancestor(con).get()
+            """
             # Organization - Location
             org_list[index]["loc"]=locs.ancestor(i).get()
             # Organization - Ref
