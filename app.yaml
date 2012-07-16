@@ -37,3 +37,7 @@ handlers:
 - url: /
   upload: index.html
   static_files: index.html
+
+- url: /index.html
+  upload: index.html
+  static_files: index.html
