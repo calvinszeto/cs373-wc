@@ -349,58 +349,58 @@
 	<organization id = "tgpei">
 		<name>The Global Polio Eradication Initiative</name>
 		<info>
-			<type></type>
-			<history></history>
+			<type>Governmental Group</type>
+			<history>The Global Polio Eradication Initiative is a public-private partnership led by national governments and spearheaded by the World Health Organization (WHO), Rotary International, the US Centers for Disease Control and Prevention (CDC), and the United Nations Children’s Fund (UNICEF).</history>
 			<contact>
-				<phone></phone>
-				<email></email>
+				<phone>No Phone Number</phone>
+				<email>Private</email>
 				<mail>
-					<address></address>
-					<city></city>
-					<state></state>
-					<country></country>
-					<zip></zip>
+					<address>Avenue Appia 20</address>
+					<city>Geneva</city>
+					<state>NA</state>
+					<country>Switzerland</country>
+					<zip>NA</zip>
 				</mail>
 			</contact>
 			<loc>
-				<city></city>
-				<region></region>
-				<country></country>
+				<city>Geneva</city>
+				<region>Region</region>
+				<country>Switzerland</country>
 			</loc>    
 		</info>
 		<ref>
             <primaryImage>
-                <site></site>
-				<title></title>
-				<url></url>
-				<description></description>
+                <site>Global Polio Eratication initiative</site>
+				<title>Global Polio Eratication Initiative</title>
+				<url>http://www.polioeradication.org/Portals/0/Image/ResourceLibrary/Strategy&Work/AR2007.jpg</url>
+				<description>Logo</description>
             </primaryImage>
 			<image>
-				<site></site>
-				<title></title>
+				<site>End Polio Now</site>
+				<title>End Polio Now</title>
 				<url>http://deskofbrian.com/wp-content/uploads/EndPolioNow.jpg</url>
-				<description></description>
+				<description>End Polio Now</description>
 			</image>
 			<video>
-				<site></site>
-				<title></title>
+				<site>Dr. Jonas Salk</site>
+				<title>Interview with Dr. Jonas Salk</title>
 				<url>http://www.youtube.com/embed/liQzs6qqYQg</url>
-				<description></description>
+				<description>Dr. Jonas Salk Interview</description>
 			</video>
 			<social>
-				<site></site>
-				<title></title>
-				<url></url>
-				<description></description>
+				<site>Twitter</site>
+				<title>Polio Free Nigeria Twitter</title>
+				<url>http://twitter.com/poliofreeNG/status/194709722010624000</url>
+				<description>Twitter to Polio Free Nigeria</description>
 			</social>
 			<ext>
-				<site></site>
-				<title></title>
-				<url></url>
-				<description></description>
+				<site>The End of Polio</site>
+				<title>The End of Polio</title>
+				<url>http://www.theendofpolio.com/home/2011/07/global-polio-eradication-initiative/</url>
+				<description>Help bring an end to polio!</description>
 			</ext>     
 		</ref>
-		<misc>    </misc>
+		<misc>Something</misc>
 		<crisis idref = "polio"/>
 		<person idref = "jonassalk"/>	
 	</organization>
