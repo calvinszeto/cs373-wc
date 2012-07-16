@@ -51,7 +51,7 @@
 			<video>
 				<site>Youtube</site>
 				<title></title>
-				<url>http://www.youtube.com/watch?v=lY-PikuXTYY</url>
+				<url>http://www.youtube.com/embed/-OVNd6Fa9fg</url>
 				<description></description>
 			</video>
 			<social>
@@ -122,7 +122,7 @@
 			<video>
 				<site></site>
 				<title></title>
-				<url>http://www.youtube.com/watch?v=AfmwcShVeM0</url>
+				<url>http://www.youtube.com/embed/AfmwcShVeM0</url>
 				<description></description>
 			</video>
 			<social>
@@ -193,7 +193,7 @@
 			<video>
 				<site></site>
 				<title></title>
-				<url>http://www.youtube.com/watch?v=dLMoFST_Lmc</url>
+				<url>http://www.youtube.com/embed/dLMoFST_Lmc</url>
 				<description></description>
 			</video>
 			<social>
@@ -264,7 +264,7 @@
 			<video>
 				<site>Youtube</site>
 				<title></title>
-				<url>http://www.youtube.com/watch?v=rshdJZruH_0</url>
+				<url>http://www.youtube.com/embed/mEVqeaFHsHE</url>
 				<description></description>
 			</video>
 			<social>
@@ -325,7 +325,7 @@
 			<video>
 				<site>Youtube</site>
 				<title></title>
-				<url>http://www.youtube.com/watch?v=KtWoPZluI2E</url>
+				<url>http://www.youtube.com/embed/KtWoPZluI2E</url>
 				<description></description>
 			</video>
 			<social>
@@ -378,13 +378,13 @@
 			<image>
 				<site></site>
 				<title></title>
-				<url></url>
+				<url>http://deskofbrian.com/wp-content/uploads/EndPolioNow.jpg</url>
 				<description></description>
 			</image>
 			<video>
 				<site></site>
 				<title></title>
-				<url></url>
+				<url>http://www.youtube.com/embed/liQzs6qqYQg</url>
 				<description></description>
 			</video>
 			<social>
@@ -443,7 +443,7 @@
 			<video>
 				<site>youtube</site>
 				<title>2011 AAP Policy Statement - Media Use by Children Younger Than 2 Years </title>
-				<url>http://www.youtube.com/watch?v=9EuXIrWUkI0</url>
+				<url>http://www.youtube.com/embed/9EuXIrWUkI0</url>
 				<description>New Policy Statement from AAP</description>
 			</video>
 			<social>
@@ -556,8 +556,7 @@
 			<video>
 				<site>Youtube</site>
 				<title>Kenneth Feinberg on the BP oil spill</title>
-				<url>http://www.youtube.com/watch?v=dUe9mCKj4A8
-</url>
+				<url>http://www.youtube.com/embed/dUe9mCKj4A8</url>
 				<description>Kenneth Feinberg being interviewed on the controversy regarding the BP Deepwater Horizon Disaster Victim Compensation Fund.</description>
 			</video>
 			<social>
@@ -608,7 +607,7 @@
 			<video>
 				<site>Youtube</site>
 				<title>George Papandreou on BBC</title>
-				<url>http://www.youtube.com/watch?v=ScPGKwAbsI8</url>
+				<url>http://www.youtube.com/embed/ScPGKwAbsI8</url>
 				<description>George Papandreou speaks on BBC in an interview about the Greek Financial Crisis.</description>
 			</video>
 			<social>
@@ -632,7 +631,7 @@
 	<person id = "michelleobama">
 	    <name>First Lady Michelle LaVaughn Robinson Obama</name>
 		<info>
-			<type>African-American</type>
+			<type></type>
 			<birthdate>
 				<time></time>
 				<day>17</day>
@@ -646,9 +645,9 @@
 		<ref>
             <primaryImage>
                 <site></site>
-				<title>Michelle Obama Portrait</title>
-				<url>http://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Michelle_Obama_official_portrait_headshot.jpg/225px-Michelle_Obama_official_portrait_headshot.jpg</url>
-				<description>The Official Headshot of the 44th First Lady</description>
+				<title></title>
+				<url></url>
+				<description></description>
             </primaryImage>
 			<image>
                 <site></site>
@@ -659,7 +658,7 @@
 			<video>
 				<site>youtube</site>
 				<title>First Lady Michelle Obama Answers Your Twitter Questions</title>
-				<url>http://www.youtube.com/watch?v=TwWPrpwhMSI</url>
+				<url>http://www.youtube.com/embed/TwWPrpwhMSI</url>
 				<description>In this video, First Lady Michelle Obama adresses questions she recieved on her Twitter account.</description>
 			</video>
 			<social>
@@ -710,7 +709,7 @@
 			<video>
 				<site>youtube</site>
 				<title>Interview With Doctor Jonas Salk</title>
-				<url>http://www.youtube.com/watch?v=liQzs6qqYQg</url>
+				<url>http://www.youtube.com/embed/liQzs6qqYQg</url>
 				<description>Interview with Doctor Jonas Salk</description>
 			</video>
 			<social>
