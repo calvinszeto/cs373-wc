@@ -31,7 +31,7 @@
 <!-- begin content -->
 <div id="content">
 	<div id = "list">
-		<h3>Crises</h3>
+		<h3>People</h3>
         {% for p in persons %}
         <img src="{{p.pimage.url}}" />	<h4><a href="/person/{{p.person.person_id}}">{{p.person.name}}</a></h4><p>{{p.info.biography}}</p>
         <hr noshade size="1">
