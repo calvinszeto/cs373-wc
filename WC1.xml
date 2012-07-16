@@ -632,7 +632,7 @@
 	<person id = "michelleobama">
 	    <name>First Lady Michelle LaVaughn Robinson Obama</name>
 		<info>
-			<type></type>
+			<type>African-American</type>
 			<birthdate>
 				<time></time>
 				<day>17</day>
@@ -646,9 +646,9 @@
 		<ref>
             <primaryImage>
                 <site></site>
-				<title></title>
-				<url></url>
-				<description></description>
+				<title>Michelle Obama Portrait</title>
+				<url>http://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Michelle_Obama_official_portrait_headshot.jpg/225px-Michelle_Obama_official_portrait_headshot.jpg</url>
+				<description>The Official Headshot of the 44th First Lady</description>
             </primaryImage>
 			<image>
                 <site></site>

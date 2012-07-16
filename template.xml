@@ -6,9 +6,9 @@
 		<name>{{c.crisis.name}}</name>
 		<info>
 			<history>{{c.info.history}}</history>
-			<help>{{c.info.help}}</help>
+			<help>{{c.info.info_help}}</help>
 			<resources>{{c.info.resources}}</resources> 
-			<type>{{c.info.type}}</type>
+			<type>{{c.info.info_type}}</type>
 			<time>
 				<time>{{c.time.time}}</time>
 				<day>{{c.time.day}}</day>
@@ -62,7 +62,7 @@
 	<organization id = "{{o.org.org_id}}">
 		<name>{{o.org.name}}</name>
 		<info>
-			<type>{{o.info.type}}</type>
+			<type>{{o.info.info_type}}</type>
 			<history>{{o.info.history}}</history>
 			<contact>
 				<phone>{{o.contact.phone}}</phone>
@@ -107,7 +107,7 @@
 	<person id = "{{p.person.person_id}}">
 	    <name>{{p.person.name}}</name>
 		<info>
-			<type>{{p.info.type}}</type>
+			<type>{{p.info.info_type}}</type>
 			<birthdate>
 				<time>{{p.time.time}}</time>
 				<day>{{p.time.day}}</day>

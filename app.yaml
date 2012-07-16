@@ -16,14 +16,23 @@ handlers:
 - url: /upload
   script: helloworld.py
 
-- url: /crisis
-  static_dir: crisis  
+- url: /crisis/.*
+  script: crisis.py
 
 - url: /orgs
   static_dir: orgs  
 
-- url: /people
-  static_dir: people  
+- url: /person/.*
+  script: person.py
+
+- url: /scripts
+  static_dir: scripts
+
+- url: /style
+  static_dir: style
+
+- url: /images
+  static_dir: images
 
 - url: /
   upload: index.html

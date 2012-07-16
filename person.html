@@ -1,0 +1,208 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>World Crises</title>
+<link rel="stylesheet" type="text/css" a href="/style/style.css" />
+<script src="scripts/typeface-0.15.js"></script>
+<script src="scripts/district_thin.typeface.js"></script>
+<script type="text/javascript" src="scripts/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="scripts/jquery.nivo.slider.js"></script>
+
+<script type="text/javascript">
+    $(window).load(function() {
+        $('#slider').nivoSlider();
+    });
+</script>
+
+</head>
+
+<body>
+<div id="header-container">
+  <div id="header">
+     <div id="logo"></div>
+     <div id="title"></div>
+  </div>
+</div>
+
+<div id="navbar-container">
+   <div id="navbar">
+   	   <ul class="navbar">
+    	<li class="navbar" ><a href="index.html">Home</a></li>
+        <li class="navbar"><a href="/crises">Crises</a></li>
+       	<li class="navbar"><a href="/people">People</a></li>
+       	<li class="navbar"><a href="/orgs">Organizations</a></li>
+	   </ul>
+   </div>
+ </div>
+<!-- end header -->
+    
+ <!-- begin content -->
+   <div id="content">
+        <!-- begin attributes -->
+        <div id="attributes">
+            <div class="primary-photo">
+                <img src="{{persons.pimage.url}}" title="Michelle Obama" />
+            </div>
+            <!-- begin stats -->
+            <div class="stats">
+                <ul>
+                    <li><strong>Type: </strong>{{persons.info.info_type}}</li>
+                    <li><strong>Nationality: </strong>{{persons.info.nationality}}</li>
+                </ul>
+                
+                {% for r in persons.socials %}
+                <h5>Social Sites</h5>
+                    <ul class="capitalize">
+                        <li><a href="{{r.url}}" title="{{r.title}}" target="_blank">{{r.title}}</a></li>  
+                    </ul>
+                {% endfor %}
+
+                {% for r in persons.exts %}
+                <h5>Social Sites</h5>
+                    <ul class="capitalize">
+                        <li><a href="{{r.url}}" title="{{r.title}}" target="_blank">{{r.title}}</a></li>  
+                    </ul>
+                {% endfor %}
+                
+            </div>
+            <!-- end stats -->
+            
+        </div>
+        <!-- end attributes -->
+        
+        <!-- begin primary content -->
+        <div id="primary-content">
+            <!-- begin Page Title -->
+            <h1 id="page-title">{{persons.person.name}}</h1>
+            <!-- end primary content -->
+            <!-- begin media -->
+            <div id="media">
+                <!-- begin photos -->
+                <div id="photos" class="half">
+                    <h3>Photos</h3>
+                    <div id="photo-box">
+                        
+                        <!-- begin single item -->
+                        {% for i in persons.images %}
+                        <div class="item-box">
+                            <div class="display-box">
+                                    <img src="{{i.url}}" title="{{i.title}}" />
+                            </div>
+                        </div>
+                        {% endfor %}
+                        <!-- end single item -->
+                        
+                    </div>
+                    <!-- begin more link -->
+                    
+                    <!-- end more link -->
+                </div>
+                <!-- end photos -->
+                <!-- begin videos -->
+                <div id="videos" class="half">
+                    <h3>Videos</h3>
+                    <div id="video-box">
+                        <!-- Video width: 135px, height: 82px -->
+                        
+         
+                        
+                        <!-- begin single item -->
+                        {% for v in persons.videos %}
+                        <div class="item-box">
+                            <div class="display-box">
+                                <object width="135" height="82"><param name="movie" value="{{v.url}}"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="{{v.url}}" type="application/x-shockwave-flash" width="135" height="82" allowscriptaccess="always" allowfullscreen="true"></embed></object>
+                            </div>                        
+                        </div>
+                        {% endfor %}
+                        <!-- end single item -->
+                        
+                        
+                        
+                    </div>
+                    
+                    <!-- begin more link -->
+                    
+                    <!-- end more link -->
+                </div>
+                <!-- end videos -->
+            </div>
+            <!-- end media -->
+            <!-- Start history -->
+            <div id="summary">
+                         
+                
+                <h2>Bio</h2>
+                <p>{{persons.info.biography}}</p>
+            </div>
+            <!-- end history -->
+            
+            
+            <!-- begin related crises -->
+            <div class="crises">
+                <h2>Related Crises</h2>
+                
+                
+                <!-- begin single item -->
+                <div class="item-box">
+                    <div class="display-box">
+                        <a href="/crisis/bp" title="Deepwater Horizon Oil Spill (BP)"><img src="" title="Deepwater Horizon Oil Spill (BP)"/></a>
+                    </div>
+                    <a href="/crisis/bp_oil_spill/" title="Deepwater Horizon Oil Spill (BP)">
+                        <span class="subtitle">Deepwater Horizon Oil Spill (BP)</span>
+                    </a>
+                </div>
+                <!-- end single item -->
+                
+                
+            </div>
+            <!-- end related crises -->
+            
+            
+            
+            
+            
+            <!-- begin related organizations -->
+            <div class="organizations">
+                <h2>Related Organizations</h2>
+                
+                
+                <!-- begin single item -->
+                <div class="item-box">
+                    <div class="display-box">
+                        <a href="/orgs/" title=""><img src="" title="" /></a>
+                    </div>
+                    <a href="/orgs" title="">
+                        <span class="subtitle"></span>
+                    </a>
+                </div>
+                <!-- end single item -->
+                
+                
+            </div>
+            <!-- end related organizations -->
+            
+            
+        </div>
+        <!-- end primary content -->
+    </div>
+    
+    <!-- footer -->
+<div id = "footer">
+ <div id="links">
+  <ul><b>Links</b>
+  	<li><a href="">Import</a></li>
+    <li><a href="">Export</a></li>
+    <li><a href="">GAE Unit Tests</a></li>
+   </ul>
+  </div>
+  <div id ="footer-right">
+    <p>&copy; Byte Me:</br>
+      Connor, Daniel, Kevin J., Calvin, Kevin T.
+    </p>
+  </div>
+   
+</div>
+
+
+</body>
+</html>
