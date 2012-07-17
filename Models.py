@@ -69,7 +69,7 @@ class Info(db.Model):
 
     # Person only
     nationality = db.StringProperty()
-    biography = db.StringProperty()
+    biography = db.TextProperty()
 
 class Crisis(db.Model):
     crisis_id = db.StringProperty()

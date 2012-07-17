@@ -203,8 +203,18 @@ class UploadHandler(blobstore_handlers.BlobstoreUploadHandler):
         tree = ElementTree()
         br = blob_info.open()
         tree.parse(br)
-        db.delete(db.Query(keys_only=True)) # Clear the datastore
-        assert(Crisis.all().get() is None)
+        db.delete(Mail.all(keys_only=True)) # Clear the datastore
+        db.delete(Time.all(keys_only=True)) # Clear the datastore
+        db.delete(Location.all(keys_only=True)) # Clear the datastore
+        db.delete(Human.all(keys_only=True)) # Clear the datastore
+        db.delete(Economic.all(keys_only=True)) # Clear the datastore
+        db.delete(Contact.all(keys_only=True)) # Clear the datastore
+        db.delete(Ref.all(keys_only=True)) # Clear the datastore
+        db.delete(Info.all(keys_only=True)) # Clear the datastore
+        db.delete(Person.all(keys_only=True)) # Clear the datastore
+        db.delete(Organization.all(keys_only=True)) # Clear the datastore
+        db.delete(Crisis.all(keys_only=True)) # Clear the datastore
+        # assert(Crisis.all().get() is None)
         # Crises
         for c in tree.findall("crisis"):
             for x in crisis_dict:
