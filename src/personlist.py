@@ -12,29 +12,29 @@ from google.appengine.ext.webapp import template
 from google.appengine.ext.webapp.util import run_wsgi_app
 from google.appengine.ext import db
 
-class CrisisHandler(blobstore_handlers.BlobstoreDownloadHandler):
+class PersonHandler(blobstore_handlers.BlobstoreDownloadHandler):
     def get(self):
-        cris = Crisis.all()
+        peeps = Person.all()
         infos = Info.all()
         refs = Ref.all()
-        cris_list = []
-        for c in cris:
-            index = len(cris_list)
-            cris_list.append({"crisis":c})
-            # Crisis - Info
-            i = infos.ancestor(c).get()
-            cris_list[index]["info"]=i
-            # Crisis - Ref
-            cris_list[index]["pimage"]=refs.ancestor(c).filter('ref_type =','primaryImage').get()
+        persons_list = []
+        for p in peeps:
+            index = len(persons_list)
+            persons_list.append({"person":p})
+            # Person - Info
+            i = infos.ancestor(p).get()
+            persons_list[index]["info"]=i
+            # Person - Ref
+            persons_list[index]["pimage"]=refs.ancestor(p).filter('ref_type =','primaryImage').get()
         template_values = {
-            'crises':cris_list }
-        path = os.path.join(os.path.dirname(__file__), 'crisislist.html')
+            'persons':persons_list }
+        path = os.path.join(os.path.dirname(__file__), '../templates/personlist.html')
         self.response.out.write(template.render(path, template_values))
          
 
 def main():
     application = webapp.WSGIApplication(
-            [('/crises', CrisisHandler)
+            [('/people', PersonHandler)
             ], debug=True)
     run_wsgi_app(application)
 

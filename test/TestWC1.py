@@ -1,6 +1,8 @@
 import unittest
-from helloworld import *
-from goodbyeworld import *
+import os
+import sys
+sys.path.append(os.path.join(os.path.dirname(__file__), '../src'))
+from Models import *
 from xml.etree.ElementTree import ElementTree
 import xml.etree.ElementTree
 
@@ -228,6 +230,7 @@ class TestWC1(unittest.TestCase):
         Testing putting and pulling a Crisis from the datastore
         """
         # Crises
+        crisis_dict = {"name":"","misc":""}
         for c in p.findall("crisis"):
             for x in crisis_dict:
                 text = c.find(x).text
@@ -242,6 +245,7 @@ class TestWC1(unittest.TestCase):
         Testing that parser does not find an organization and thus datastore is empty
         """
         # Crises
+        org_dict = {"name":"","misc":""}
         for c in p.findall("organization"):
             for x in org_dict:
                 text = c.find(x).text
@@ -256,6 +260,7 @@ class TestWC1(unittest.TestCase):
         Testing pulling the Crisis - Orgs attribute from the datastore
         """
         # Crises
+        crisis_dict = {"name":"","misc":""}
         for c in p.findall("crisis"):
             for x in crisis_dict:
                 text = c.find(x).text

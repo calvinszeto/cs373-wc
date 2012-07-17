@@ -71,15 +71,12 @@ class ExportHandler(webapp.RequestHandler):
             index = len(org_list)
             org_list.append({"org":o})
             # Organization - Info
-            i = infos.ancestor(c).get()
+            i = infos.ancestor(o).get()
             org_list[index]["info"]=i
-            """
-            # Organization - Info - Contact
             con = contacts.ancestor(i).get()
             org_list[index]["contact"]=con
             # Organization - Info - Mail 
             org_list[index]["mail"]=mails.ancestor(con).get()
-            """
             # Organization - Location
             org_list[index]["loc"]=locs.ancestor(i).get()
             # Organization - Ref
@@ -101,7 +98,7 @@ class ExportHandler(webapp.RequestHandler):
             'orgs':org_list,
             'persons':persons_list
             }
-        path = os.path.join(os.path.dirname(__file__), 'template.xml')
+        path = os.path.join(os.path.dirname(__file__), '../templates/template.xml')
         self.response.out.write(template.render(path, template_values))
 
 def main():

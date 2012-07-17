@@ -12,30 +12,29 @@ from google.appengine.ext.webapp import template
 from google.appengine.ext.webapp.util import run_wsgi_app
 from google.appengine.ext import db
 
-class OrgHandler(blobstore_handlers.BlobstoreDownloadHandler):
+class CrisisHandler(blobstore_handlers.BlobstoreDownloadHandler):
     def get(self):
-        orgs = Organization.all()
+        cris = Crisis.all()
         infos = Info.all()
         refs = Ref.all()
-        org_list = []
-        for o in orgs:
-            index = len(org_list)
-            org_list.append({"org":o})
-            # Organization - Info
-            i = infos.ancestor(o).get()
-            org_list[index]["info"]=i
-            # Organization - Ref
-            org_list[index]["pimage"]=refs.ancestor(o).filter('ref_type =','primaryImage').get()
+        cris_list = []
+        for c in cris:
+            index = len(cris_list)
+            cris_list.append({"crisis":c})
+            # Crisis - Info
+            i = infos.ancestor(c).get()
+            cris_list[index]["info"]=i
+            # Crisis - Ref
+            cris_list[index]["pimage"]=refs.ancestor(c).filter('ref_type =','primaryImage').get()
         template_values = {
-            'orgs':org_list
-            }
-        path = os.path.join(os.path.dirname(__file__), 'orglist.html')
+            'crises':cris_list }
+        path = os.path.join(os.path.dirname(__file__), '../templates/crisislist.html')
         self.response.out.write(template.render(path, template_values))
          
 
 def main():
     application = webapp.WSGIApplication(
-            [('/orgs', OrgHandler)
+            [('/crises', CrisisHandler)
             ], debug=True)
     run_wsgi_app(application)
 

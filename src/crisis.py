@@ -56,7 +56,7 @@ class CrisisHandler(blobstore_handlers.BlobstoreDownloadHandler):
         crisis_list["personimage"]=refs.ancestor(per).filter('ref_type =','primaryImage').get()
         template_values = {
             'c':crisis_list }
-        path = os.path.join(os.path.dirname(__file__), 'crisis.html')
+        path = os.path.join(os.path.dirname(__file__), '../templates/crisis.html')
         self.response.out.write(template.render(path, template_values))
          
 

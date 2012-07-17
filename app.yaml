@@ -5,34 +5,34 @@ api_version: 1
 
 handlers:
 - url: /test.*
-  script: gaeunit.py
+  script: src/gaeunit.py
 
 - url: /import
-  script: helloworld.py
+  script: src/helloworld.py
 
 - url: /export
-  script: goodbyeworld.py
+  script: src/goodbyeworld.py
 
 - url: /upload
-  script: helloworld.py
+  script: src/helloworld.py
 
 - url: /crises
-  script: crisislist.py
+  script: src/crisislist.py
 
 - url: /crisis/.*
-  script: crisis.py
+  script: src/crisis.py
 
 - url: /people
-  script: personlist.py
+  script: src/personlist.py
 
 - url: /person/.*
-  script: person.py
+  script: src/person.py
 
 - url: /org/.*
-  script: org.py
+  script: src/org.py
 
 - url: /orgs
-  script: orglist.py
+  script: src/orglist.py
 
 - url: /scripts
   static_dir: scripts
@@ -43,10 +43,6 @@ handlers:
 - url: /images
   static_dir: images
 
-- url: /
-  upload: index.html
-  static_files: index.html
-
-- url: /index.html
+- url: /.*
   upload: index.html
   static_files: index.html

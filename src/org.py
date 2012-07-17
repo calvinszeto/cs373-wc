@@ -55,7 +55,7 @@ class OrgHandler(blobstore_handlers.BlobstoreDownloadHandler):
         org_list["crisisimage"]=refs.ancestor(cris).filter('ref_type =','primaryImage').get()
         template_values = {
             'o':org_list }
-        path = os.path.join(os.path.dirname(__file__), 'org.html')
+        path = os.path.join(os.path.dirname(__file__), '../templates/org.html')
         self.response.out.write(template.render(path, template_values))
          
 
