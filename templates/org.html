@@ -47,30 +47,30 @@
         <!-- begin attributes -->
         <div id="attributes">
             <div class="primary-photo">
-                <img src="http://www.polioeradication.org/Portals/0/newlogo.jpg" title="" />
+                <img src="{{o.pimage.url}}" title="" />
             </div>
             <!-- begin stats -->
             <div class="stats">
                 <ul>
-                    <li><strong>Type: </strong>Governmental Group</li>
-                    <li><strong>Phone: </strong>No Phone Number</li>
-                    <li><strong>Email: </strong>Private</li>
-                    <li><strong>Mail: </strong>Avenue Appia 20 <br>Geneva, NA  Switzerland</li>
+                    <li><strong>Type: </strong>{{o.info.info_type}}</li>
+                    <li><strong>Phone: </strong>{{o.contact.phone}}</li>
+                    <li><strong>Email: </strong>{{o.contact.email}}</li>
+                    <li><strong>Mail: </strong>{{o.mail.address}} <br>{{o.mail.city}}, {{o.mail.state}} {{o.mail.zip}} {{o.mail.country}}</li>
                 </ul>
                 
-                
+                {% for r in o.socials %}
                 <h5>Social Sites</h5>
                     <ul class="capitalize">
-                        <li><a href="http://twitter.com/poliofreeNG/status/194709722010624000" title="Polio Free Nigeria Twitter" target="_blank">Polio Free Nigeria Twitter</a></li>
+                        <li><a href="{{r.url}}" title="{{r.title}}" target="_blank">{{r.title}}</a></li>
                     </ul>
-                
+                {% endfor %}
 
-                
+                {% for r in o.exts %}
                 <h5>Social Sites</h5>
                     <ul class="capitalize">
-                        <li><a href="http://www.theendofpolio.com/home/2011/07/global-polio-eradication-initiative/" title="The End of Polio" target="_blank">The End of Polio</a></li>
+                        <li><a href="{{r.url}}" title="{{r.title}}" target="_blank">{{r.title}}</a></li>
                     </ul>
-                
+                {% endfor %}
                 
             </div>
             <!-- end stats -->
@@ -81,9 +81,9 @@
         <!-- begin primary content -->
         <div id="primary-content">
             <!-- begin Page Title -->
-            <h1 id="page-title"></h1>
+            <h1 id="page-title">{{o.org.name}}</h1>
             <h2>History</h2>
-            <p>The Global Polio Eradication Initiative is a public-private partnership led by national governments and spearheaded by the World Health Organization (WHO), Rotary International, the US Centers for Disease Control and Prevention (CDC), and the United Nations Children’s Fund (UNICEF).</p>
+            <p>{{o.info.history}}</p>
             <!-- end primary content -->
             <!-- begin media -->
             <div id="media">
@@ -93,13 +93,13 @@
                     <div id="photo-box">
                         
                         <!-- begin single item -->
-                        
+                        {% for i in o.images %}
                         <div class="item-box">
                             <div class="display-box">
-                                    <img src="http://deskofbrian.com/wp-content/uploads/EndPolioNow.jpg" title="End Polio Now" />
+                                    <img src="{{i.url}}" title="{{i.title}}" />
                             </div>
                         </div>
-                        
+                        {% endfor %}
                         <!-- end single item -->
                         
                     </div>
@@ -117,13 +117,13 @@
          
                         
                         <!-- begin single item -->
-                        
+                        {% for v in o.videos %}
                         <div class="item-box">
                             <div class="display-box">
-                                <iframe width="400" height="200" src="http://www.youtube.com/embed/liQzs6qqYQg" frameborder="0" allowfullscreen></iframe>
+                                <iframe width="400" height="200" src="{{v.url}}" frameborder="0" allowfullscreen></iframe>
                             </div>
                         </div>
-                        
+                        {% endfor %}
                         <!-- end single item -->
                         
                         
@@ -145,7 +145,7 @@
                 <!-- begin single item -->
                 <div class="item-box">
                     <div class="display-box">
-                        <a href="/crisis/polio" title="Polio"><img src="http://sphotos-a.xx.fbcdn.net/hphotos-ash4/s720x720/419233_10150647107914837_1435806600_n.jpg" title="Polio"/></a>
+                        <a href="/crisis/{{o.crisis.crisis_id}}" title="{{o.crisis.name}}"><img src="{{o.crisisimage.url}}" title="{{o.crisis.name}}"/></a>
                     </div>
                 </div>
                 <!-- end single item -->
@@ -157,7 +157,7 @@
                 <!-- begin single item -->
                 <div class="item-box">
                     <div class="display-box">
-                        <a href="/person/jonassalk" title="Doctor Jonas Edward Salk"><img src="http://themurkyfringe.com/wp-content/uploads/2010/03/jonas-salk.jpg" title="Doctor Jonas Edward Salk" /></a>
+                        <a href="/person/{{o.person.person_id}}" title="{{o.person.name}}"><img src="{{o.personimage.url}}" title="{{o.person.name}}" /></a>
                     </div>
                 </div>
                 <!-- end single item -->

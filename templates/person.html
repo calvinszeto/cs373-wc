@@ -46,28 +46,28 @@
         <!-- begin attributes -->
         <div id="attributes">
             <div class="primary-photo">
-                <img src="http://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Michelle_Obama_official_portrait_headshot.jpg/225px-Michelle_Obama_official_portrait_headshot.jpg" title="Michelle Obama" />
+                <img src="{{persons.pimage.url}}" title="Michelle Obama" />
             </div>
             <!-- begin stats -->
             <div class="stats">
                 <ul>
-                    <li><strong>Type: </strong>Current First Lady</li>
-                    <li><strong>Nationality: </strong>American</li>
+                    <li><strong>Type: </strong>{{persons.info.info_type}}</li>
+                    <li><strong>Nationality: </strong>{{persons.info.nationality}}</li>
                 </ul>
                 
-                
+                {% for r in persons.socials %}
                 <h5>Social Sites</h5>
                     <ul class="capitalize">
-                        <li><a href="http://www.facebook.com/michelleobama" title="Michelle Obama's Facebook Page" target="_blank">Michelle Obama's Facebook Page</a></li>  
+                        <li><a href="{{r.url}}" title="{{r.title}}" target="_blank">{{r.title}}</a></li>  
                     </ul>
-                
+                {% endfor %}
 
-                
+                {% for r in persons.exts %}
                 <h5>Social Sites</h5>
                     <ul class="capitalize">
-                        <li><a href="http://en.wikipedia.org/wiki/Michelle_Obama" title="Michelle Obama's Wikipedia Entry" target="_blank">Michelle Obama's Wikipedia Entry</a></li>  
+                        <li><a href="{{r.url}}" title="{{r.title}}" target="_blank">{{r.title}}</a></li>  
                     </ul>
-                
+                {% endfor %}
                 
             </div>
             <!-- end stats -->
@@ -78,9 +78,9 @@
         <!-- begin primary content -->
         <div id="primary-content">
             <!-- begin Page Title -->
-            <h1 id="page-title">First Lady Michelle LaVaughn Robinson Obama</h1>
+            <h1 id="page-title">{{persons.person.name}}</h1>
             <h2>Bio</h2>
-            <p>Michelle LaVaughn Robinson Obama is the first African-American First Lady of the United States and wife to the 44th President of the United States, Barack Obama.</p>
+            <p>{{persons.info.biography}}</p>
             <!-- end primary content -->
             <!-- begin media -->
             <div id="media">
@@ -90,13 +90,13 @@
                     <div id="photo-box">
                         
                         <!-- begin single item -->
-                        
+                        {% for i in persons.images %}
                         <div class="item-box">
                             <div class="display-box">
-                                    <img src="http://images.politico.com/global/news/110128_michelle_obama_smiling_ap_328.jpg" title="Michelle Obama Smiling" />
+                                    <img src="{{i.url}}" title="{{i.title}}" />
                             </div>
                         </div>
-                        
+                        {% endfor %}
                         <!-- end single item -->
                         
                     </div>
@@ -114,13 +114,13 @@
          
                         
                         <!-- begin single item -->
-                        
+                        {% for v in persons.videos %}
                         <div class="item-box">
                             <div class="display-box">
-                                <iframe width="400" height="200" src="http://www.youtube.com/embed/TwWPrpwhMSI" frameborder="0" allowfullscreen></iframe>
+                                <iframe width="400" height="200" src="{{v.url}}" frameborder="0" allowfullscreen></iframe>
                             </div>                        
                         </div>
-                        
+                        {% endfor %}
                         <!-- end single item -->
                         
                         
@@ -142,7 +142,7 @@
                 <!-- begin single item -->
                 <div class="item-box">
                     <div class="display-box">
-                        <a href="/crisis/childhoodobesity" title="Childhood Obesity"><img src="http://www.toptenz.net/wp-content/uploads/2011/07/childhood-obesity-300x180.jpg" title="Childhood Obesity"/></a>
+                        <a href="/crisis/{{persons.crisis.crisis_id}}" title="{{persons.crisis.name}}"><img src="{{persons.crisisimage.url}}" title="{{persons.crisis.name}}"/></a>
                     </div>
                 </div>
                 <!-- end single item -->
@@ -154,7 +154,7 @@
                 <!-- begin single item -->
                 <div class="item-box">
                     <div class="display-box">
-                        <a href="/org/aap" title="The American Academy of Pediatrics"><img src="http://instinctmagazine.com/images/stories/blogs/jhigbee/april2012/aaop.jpg" title="The American Academy of Pediatrics" /></a>
+                        <a href="/org/{{persons.org.org_id}}" title="{{persons.org.name}}"><img src="{{persons.orgimage.url}}" title="{{persons.org.name}}" /></a>
                     </div>
                 </div>
                 <!-- end single item -->
@@ -168,4 +168,3 @@
 
 </body>
 </html>
-

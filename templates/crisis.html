@@ -47,48 +47,48 @@
         <!-- begin attributes -->
         <div id="attributes">
             <div class="primary-photo">
-                <img src="http://2.bp.blogspot.com/--S0bgE12ohM/TrQUIGj7NSI/AAAAAAAAAPg/5aBsjD2csgM/s1600/023-0617131539-greek-economy-crisis2.jpg" title="Political Cartoon" />
+                <img src="{{c.pimage.url}}" title="{{c.pimage.title}}" />
             </div>
             <ul>
-         	<li><strong>Date: </strong>1/1/2009</li>
-        	<li><strong>Type: </strong>Debt crisis that could lead to problems in the Eurozone</li>
-        	<li><strong>Location: </strong> </li>
+         	<li><strong>Date: </strong>{{c.time.month}}/{{c.time.day}}/{{c.time.year}}</li>
+        	<li><strong>Type: </strong>{{c.info.info_type}}</li>
+        	<li><strong>Location: </strong>{{c.loc.city}} </li>
             </ul>
             <!-- begin stats -->
             <div class="stats">
             <h4>Economic Impact</h4>
             <ul>
-         	<li>240000000000 Euros</li>
+         	<li>{{c.economic.amount}} {{c.economic.currency}}</li>
             </ul>
             <h4>Human Impact</h4>
                 <ul>
-                    <li><strong>Deaths: </strong>5</li>
-                    <li><strong>Displaced: </strong>0</li>
-                    <li><strong>Injured: </strong>300</li>
-                    <li><strong>Missing: </strong>0</li>
-                    <li><strong>Misc: </strong>0</li>
+                    <li><strong>Deaths: </strong>{{c.human.deaths}}</li>
+                    <li><strong>Displaced: </strong>{{c.human.displaced}}</li>
+                    <li><strong>Injured: </strong>{{c.human.injured}}</li>
+                    <li><strong>Missing: </strong>{{c.human.missing}}</li>
+                    <li><strong>Misc: </strong>{{c.human.misc}}</li>
                 </ul>
             <h4>Resources Needed</h4>
                 <ul>
-         	    <li>Bailouts from EU and IMF</li>
+         	    <li>{{c.info.resources}}</li>
 		</ul>
 	    <h4>Help Needed</h4>
                 <ul>
-         	    <li>Bailout from IMF and EU</li>
+         	    <li>{{c.info.info_help}}</li>
 		</ul>
-                
+                {% for r in c.socials %}
                 <h5>Social Sites</h5>
                     <ul class="capitalize">
-                        <li><a href="https://www.facebook.com/GreeceDebtFree" title="Facebook" target="_blank">Facebook</a></li>  
+                        <li><a href="{{r.url}}" title="{{r.title}}" target="_blank">{{r.title}}</a></li>  
                     </ul>
-                
+                {% endfor %}
 
-                
+                {% for r in c.exts %}
                 <h5>Social Sites</h5>
                     <ul class="capitalize">
-                        <li><a href="http://www.cnn.com/2010/BUSINESS/02/10/greek.debt.qanda/index.html" title="CNN" target="_blank">CNN</a></li>  
+                        <li><a href="{{r.url}}" title="{{r.title}}" target="_blank">{{r.title}}</a></li>  
                     </ul>
-                
+                {% endfor %}
                 
             </div>
             <!-- end stats -->
@@ -99,9 +99,9 @@
         <!-- begin primary content -->
         <div id="primary-content">
             <!-- begin Page Title -->
-            <h1 id="page-title"></h1>
+            <h1 id="page-title">{{persons.person.name}}</h1>
             <h2>History</h2>
-            <p>Greece was living beyond its means before adopting the Euro and after adopting the Euro public spending significantly rose. After years of overspending, Greece’s budget deficit spiraled out of control, which left Greece unprepared to handle the global economic downturn. Greece’s debt reached levels so high that it was unable to pay, so required massive loans from European partners and the IMF </p>
+            <p>{{c.info.history}}</p>
             <!-- end primary content -->
             <!-- begin media -->
             <div id="media">
@@ -110,13 +110,13 @@
                     <h3>Photos</h3>
                     <div id="photo-box">
                         <!-- begin single item -->
-                        
+                        {% for i in c.images %}
                         <div class="item-box">
                             <div class="display-box">
-                                    <img src="http://cdn.theatlantic.com/static/infocus/athens021312/s_a06_10125965.jpg" title="Rioting in Greece" />
+                                    <img src="{{i.url}}" title="{{i.title}}" />
                             </div>
                         </div>
-                        
+                        {% endfor %}
                         <!-- end single item -->
                     </div>
                 </div>
@@ -127,13 +127,13 @@
                     <div id="video-box">
                         <!-- Video width: 135px, height: 82px -->
                         <!-- begin single item -->
-                        
+                        {% for v in c.videos %}
                         <div class="item-box">
                             <div class="display-box">
-                                <iframe width="400" height="200" src="http://www.youtube.com/embed/mEVqeaFHsHE" frameborder="0" allowfullscreen></iframe>
+                                <iframe width="400" height="200" src="{{v.url}}" frameborder="0" allowfullscreen></iframe>
                             </div>                        
                         </div>
-                        
+                        {% endfor %}
                         <!-- end single item -->
                     </div>
                 </div>
@@ -148,7 +148,7 @@
                 <!-- begin single item -->
                 <div class="item-box">
                     <div class="display-box">
-                        <a href="/person/papandreou" title="Former Prime Minister of Greece George Papandreou"><img src="http://www.ahistoryofgreece.com/biography/giorgospapandreou.jpg" title="Former Prime Minister of Greece George Papandreou"/></a>
+                        <a href="/person/{{c.person.person_id}}" title="{{c.person.name}}"><img src="{{c.personimage.url}}" title="{{c.person.name}}"/></a>
                     </div>
                 </div>
                 <!-- end single item -->
@@ -160,7 +160,7 @@
                 <!-- begin single item -->
                 <div class="item-box">
                     <div class="display-box">
-                        <a href="/org/imf" title="International Monetary Fund"><img src="http://upload.wikimedia.org/wikipedia/en/thumb/7/7e/International_Monetary_Fund_logo.svg/200px-International_Monetary_Fund_logo.svg.png" title="International Monetary Fund" /></a>
+                        <a href="/org/{{c.org.org_id}}" title="{{c.org.name}}"><img src="{{c.orgimage.url}}" title="{{c.org.name}}" /></a>
                     </div>
                 </div>
                 <!-- end single item -->
@@ -171,3 +171,4 @@
     </div>
 </body>
 </html>
+
