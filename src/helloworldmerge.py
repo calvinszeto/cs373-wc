@@ -8,6 +8,7 @@ import urllib
 from Models import *
 
 from xml.etree.ElementTree import ElementTree
+from google.appengine.api import taskqueue
 from google.appengine.ext import blobstore
 from google.appengine.ext import webapp
 from google.appengine.ext.webapp import blobstore_handlers
@@ -31,14 +32,13 @@ person_dict = {"name":"", "misc":""}
 person_info_dict = {"nationality":"", "biography":""}
 person_birth_dict = {"time":"","day":"","month":"","year":"","misc":""}
 
-
-class MainHandler(webapp.RequestHandler):
+class MergeMainHandler(webapp.RequestHandler):
     def get(self):
         """
-        Handles the import feature by posting the HTML which accepts a file.
+        Handles the import merge feature by posting the HTML which accepts a file.
         Then file is stored as a blob and UploadHandler is called.
         """
-        upload_url = blobstore.create_upload_url('/upload')
+        upload_url = blobstore.create_upload_url('/uploadmerge')
         self.response.out.write('<html><body>')
         self.response.out.write('<form action="%s" method="POST" enctype="multipart/form-data">' % upload_url)
         self.response.out.write("""Upload File: <input type="file" name="file"><br> <input type="submit" name="submit" value="Submit"> </form></body></html>""")
@@ -189,41 +189,14 @@ class UploadHandler(blobstore_handlers.BlobstoreUploadHandler):
                     for x in ref_dict:
                         text = ei.find(x).text
         except :
+            self.response.out.write("Invalid XML")
             return False
         return True
 
+class CrisisHandler(webapp.RequestHandler):
     def post(self):
         """
-        Handles the import of a file into the GAE Models.
-        Searches for specific tags per the Schema and quits if file is invalid.
-        """
-        upload_files = self.get_uploads('file')  # 'file' is file upload field in the form
-        blob_info = upload_files[0]
-        if(not self.validate()):
-            self.response.out.write("Invalid XML")
-            return
-        tree = ElementTree()
-        br = blob_info.open()
-        tree.parse(br)
-        db.delete(Mail.all(keys_only=True)) # Clear the datastore
-        db.delete(Time.all(keys_only=True)) # Clear the datastore
-        db.delete(Location.all(keys_only=True)) # Clear the datastore
-        db.delete(Human.all(keys_only=True)) # Clear the datastore
-        db.delete(Economic.all(keys_only=True)) # Clear the datastore
-        db.delete(Contact.all(keys_only=True)) # Clear the datastore
-        db.delete(Ref.all(keys_only=True)) # Clear the datastore
-        db.delete(Info.all(keys_only=True)) # Clear the datastore
-        db.delete(Person.all(keys_only=True)) # Clear the datastore
-        db.delete(Organization.all(keys_only=True)) # Clear the datastore
-        db.delete(Crisis.all(keys_only=True)) # Clear the datastore
-        # assert(Crisis.all().get() is None)
-        crisis_ids = Ids(model = "crisis", ids = [])
-        organization_ids = Ids(model = "organization", ids = [])
-        person_ids = Ids(model = "person", ids = [])
-        # Crises
-        for c in tree.findall("crisis"):
-            cris_id = c.attrib["id"]
-            crisis_ids.ids.append(cris_id)
+        def txn():
             for x in crisis_dict:
                 text = c.find(x).text
                 crisis_dict[x] = text if text is not None else ""
@@ -310,6 +283,37 @@ class UploadHandler(blobstore_handlers.BlobstoreUploadHandler):
                 eir = Ref(parent=cris,**ref_dict)
                 eir.ref_type="ext"
                 eir.put()
+        db.run_in_transaction(txn)
+        """
+        pass
+
+    def post(self):
+        """
+        Handles the import merge of a file into the GAE Models.
+        Searches for specific tags per the Schema and quits if file is invalid.
+        """
+        if(not self.validate()):
+            return
+        upload_files = self.get_uploads('file')  # 'file' is file upload field in the form
+        blob_info = upload_files[0]
+        tree = ElementTree()
+        br = blob_info.open()
+        tree.parse(br)
+        # assert(Crisis.all().get() is None)
+        t1 = Ids.all().filter('model =', 'crisis').get()
+        t2 = Ids.all().filter('model =', 'organization').get()
+        t3 = Ids.all().filter('model =', 'person').get()
+        crisis_ids = Ids(model = "crisis", ids = []) if t1 is None else t1
+        organization_ids = Ids(model = "organization", ids = []) if t2 is None else t2
+        person_ids = Ids(model = "person", ids = []) if t3 is None else t3
+        # Crises
+        for c in tree.findall("crisis"):
+            cris_id = c.attrib["id"]
+            # Check for Merge Case
+            if cris_id in crisis_ids.ids:
+                pass
+            crisis_ids.ids.append(cris_id)
+            taskqueue.add(url='/crisismerge',params={})
         assert(Crisis.all().get() is not None) 
         # Organizations
         for o in tree.findall("organization"):
@@ -471,8 +475,9 @@ class UploadHandler(blobstore_handlers.BlobstoreUploadHandler):
 
 def main():
     application = webapp.WSGIApplication(
-            [('/import', MainHandler),
-            ('/upload', UploadHandler),
+            [('/importmerge', MergeMainHandler),
+            ('/uploadmerge', UploadHandler),
+            ('/crisismerge', CrisisHandler),
             ], debug=True)
     run_wsgi_app(application)
 

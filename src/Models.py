@@ -101,3 +101,7 @@ class Ref(db.Model):
     title = db.StringProperty()
     url = db.TextProperty()
     description = db.StringProperty()
+
+class Ids(db.Model):
+    model = db.StringProperty()
+    ids = db.ListProperty(str)
