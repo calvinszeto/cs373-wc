@@ -467,7 +467,7 @@ class UploadHandler(blobstore_handlers.BlobstoreUploadHandler):
         crisis_ids.put()
         organization_ids.put()
         person_ids.put()
-        self.redirect("/", permanent=True)
+        self.redirect("/construct", permanent=True)
 
 def main():
     application = webapp.WSGIApplication(
