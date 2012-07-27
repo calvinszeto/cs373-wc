@@ -13,35 +13,40 @@
 	});
 </script>
 
+
 </head>
+
+<body>
+<div id = "wrap">
 <!-- begin header -->
 <div id = "header-container">
    <div id = "header">
      <div id="logo"><a href="..index.html"><img src="images/logo.jpg" /></a></div>
      <div id="title"><a href="..index.html"><img src="images/title.png" /></a></div>
-     <form id="search-form" method="get" action="/search">
-        <input type="text" name="q" id="search-box" placeholder="Search everything, here." />
-        <input type="submit" value="Search" id="submit-button"/>
-     </form> 
-     <div id="names"><p>&copy; 'Byte Me' 2012<br />
-          Connor, Daniel, Kevin J., Calvin, Kevin T.</p></div>
-   </div>
+	 <div id="search">
+     	<form id="search-form" method="get" action="/search">
+        	<input type="text" name="q" id="search-box" placeholder="Search everything, here." />
+     	</form>
+	</div> 
 </div><!-- end header -->
 
 <!-- begin navbar -->
 <div id="nav-container">
-   <div id ="nav">
-     <ul>
-       <li><a href="/index.html">Home</a></li>
-       <li><a href="/crises">Crises</a></li>
-       <li><a href="/people">People</a></li>
-       <li><a href="/orgs">Orgs</a></li>
-    	<li><a href="../import">Import</a></li>
+  <div id ="nav">
+    <ul id="menu">
+      <li><a href="/index.html">Home</a></li>
+      <li><a href="/crises">Crises</a></li>
+      <li><a href="/people">People</a></li>
+      <li><a href="/orgs">Organizations</a></li>
+	  <li><a href="#" target="_self" >Tools</a></li>
+	  <!--<ul id ="submenu">-->   	
+	    <li><a href="../import">Import</a></li>
     	<li><a href="../importmerge">Merge</a></li>
         <li><a href="../export">Export</a></li>
         <li><a href="../test">Tests</a></li>
-	 </ul>
-   </div>
+      <!--</ul>-->
+    </ul>
+  </div>
 </div><!-- end navbar -->
 
 <!-- begin slider -->
@@ -53,7 +58,12 @@
     	<a href=""><img src = "images/greece.jpeg" title="<strong>Greece Debt Crisis:</strong><br />Beginning in late 2009, fears of a sovereign debt crisis developed among investors concerning Greece's ability to meet its debt obligations due to strong increase in government debt levels.This led to a crisis of confidence, indicated by a widening of bond yield..."/></a>
     </div>
 </div><!-- end slider -->
+</div><!-- end wrap -->
+  <div id="push"></div>
+  <div id = "footer-container">
+	<p>Hello.</p>
+  </div>
 
-<body>
+
 </body>
 </html>
