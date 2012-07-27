@@ -205,6 +205,7 @@ class UploadHandler(blobstore_handlers.BlobstoreUploadHandler):
         tree = ElementTree()
         br = blob_info.open()
         tree.parse(br)
+        db.delete(Ids.all(keys_only=True)) # Clear the datastore
         db.delete(Mail.all(keys_only=True)) # Clear the datastore
         db.delete(Time.all(keys_only=True)) # Clear the datastore
         db.delete(Location.all(keys_only=True)) # Clear the datastore
