@@ -193,10 +193,30 @@ class UploadHandler(blobstore_handlers.BlobstoreUploadHandler):
             return False
         return True
 
-class CrisisHandler(webapp.RequestHandler):
     def post(self):
         """
-        def txn():
+        Handles the import merge of a file into the GAE Models.
+        Searches for specific tags per the Schema and quits if file is invalid.
+        """
+        if(not self.validate()):
+            return
+        upload_files = self.get_uploads('file')  # 'file' is file upload field in the form
+        blob_info = upload_files[0]
+        tree = ElementTree()
+        br = blob_info.open()
+        tree.parse(br)
+        # assert(Crisis.all().get() is None)
+        t1 = Ids.all().filter('model =', 'crisis').get()
+        t2 = Ids.all().filter('model =', 'organization').get()
+        t3 = Ids.all().filter('model =', 'person').get()
+        crisis_ids = Ids(model = "crisis", ids = []) if t1 is None else t1
+        organization_ids = Ids(model = "organization", ids = []) if t2 is None else t2
+        person_ids = Ids(model = "person", ids = []) if t3 is None else t3
+        # Crises
+        for c in tree.findall("crisis"):
+            cris_id = c.attrib["id"]
+            # Check for Merge Case
+
             for x in crisis_dict:
                 text = c.find(x).text
                 crisis_dict[x] = text if text is not None else ""
@@ -283,35 +303,6 @@ class CrisisHandler(webapp.RequestHandler):
                 eir = Ref(parent=cris,**ref_dict)
                 eir.ref_type="ext"
                 eir.put()
-        db.run_in_transaction(txn)
-        """
-        pass
-
-    def post(self):
-        """
-        Handles the import merge of a file into the GAE Models.
-        Searches for specific tags per the Schema and quits if file is invalid.
-        """
-        if(not self.validate()):
-            return
-        upload_files = self.get_uploads('file')  # 'file' is file upload field in the form
-        blob_info = upload_files[0]
-        tree = ElementTree()
-        br = blob_info.open()
-        tree.parse(br)
-        # assert(Crisis.all().get() is None)
-        t1 = Ids.all().filter('model =', 'crisis').get()
-        t2 = Ids.all().filter('model =', 'organization').get()
-        t3 = Ids.all().filter('model =', 'person').get()
-        crisis_ids = Ids(model = "crisis", ids = []) if t1 is None else t1
-        organization_ids = Ids(model = "organization", ids = []) if t2 is None else t2
-        person_ids = Ids(model = "person", ids = []) if t3 is None else t3
-        # Crises
-        for c in tree.findall("crisis"):
-            cris_id = c.attrib["id"]
-            # Check for Merge Case
-            if cris_id in crisis_ids.ids:
-                pass
             crisis_ids.ids.append(cris_id)
             taskqueue.add(url='/crisismerge',params={})
         assert(Crisis.all().get() is not None) 
@@ -476,8 +467,7 @@ class CrisisHandler(webapp.RequestHandler):
 def main():
     application = webapp.WSGIApplication(
             [('/importmerge', MergeMainHandler),
-            ('/uploadmerge', UploadHandler),
-            ('/crisismerge', CrisisHandler),
+             ('/uploadmerge', UploadHandler)
             ], debug=True)
     run_wsgi_app(application)
 

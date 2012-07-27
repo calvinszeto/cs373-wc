@@ -10,11 +10,23 @@ handlers:
 - url: /import
   script: src/helloworld.py
 
+- url: /importmerge
+  script: src/helloworldmerge.py
+
 - url: /export
   script: src/goodbyeworld.py
 
 - url: /upload
   script: src/helloworld.py
+
+- url: /uploadmerge
+  script: src/helloworldmerge.py
+
+- url: /construct
+  script: src/constructDoc.py
+
+- url: /search
+  script: src/testQuery.py
 
 - url: /crises
   script: src/crisislist.py
