@@ -47,8 +47,28 @@ class SearchHandler(webapp.RequestHandler):
             query = query['query'][0]
         query_obj = search.Query(query_string=query)
         """
-        results = search.Index(name=_INDEX_NAME).search(query=self.request.get("q"))
-        self.response.out.write(results)
+        try:
+            options = search.QueryOptions(
+                #sort_options=sort,
+                returned_fields=['name', 'history'],
+                snippeted_fields=['history'])
+
+            query = search.Query(query_string=self.request.get("q"), options=options)
+
+            index = search.Index(name=_INDEX_NAME)
+
+        # Execute the query
+            results = index.search(query)
+
+            for scored_document in results:
+                #self.response.out.write(scored_document.fields[0].value)
+                for fields in scored_document.fields:
+                    self.response.out.write(fields.value)
+
+            #results = search.Index(name=_INDEX_NAME).search(query=self.request.get("q"))
+            #self.response.out.write(index.search(query))
+        except search.Error:
+            logging.exception('Search failed')
 
 def main():
     application = webapp.WSGIApplication(
