@@ -47,32 +47,65 @@ class ConstructHandler(webapp.RequestHandler):
         orgs = Organization.all()
         peeps = Person.all()
         infos = Info.all()
+        ref = Ref.all()
         assert(infos.get() is not None)
 
-        for c in crises:
+        cris_list = []
+	"""        
+	for c in crises:
+            index = len(cris_list)
+            cris_list.append({"crisis":c})
+            name = c.name
+            cris_list[index]["name"]=name
+            # Crisis - Info
+            i = infos.ancestor(c).get()
+            cris_list[index]["content"]=i
+            content = i.history
+            # Crisis - Ref
+            r = ref.ancestor(c).filter('ref_type =','primaryImage').get()
+            cris_list[index]["pimage"]=r
+            pimage = r.url
+            search.Index(name=_INDEX_NAME).add(CreateDocument(name, content, pimage))
+	"""
+        counter = 0
+	for c in crises:
             name = c.name
             i = infos.ancestor(c).get()
             content = i.history
-            search.Index(name=_INDEX_NAME).add(CreateDocument(name, content))
+            idref = c.crisis_id
+            #c_list[index]["pimage"]=refs.ancestor(o).filter('ref_type =','primaryImage').get()
+	    #refs = o_list[index]["pimage"]
+            
+            search.Index(name=_INDEX_NAME).add(CreateDocument(name, content, idref))
+            ++counter
 
+	
         for o in orgs:
             name = o.name
             i = infos.ancestor(o).get()
             content = i.history
-            search.Index(name=_INDEX_NAME).add(CreateDocument(name, content))
-
+            idref = o.org_id
+            search.Index(name=_INDEX_NAME).add(CreateDocument(name, content, idref))
+        
         for p in peeps:
             name = p.name
             i = infos.ancestor(p).get()
             content = i.biography
-            search.Index(name=_INDEX_NAME).add(CreateDocument(name, content))
+            idref = p.person_id
+            search.Index(name=_INDEX_NAME).add(CreateDocument(name, content, idref))
+	"""
+	template_values = {
+            'crisis' : cris_list}
 
+	self.response.out.write(template.render(path, template_values))
+	"""
         self.redirect("/", permanent=True)
 
-def CreateDocument(name, content):
+def CreateDocument(name, content, idref):
     return search.Document(
         fields=[search.TextField(name='name', value=name),
-                search.TextField(name='history', value=content)])
+                search.TextField(name='history', value=content),
+                search.TextField(name='idref', value=idref)])
 
 def main():
     application = webapp.WSGIApplication(
