@@ -34,8 +34,13 @@
 <!-- begin content -->
 <div id="content">
 	<div id = "list">
-		<h3>Results</h3>
-        {% for r in results %}
+		<h3>{{num_and}} Results Found Matching All Words</h3>
+        {% for r in and_results %}
+        <img src="{{r.image}}" />	<h4><a href="{{r.link}}">{{r.name}}</a></h4><p>{{r.history}}</p>
+        <hr noshade size="1">
+        {% endfor %}
+		<h3>{{num_or}} Results Found Matching One or More Words</h3>
+        {% for r in or_results %}
         <img src="{{r.image}}" />	<h4><a href="{{r.link}}">{{r.name}}</a></h4><p>{{r.history}}</p>
         <hr noshade size="1">
         {% endfor %}
