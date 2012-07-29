@@ -103,25 +103,14 @@ class SearchHandler(webapp.RequestHandler):
             refs = Ref.all()
 
             for scored_document in results:
-<<<<<<< HEAD
                 index = len(result_list)
                 result_list.append({}) 
                 doc_type = " "
-=======
-                doc_type = " "
-                if "crisis" in scored_document.doc_id:
-                    doc_type = "crisis"
-                if "org" in scored_document.doc_id:
-                    doc_type = "org"
-                if "person" in scored_document.doc_id:
-                    doc_type = "person"
->>>>>>> 83b2a7aae6f7fbcd7a66dcc364f38f0ae3c3030e
                 id_ref = " "
                 # self.response.out.write(scored_document.fields[0].value)
                 for fields in scored_document.fields:
                     if fields.name == "idref":
                         id_ref = fields.value
-<<<<<<< HEAD
                     else:
                         result_list[index][fields.name] = fields.value
                     # self.response.out.write(str(fields.value) + " ")
@@ -145,11 +134,6 @@ class SearchHandler(webapp.RequestHandler):
                 }
             path = os.path.join(os.path.dirname(__file__), '../templates/searchresults.html')
             self.response.out.write(template.render(path, template_values))
-=======
-                    self.response.out.write(str(fields.value) + " ")
-                link = "/%s/%s" % (doc_type,id_ref)
-                self.response.out.write(link)
->>>>>>> 83b2a7aae6f7fbcd7a66dcc364f38f0ae3c3030e
         except search.Error:
             logging.exception('Search failed')
 
