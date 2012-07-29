@@ -19,7 +19,7 @@ html {
 	min-height: 100%;
 	height: auto !important;
 	height: 100%;
-	margin: 0 auto -150px; /* the bottom margin is the negative value of the footer's height */
+	margin: 0 auto -100px; /* the bottom margin is the negative value of the footer's height */
 }
 
 /* Header */
@@ -167,26 +167,25 @@ input[type=text] {
 
 /* Footer */
 #footer-container, #push {
-	height: 150px; /* .push must be the same height as .footer */
+	height: 75px; 
 }
 
 #footer-container {
 	background-color:#3399cc;
 	width:100%;
-	margin-top:764px;
+	margin-top:835px;
 }
 
 #footer {
 	width:960px;
-	padding-left:200px;
-	margin:0 auto;
-	position:absolute;
-	bottom:0;
+	margin: 0 auto;
 	font-family:Arial, Helvetica, sans-serif;
 	font-size:12px;
-	text-transform:capitalize;
-	float:left;
-	background-color:#3399cc;
+}
+
+#footer p {
+	padding-top:15px;
+	text-align:right;
 }
 
 
