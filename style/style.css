@@ -15,32 +15,14 @@ html {
 	height:100%;
 }
 
-.crises img {
-    height:200px;
-    width:300px;
+#wrap {
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	margin: 0 auto -150px; /* the bottom margin is the negative value of the footer's height */
 }
 
-.people img {
-    height:200px;
-    width:300px;
-}
-
-.organizations img {
-    height:200px;
-    width:300px;
-}
-
-#names {
-    padding:20px;
-    float:right;
-}
-
-#names p {
-    font:Arial, Helvetica, sans-serif;
-    color:#fff;
-    font-size:10px;
-}
-
+/* Header */
 #header-container {
 	width:100%;
 	height:75px;
@@ -73,7 +55,53 @@ html {
 	border:0;
 }
 
+#search {
+	height:75px;
+	width: 300px;
+	float:right;
+	padding:20px;
+}
+
+
+input[type=text] {
+	width: 260px;
+	padding: 5px;
+	padding-right: 40px;
+	outline: none;
+	border: 2px solid #999999;
+	border-radius: 5px;
+	background-color: #FBFBFB;
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	background-position: 270px -10px;
+	/*background-image: url('');*/
+	background-repeat: no-repeat;
+ 
+	-webkit-transition: background-color .2s ease-in,
+                    background-position .2s ease-in,
+                    box-shadow .3s ease-in;
+ 
+	-moz-transition: background-color .2s ease-in,
+                 background-position .2s ease-in,
+                 box-shadow .3s ease-in;
+ 
+	-o-transition: background-color .2s ease-in,
+               background-position .2s ease-in,
+               box-shadow .3s ease-in;
+ 
+	-ms-transition: background-color .2s ease-in,
+                background-position .2s ease-in,
+                box-shadow .3s ease-in;
+ 
+	transition: background-color .2s ease-in,
+            background-position .2s ease-in,
+            box-shadow .3s ease-in;
+} 
+
+/* Navigation */
 #nav-container {
+	position:absolute;
+	top:75px;
 	width:100%;
 	height:35px;
 	background-color:#3399cc;
@@ -87,8 +115,8 @@ html {
 
 #nav ul {
 	margin:0;
-	margin-left: -35px;
-	padding-top:10px;
+	margin-left: -40px;
+	padding-top:7px;
 	float:left;
 }
 
@@ -96,11 +124,11 @@ html {
 	display: inline-block;
 	list-style-type:none;
 	margin:0;
+	padding-right:27px;
 }
 
 #nav ul li a {
 	text-decoration:none;
-	width:80px;
 	color:#fff;
 	float:left;
 	text-align:left;
@@ -111,29 +139,42 @@ html {
 	text-decoration:underline;
 }
 
+#submenu ul {
+	list-style-type:none;
+}
+
+#submenu li {
+	text-align:left;
+}
+
+#submenu li:hover {
+	display:block;
+}
+
+/* Slider */
 #slider-container {
 	min-height: 100%;
 	height: auto !important;
-	height: 100%;
-	margin: 0 auto -90px;
+	margin: 0 auto 0;
 }
 
 #slider {
+	position:absolute;
+	top:110px;
 	height:100%;
 	float:left;
 }
 
-
-#footer-container {
-	width:100%;
-	position:absolute;
-	top:1008px;
-	height:90px;
-	background-color:#3399cc;
-	margin:0 auto;
-	/*padding-left:200px;*/
+/* Footer */
+#footer-container, #push {
+	height: 150px; /* .push must be the same height as .footer */
 }
 
+#footer-container {
+	background-color:#3399cc;
+	width:100%;
+	margin-top:764px;
+}
 
 #footer {
 	width:960px;
@@ -148,43 +189,31 @@ html {
 	background-color:#3399cc;
 }
 
-#footer a {
-	text-decoration:none;
-	color:#FFF;
-}
-#footer a:hover {
-	text-decoration:underline;
-}
-#footer a:visited{
-	text-decoration:none;
-	color:#fff;
+
+.crises img {
+    height:200px;
+    width:300px;
 }
 
-#footer ul {
-	margin-left:0px;
+.people img {
+    height:200px;
+    width:300px;
 }
 
-#footer ul a: {
-	text-decoration:none;
-	color:#FFF;
+.organizations img {
+    height:200px;
+    width:300px;
 }
 
-#footer-left {
-	height:100%;
-	width:200px;
-	float:left;
+#names {
+    padding:20px;
+    float:right;
 }
 
-#footer-left ul {
-	list-style-type:none;
-}
-
-#footer-right {
-	height:100%;
-	width:300px;
-	float:right;
-	margin-right:-50px;
-	
+#names p {
+    font:Arial, Helvetica, sans-serif;
+    color:#fff;
+    font-size:10px;
 }
 
 #content {
