@@ -35,9 +35,6 @@ handlers:
 - url: /personserve
   script: src/helloworldmerge.py
 
-- url: /construct
-  script: src/constructDoc.py
-
 - url: /search
   script: src/testQuery.py
 
