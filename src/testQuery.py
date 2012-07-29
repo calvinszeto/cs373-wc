@@ -39,34 +39,32 @@ class SearchHandler(webapp.RequestHandler):
         Handles the search feature of the GAE application.
         Called at calvins-cs373-wc.appspot.com/
         """
-        """
-        uri = urlparse(self.request.uri)
-        query = ''
-        if uri.query:
-            query = parse_qs(uri.query)
-            query = query['query'][0]
-        query_obj = search.Query(query_string=query)
-        """
         try:
             options = search.QueryOptions(
-                #sort_options=sort,
-                returned_fields=['name', 'history'],
+                returned_fields=['name', 'history', 'idref'],
                 snippeted_fields=['history'])
-
             query = search.Query(query_string=self.request.get("q"), options=options)
-
             index = search.Index(name=_INDEX_NAME)
 
-        # Execute the query
+            # Execute the query
             results = index.search(query)
 
             for scored_document in results:
-                #self.response.out.write(scored_document.fields[0].value)
+                doc_type = " "
+                if "crisis" in scored_document.doc_id:
+                    doc_type = "crisis"
+                if "org" in scored_document.doc_id:
+                    doc_type = "org"
+                if "person" in scored_document.doc_id:
+                    doc_type = "person"
+                id_ref = " "
+                # self.response.out.write(scored_document.fields[0].value)
                 for fields in scored_document.fields:
-                    self.response.out.write(fields.value)
-
-            #results = search.Index(name=_INDEX_NAME).search(query=self.request.get("q"))
-            #self.response.out.write(index.search(query))
+                    if fields.name == "idref":
+                        id_ref = fields.value
+                    self.response.out.write(str(fields.value) + " ")
+                link = "/%s/%s" % (doc_type,id_ref)
+                self.response.out.write(link)
         except search.Error:
             logging.exception('Search failed')
 

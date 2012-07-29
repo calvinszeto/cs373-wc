@@ -17,7 +17,7 @@ class Time(db.Model):
     day = db.StringProperty()
     month = db.StringProperty()
     year = db.StringProperty()
-    misc = db.StringProperty()
+    misc = db.TextProperty()
 
 class Location(db.Model):
     city = db.StringProperty()
@@ -29,12 +29,12 @@ class Human(db.Model):
     displaced = db.StringProperty()
     injured = db.StringProperty()
     missing = db.StringProperty()
-    misc = db.StringProperty()
+    misc = db.TextProperty()
 
 class Economic(db.Model):
     amount = db.StringProperty()
     currency = db.StringProperty()
-    misc = db.StringProperty()
+    misc = db.TextProperty()
 
 """
 class Impact(db.Model):
@@ -75,7 +75,7 @@ class Crisis(db.Model):
     crisis_id = db.StringProperty()
     name = db.StringProperty()
     # info_ref = db.ReferenceProperty(Info)
-    misc = db.StringProperty()
+    misc = db.TextProperty()
     orgs = db.ListProperty(str)
     persons = db.ListProperty(str)
 
@@ -83,7 +83,7 @@ class Organization(db.Model):
     org_id = db.StringProperty()
     name = db.StringProperty()
     # info_ref = db.ReferenceProperty(Info)
-    misc = db.StringProperty()
+    misc = db.TextProperty()
     crises = db.ListProperty(str)
     persons = db.ListProperty(str)
 
@@ -91,7 +91,7 @@ class Person(db.Model):
     person_id = db.StringProperty()
     name = db.StringProperty()
     # info_ref = db.ReferenceProperty(Info)
-    misc = db.StringProperty()
+    misc = db.TextProperty()
     crises = db.ListProperty(str)
     orgs = db.ListProperty(str)
 

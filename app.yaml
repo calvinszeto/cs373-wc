@@ -4,6 +4,10 @@ runtime: python
 api_version: 1
 
 handlers:
+
+- url: /validate
+  script: src/validate.py
+
 - url: /test.*
   script: src/gaeunit.py
 
@@ -19,7 +23,16 @@ handlers:
 - url: /upload
   script: src/helloworld.py
 
-- url: /uploadmerge
+- url: /mergeserve.*
+  script: src/helloworldmerge.py
+
+- url: /crisisserve
+  script: src/helloworldmerge.py
+
+- url: /orgserve
+  script: src/helloworldmerge.py
+
+- url: /personserve
   script: src/helloworldmerge.py
 
 - url: /construct

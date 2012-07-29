@@ -47,32 +47,42 @@ class ConstructHandler(webapp.RequestHandler):
         orgs = Organization.all()
         peeps = Person.all()
         infos = Info.all()
+        ref = Ref.all()
         assert(infos.get() is not None)
 
+        counter = 0
         for c in crises:
             name = c.name
             i = infos.ancestor(c).get()
             content = i.history
-            search.Index(name=_INDEX_NAME).add(CreateDocument(name, content))
-
+            idref = c.crisis_id
+            search.Index(name=_INDEX_NAME).add(CreateDocument("crisis"+str(counter), name, content, idref))
+            counter += 1
+        counter = 0
         for o in orgs:
             name = o.name
             i = infos.ancestor(o).get()
             content = i.history
-            search.Index(name=_INDEX_NAME).add(CreateDocument(name, content))
-
+            idref = o.org_id
+            search.Index(name=_INDEX_NAME).add(CreateDocument("org"+str(counter), name, content, idref))
+            counter += 1
+        
+        counter = 0
         for p in peeps:
             name = p.name
             i = infos.ancestor(p).get()
             content = i.biography
-            search.Index(name=_INDEX_NAME).add(CreateDocument(name, content))
-
+            idref = p.person_id
+            search.Index(name=_INDEX_NAME).add(CreateDocument("person"+str(counter), name, content, idref))
+            counter += 1
         self.redirect("/", permanent=True)
 
-def CreateDocument(name, content):
+def CreateDocument(did, name, content, idref):
     return search.Document(
+        doc_id = did,
         fields=[search.TextField(name='name', value=name),
-                search.TextField(name='history', value=content)])
+                search.TextField(name='history', value=content),
+                search.TextField(name='idref', value=idref)])
 
 def main():
     application = webapp.WSGIApplication(
