@@ -5,6 +5,7 @@ import os
 import sys
 sys.path.append(os.path.join(os.path.dirname(__file__), '../src'))
 import urllib
+import traceback
 from Models import *
 
 from xml.etree.ElementTree import ElementTree
@@ -188,7 +189,8 @@ class UploadHandler(blobstore_handlers.BlobstoreUploadHandler):
                 for ei in r.findall("ext"):
                     for x in ref_dict:
                         text = ei.find(x).text
-        except :
+        except Exception, e:
+            # self.response.out.write(traceback.format_exc())
             return False
         return True
 
@@ -341,7 +343,7 @@ class UploadHandler(blobstore_handlers.BlobstoreUploadHandler):
             for x in org_contact_dict:
                 text = t.find(x).text 
                 org_contact_dict[x] = text if text is not None else ""
-            con = Contact(parent=inf,**org_contact_dict)	
+            con = Contact(parent=inf,**org_contact_dict)    
             con.put()
             # Organization - Info - Contact - Mail
             m = i.find("contact/mail")

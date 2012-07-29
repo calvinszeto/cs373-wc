@@ -57,100 +57,101 @@ class CrisisServeHandler(webapp.RequestHandler):
         t1 = Ids.all().filter('model =', 'crisis').get()
         crisis_ids = Ids(model = "crisis", ids = []) if t1 is None else t1
         exists = crisis_id in crisis_ids.ids
-        if exists:
-            pass
-        else:
-            for c in tree.findall("crisis"):
-                cris_id = c.attrib["id"]
-                if cris_id == crisis_id:
-                    for x in crisis_dict:
-                        text = c.find(x).text
-                        crisis_dict[x] = text if text is not None else ""
-                    cris = Crisis(**crisis_dict)
-                    cris.crisis_id = cris_id
-                    # Crisis - Org
-                    for org in c.findall("org"):
-                        cris.orgs.append(org.attrib["idref"]) 
-                    # Crisis - Person
-                    for person in c.findall("person"):
-                        cris.persons.append(person.attrib["idref"]) 
-                    cris.put()
-                    # Crisis - Info
-                    i = c.find("info")
-                    for x in info_dict:
-                        text = i.find(x).text
-                        info_dict[x] = text if text is not None else ""
-                    inf = Info(parent=cris,**info_dict)
-                    inf.info_help = i.find("help").text
-                    inf.info_type = i.find("type").text
-                    inf.put()
-                    # Crisis - Info - Time
-                    t = i.find("time")
-                    for x in time_dict:
-                        text = t.find(x).text
-                        time_dict[x] = text if text is not None else ""
-                    tim = Time(parent=inf,**time_dict)
-                    tim.put()
-                    # Crisis - Info - Location
-                    l = i.find("loc")
-                    for x in loc_dict:
-                        text = l.find(x).text
-                        loc_dict[x] = text if text is not None else ""
-                    loc = Location(parent=inf,**loc_dict)
-                    loc.put()
-                    # Crisis - Info - Impact/Human
-                    h = i.find("impact/human")
-                    for x in human_dict:
-                        text = h.find(x).text
-                        human_dict[x] = text if text is not None else ""
-                    hum = Human(parent=inf,**human_dict)
-                    hum.put()
-                    # Crisis - Info - Impact/Economic
-                    e = i.find("impact/economic")
-                    for x in economic_dict:
-                        text = e.find(x).text
-                        economic_dict[x] = text if text is not None else ""
-                    eco = Economic(parent=inf,**economic_dict)
-                    eco.put()
-                    # Crisis - Ref
-                    r = c.find("ref")
-                    for pi in r.findall("primaryImage"):
-                        for x in ref_dict:
-                            text = pi.find(x).text
-                            ref_dict[x] = text if text is not None else ""
-                        pir = Ref(parent=cris,**ref_dict)
-                        pir.ref_type="primaryImage"
-                        pir.put()
-                    for ii in r.findall("image"):
-                        for x in ref_dict:
-                            text = ii.find(x).text
-                            ref_dict[x] = text if text is not None else ""
-                        iir = Ref(parent=cris,**ref_dict)
-                        iir.ref_type="image"
-                        iir.put()
-                    for vi in r.findall("video"):
-                        for x in ref_dict:
-                            text = vi.find(x).text
-                            ref_dict[x] = text if text is not None else ""
-                        vir = Ref(parent=cris,**ref_dict)
-                        vir.ref_type="video"
-                        vir.put()
-                    for si in r.findall("social"):
-                        for x in ref_dict:
-                            text = si.find(x).text
-                            ref_dict[x] = text if text is not None else ""
-                        sir = Ref(parent=cris,**ref_dict)
-                        sir.ref_type="social"
-                        sir.put()
-                    for ei in r.findall("ext"):
-                        for x in ref_dict:
-                            text = ei.find(x).text
-                            ref_dict[x] = text if text is not None else ""
-                        eir = Ref(parent=cris,**ref_dict)
-                        eir.ref_type="ext"
-                        eir.put()
-                    crisis_ids.ids.append(crisis_id)
-                    crisis_ids.put()
+        if not exists:
+            # Add id to id list
+            crisis_ids.ids.append(crisis_id)
+            crisis_ids.put()
+        for c in tree.findall("crisis"):
+            cris_id = c.attrib["id"]
+            if cris_id == crisis_id:
+                if exists:
+                    crisisObj = Crisis.all().filter('crisis_id =',crisis_id).get().delete() 
+                for x in crisis_dict:
+                    text = c.find(x).text
+                    crisis_dict[x] = text if text is not None else ""
+                cris = Crisis(**crisis_dict)
+                cris.crisis_id = cris_id
+                # Crisis - Org
+                for org in c.findall("org"):
+                    cris.orgs.append(org.attrib["idref"]) 
+                # Crisis - Person
+                for person in c.findall("person"):
+                    cris.persons.append(person.attrib["idref"]) 
+                cris.put()
+                # Crisis - Info
+                i = c.find("info")
+                for x in info_dict:
+                    text = i.find(x).text
+                    info_dict[x] = text if text is not None else ""
+                inf = Info(parent=cris,**info_dict)
+                inf.info_help = i.find("help").text
+                inf.info_type = i.find("type").text
+                inf.put()
+                # Crisis - Info - Time
+                t = i.find("time")
+                for x in time_dict:
+                    text = t.find(x).text
+                    time_dict[x] = text if text is not None else ""
+                tim = Time(parent=inf,**time_dict)
+                tim.put()
+                # Crisis - Info - Location
+                l = i.find("loc")
+                for x in loc_dict:
+                    text = l.find(x).text
+                    loc_dict[x] = text if text is not None else ""
+                loc = Location(parent=inf,**loc_dict)
+                loc.put()
+                # Crisis - Info - Impact/Human
+                h = i.find("impact/human")
+                for x in human_dict:
+                    text = h.find(x).text
+                    human_dict[x] = text if text is not None else ""
+                hum = Human(parent=inf,**human_dict)
+                hum.put()
+                # Crisis - Info - Impact/Economic
+                e = i.find("impact/economic")
+                for x in economic_dict:
+                    text = e.find(x).text
+                    economic_dict[x] = text if text is not None else ""
+                eco = Economic(parent=inf,**economic_dict)
+                eco.put()
+                # Crisis - Ref
+                r = c.find("ref")
+                for pi in r.findall("primaryImage"):
+                    for x in ref_dict:
+                        text = pi.find(x).text
+                        ref_dict[x] = text if text is not None else ""
+                    pir = Ref(parent=cris,**ref_dict)
+                    pir.ref_type="primaryImage"
+                    pir.put()
+                for ii in r.findall("image"):
+                    for x in ref_dict:
+                        text = ii.find(x).text
+                        ref_dict[x] = text if text is not None else ""
+                    iir = Ref(parent=cris,**ref_dict)
+                    iir.ref_type="image"
+                    iir.put()
+                for vi in r.findall("video"):
+                    for x in ref_dict:
+                        text = vi.find(x).text
+                        ref_dict[x] = text if text is not None else ""
+                    vir = Ref(parent=cris,**ref_dict)
+                    vir.ref_type="video"
+                    vir.put()
+                for si in r.findall("social"):
+                    for x in ref_dict:
+                        text = si.find(x).text
+                        ref_dict[x] = text if text is not None else ""
+                    sir = Ref(parent=cris,**ref_dict)
+                    sir.ref_type="social"
+                    sir.put()
+                for ei in r.findall("ext"):
+                    for x in ref_dict:
+                        text = ei.find(x).text
+                        ref_dict[x] = text if text is not None else ""
+                    eir = Ref(parent=cris,**ref_dict)
+                    eir.ref_type="ext"
+                    eir.put()
 
 class OrgServeHandler(webapp.RequestHandler):
     def post(self):
@@ -166,12 +167,12 @@ class OrgServeHandler(webapp.RequestHandler):
         t2 = Ids.all().filter('model =', 'organization').get()
         organization_ids = Ids(model = "organization", ids = []) if t2 is None else t2
         exists = organization_id in organization_ids.ids
-        if exists:
-            pass
-        else:
-            for o in tree.findall("organization"):
-                org_id = o.attrib["id"]
-                if org_id == organization_id:
+        for o in tree.findall("organization"):
+            org_id = o.attrib["id"]
+            if org_id == organization_id:
+                if exists:
+                    orgObj = Organization.all().filter('org_id =',organization_id).get().delete()
+                else:
                     for x in org_dict:
                         text = o.find(x).text
                         org_dict[x] = text if text is not None else ""
@@ -197,7 +198,7 @@ class OrgServeHandler(webapp.RequestHandler):
                     for x in org_contact_dict:
                         text = t.find(x).text 
                         org_contact_dict[x] = text if text is not None else ""
-                    con = Contact(parent=inf,**org_contact_dict)	
+                    con = Contact(parent=inf,**org_contact_dict)    
                     con.put()
                     # Organization - Info - Contact - Mail
                     m = i.find("contact/mail")
@@ -267,12 +268,12 @@ class PersonServeHandler(webapp.RequestHandler):
         t3 = Ids.all().filter('model =', 'person').get()
         person_ids = Ids(model = "person", ids = []) if t3 is None else t3
         exists = person_id in person_ids.ids
-        if exists:
-            pass
-        else:
-            for p in tree.findall("person"):
-                per_id = p.attrib["id"]
-                if per_id == person_id:
+        for p in tree.findall("person"):
+            per_id = p.attrib["id"]
+            if per_id == person_id:
+                if exists:
+                    personObj = Person.all().filter('person_id =',person_id).get().delete()
+                else:
                     for x in person_dict:
                         text = p.find(x).text
                         person_dict[x] = text if text is not None else ""
@@ -355,17 +356,14 @@ class MergeServeHandler(blobstore_handlers.BlobstoreDownloadHandler):
         for c in tree.findall("crisis"):
             cris_id = c.attrib["id"]
             taskqueue.add(url='/crisisserve', params={'blob': blob_info.key(), 'crisis_id': cris_id})
-        assert(Crisis.all().get() is not None) 
         # Organizations
         for o in tree.findall("organization"):
             org_id = o.attrib["id"]
             taskqueue.add(url='/orgserve', params={'blob': blob_info.key(), 'organization_id': org_id})
-        assert(Organization.all().get() is not None) 
         # Person
         for p in tree.findall("person"):
             person_id = p.attrib["id"]
             taskqueue.add(url='/personserve', params={'blob': blob_info.key(), 'person_id': person_id})
-        assert(Person.all().get() is not None) 
         self.redirect("/", permanent=True)
 
 def main():
