@@ -221,6 +221,10 @@ input[type=text] {
 	margin:0 auto;
 }
 
+#list img {
+	height: 200px;
+}
+
 #list li {
 	position:relative;
 	margin:5px;

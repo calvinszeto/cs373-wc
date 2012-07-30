@@ -40,9 +40,12 @@ class MainHandler(webapp.RequestHandler):
         Then file is stored as a blob and UploadHandler is called.
         """
         upload_url = blobstore.create_upload_url('/upload')
-        self.response.out.write('<html><body>')
-        self.response.out.write('<form action="%s" method="POST" enctype="multipart/form-data">' % upload_url)
-        self.response.out.write("""Upload File: <input type="file" name="file"><br> <input type="submit" name="submit" value="Submit"> </form></body></html>""")
+        template_values = {
+            'upload_url':upload_url,
+            'type':'Import'
+        }
+        path = os.path.join(os.path.dirname(__file__), '../templates/import.html')
+        self.response.out.write(template.render(path, template_values))
 
 class UploadHandler(blobstore_handlers.BlobstoreUploadHandler):
     def validate(self):

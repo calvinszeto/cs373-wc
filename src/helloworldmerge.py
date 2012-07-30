@@ -38,10 +38,13 @@ class MergeMainHandler(webapp.RequestHandler):
         Handles the import merge feature by posting the HTML which accepts a file.
         Then file is stored as a blob and UploadHandler is called.
         """
-        upload_url = blobstore.create_upload_url('/validate')
-        self.response.out.write('<html><body>')
-        self.response.out.write('<form action="%s" method="POST" enctype="multipart/form-data">' % upload_url)
-        self.response.out.write("""Upload File: <input type="file" name="file"><br> <input type="submit" name="submit" value="Submit"> </form></body></html>""")
+        upload_url = blobstore.create_upload_url('/upload')
+        template_values = {
+            'upload_url':upload_url,
+            'type':'Merge'
+        }
+        path = os.path.join(os.path.dirname(__file__), '../templates/import.html')
+        self.response.out.write(template.render(path, template_values))
 
 class CrisisServeHandler(webapp.RequestHandler):
     def post(self):

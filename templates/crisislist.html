@@ -1,57 +1,54 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>World Crises</title>
-<link rel="stylesheet" type="text/css" a href="/style/style.css" />
-<link rel="icon" type="image/png" href="images/favicon.png">
+    <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>World Crises</title>
+    <link rel="stylesheet" type="text/css" a href="/style/style.css" />
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    </head>
+    <body>
+    <div id = "wrap">
+    <!-- begin header -->
+      <div id = "header-container">
+       <div id = "header">
+         <div id="logo"><a href="/index.html"><img src="/images/logo.jpg" /></a></div>
+         <div id="title"><a href="/index.html"><img src="/images/title.png" /></a></div>
+         <div id="search">
+            <form id="search-form" method="get" action="/search">
+                <input type="text" name="q" id="search-box" placeholder="Search everything, here." />
+            </form>
+        </div> 
+      </div><!-- end header -->
 
-</head>
+      <!-- begin navbar -->
+      <div id="nav-container">
+        <div id ="nav">
+          <ul id="menu">
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/crises">Crises</a></li>
+            <li><a href="/people">People</a></li>
+            <li><a href="/orgs">Organizations</a></li>  	
+            <li><a href="/import">Import</a></li>
+            <li><a href="/importmerge">Merge</a></li>
+            <li><a href="/export">Export</a></li>
+            <li><a href="/test">Tests</a></li>
+          </ul>
+        </div>
+      </div><!-- end navbar -->
+      <!-- content-container -->
+      <div id="content-container">
+        <!-- begin content -->
+        <div id="content">
+            <div id = "list">
+                <h3>Crises</h3>
+                {% for c in crises %}
+                <img src="{{c.pimage.url}}" />	<h4><a href="/crisis/{{c.crisis.crisis_id}}">{{c.crisis.name}}</a></h4><p>{{c.info.history}}</p>
+                <hr noshade size="1">
+                {% endfor %}
+            </div>
+        </div><!-- content -->
 
-
-<body>
-<div id = "wrap">
-<!-- begin header -->
-  <div id = "header-container">
-   <div id = "header">
-     <div id="logo"><a href="/index.html"><img src="/images/logo.jpg" /></a></div>
-     <div id="title"><a href="/index.html"><img src="/images/title.png" /></a></div>
-	 <div id="search">
-     	<form id="search-form" method="get" action="/search">
-        	<input type="text" name="q" id="search-box" placeholder="Search everything, here." />
-     	</form>
-	</div> 
-  </div><!-- end header -->
-
-  <!-- begin navbar -->
-  <div id="nav-container">
-    <div id ="nav">
-      <ul id="menu">
-        <li><a href="/index.html">Home</a></li>
-        <li><a href="/crises">Crises</a></li>
-        <li><a href="/people">People</a></li>
-        <li><a href="/orgs">Organizations</a></li>  	
-	    <li><a href="/import">Import</a></li>
-        <li><a href="/importmerge">Merge</a></li>
-        <li><a href="/export">Export</a></li>
-        <li><a href="/test">Tests</a></li>
-      </ul>
-    </div>
-  </div><!-- end navbar -->
-
-
-<!-- begin content -->
-<div id="content">
-	<div id = "list">
-		<h3>Crises</h3>
-        {% for c in crises %}
-        <img src="{{c.pimage.url}}" />	<h4><a href="/crisis/{{c.crisis.crisis_id}}">{{c.crisis.name}}</a></h4><p>{{c.info.history}}</p>
-        <hr noshade size="1">
-        {% endfor %}
-
-    </div>
-</div><!-- content -->
-
-</div><!-- end wrap -->
-</body>
+      </div><!-- end content-container -->
+    </div><!-- end wrap -->
+    </body>
 </html>
