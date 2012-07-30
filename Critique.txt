@@ -1,20 +1,37 @@
-What did we do well?
-Splash page is very appealing.
-Easy navigation.
-Search engine works.
-Good tests.
+Self Critique
+
+What we did well?
+-Splash page is very appealing.
+-Easy navigation.
+-Search engine works.
+-Good tests.
 
 What did we learn?
-Programming in Python.
-Google App Engine.
-ElementTree
+-Programming in Python.
+-Google App Engine.
+-ElementTree
 
 What can we do better?
-Wider range of tests.
+-Wider range of tests.
 
 What puzzles us? 
+-Colonel Mustard, in the library, with the candelstick!
+
+===============================================================
+
+Car Ramrod Critique
 
 What did they do well?
+-Splash page is organized well. we like the drop down effect
+when you click on People, Crisis, or Organization. 
+-We like the way you organize your search results
+-User friendly
+
 What did we learn from their app?
+-Colonel Mustard, in the Kitchen, with the revolver.
+
 What can they do better?
+-
+
 What puzzles us about their app?
+-
