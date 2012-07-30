@@ -5,51 +5,92 @@
 <title>World Crises</title>
 <link rel="stylesheet" type="text/css" a href="/style/style.css" />
 <link rel="icon" type="image/png" href="images/favicon.png">
-
+<script type="text/javascript" src="scripts/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="scripts/jquery.nivo.slider.js"></script>
+<script type="text/javascript">
+	$(window).load(function() {
+		$('#slider').nivoSlider();
+	});
+</script>
 </head>
+
 <body>
-    <div id = "wrap">
-    <!-- begin header -->
-      <div id = "header-container">
-       <div id = "header">
-         <div id="logo"><a href="/index.html"><img src="/images/logo.jpg" /></a></div>
-         <div id="title"><a href="/index.html"><img src="/images/title.png" /></a></div>
-         <div id="search">
-            <form id="search-form" method="get" action="/search">
-                <input type="text" name="q" id="search-box" placeholder="Search everything, here." />
-            </form>
-        </div> 
-      </div><!-- end header -->
+<div id = "wrap">
+<!-- begin header -->
+<div id = "header-container">
+   <div id = "header">
+     <div id="logo"><a href="/index.html"><img src="/images/logo.jpg" /></a></div>
+     <div id="title"><a href="/index.html"><img src="/images/title.png" /></a></div>
+	 <div id="search">
+     	<form id="search-form" method="get" action="/search">
+        	<input type="text" name="q" id="search-box" placeholder="Search everything, here." />
+     	</form>
+	</div> 
+</div><!-- end header -->
 
-      <!-- begin navbar -->
-      <div id="nav-container">
-        <div id ="nav">
-          <ul id="menu">
-            <li><a href="/index.html">Home</a></li>
-            <li><a href="/crises">Crises</a></li>
-            <li><a href="/people">People</a></li>
-            <li><a href="/orgs">Organizations</a></li>  	
-            <li><a href="/import">Import</a></li>
-            <li><a href="/importmerge">Merge</a></li>
-            <li><a href="/export">Export</a></li>
-            <li><a href="/test">Tests</a></li>
-          </ul>
-        </div>
-      </div><!-- end navbar -->
-      <!-- content-container -->
-      <div id="content-container">
-        <!-- begin content -->
-        <div id="content">
-            <div id = "list">
-                <h3>Organizations</h3>
-                {% for o in orgs %}
-                <img src="{{o.pimage.url}}" />	<h4><a href="/org/{{o.org.org_id}}">{{o.org.name}}</a></h4><p>{{o.info.history}}</p>
-                <hr noshade size="1">
-                {% endfor %}
+<!-- begin navbar -->
+<div id="nav-container">
+  <div id ="nav">
+    <ul id="menu">
+      <li><a href="/index.html">Home</a></li>
+      <li><a href="/crises">Crises</a></li>
+      <li><a href="/people">People</a></li>
+      <li><a href="/orgs">Organizations</a></li>  	
+	  <li><a href="/import">Import</a></li>
+      <li><a href="/importmerge">Merge</a></li>
+      <li><a href="/export">Export</a></li>
+      <li><a href="/test">Tests</a></li>
+    </ul>
+  </div>
+</div><!-- end navbar -->
 
-            </div>
-        </div><!-- content -->
-      </div><!-- end content-container -->
-    </div><!-- end wrap -->
+  <!-- begin content -->
+  <div id="content-container">
+    <div id="content">
+      <h3>Crises:</h3>
+	  <ul id = "list">
+		{% for o in orgs %}      
+		<li>
+		  <img src="{{o.pimage.url}}" class="limg"/>
+		  <div class="inner">
+		    <h5><a href="/org/{{o.org.org_id}}">{{o.org.name}}</a></h5><p>{{o.info.history}}</p>
+           </div>
+		  <div style='clear:both'></div>
+	    </li>
+        {% endfor %}    
+    </div><!-- end content -->
+    <!-- begin sidebar -->
+    <div id="sidebar">
+	<h5>Top Crises</h5>
+     <ul>
+	   <li><a href="/crisis/deepwater">Deepwater Horizon Oil Spill</a></li>
+	   <li><a href="/crisis/polio">Polio</a></li>
+       <li><a href="/crisis/childhoodobesity">Childhood Obesity</a></li>
+       <li><a href="/crisis/greece">Greece Debt Crisis</a></li>
+      </ul>
+	  <p><a href="/crises">More Crises>></a></p>
+      <h5>Top People</h5>
+      <ul>
+	   <li><a href="/person/feinberg">Kenneth Feinberg</a></li>
+	   <li><a href="/person/papandreou">George Papandreou</a></li>
+       <li><a href="/crisis/michelleobama">Michelle Obama</a></li>
+       <li><a href="/crisis/jonassalk">Jonas Salk</a></li>
+      </ul>
+	  <p><a href="/people">More People>></a></p>
+	  <h5>Top Organizations</h5>
+      <ul>
+	   <li><a href="/org/bp">BP</a></li>
+	   <li><a href="/org/tgpei">The Global Polio Eradication Initiative</a></li>
+       <li><a href="/orgs/aap">The American Academy of Pediatrics</a></li>
+       <li><a href="/orgs/imf">International Monetary Fund</a></li>
+      </ul>
+	  <p><a href="/orgs">More Organizations>></a></p>
+	  <p>&copy; 'Byte Me' 2012<br />
+          Connor, Daniel, Kevin J., Calvin, Kevin T.</p>
+</div>
+   </div><!--end sidebar -->
+  </div><!-- end content container -->
+</div><!-- wrap -->
+
 </body>
 </html>

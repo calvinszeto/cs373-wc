@@ -42,7 +42,7 @@ class MainHandler(webapp.RequestHandler):
         upload_url = blobstore.create_upload_url('/upload')
         template_values = {
             'upload_url':upload_url,
-            'type':'Import'
+            'button':'Import',
         }
         path = os.path.join(os.path.dirname(__file__), '../templates/import.html')
         self.response.out.write(template.render(path, template_values))

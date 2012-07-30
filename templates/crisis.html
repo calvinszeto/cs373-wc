@@ -17,7 +17,7 @@
 <body>
 <div id = "wrap">
 <!-- begin header -->
-  <div id = "header-container">
+<div id = "header-container">
    <div id = "header">
      <div id="logo"><a href="/index.html"><img src="/images/logo.jpg" /></a></div>
      <div id="title"><a href="/index.html"><img src="/images/title.png" /></a></div>
@@ -26,7 +26,23 @@
         	<input type="text" name="q" id="search-box" placeholder="Search everything, here." />
      	</form>
 	</div> 
-  </div><!-- end header -->
+</div><!-- end header -->
+
+<!-- begin navbar -->
+<div id="nav-container">
+  <div id ="nav">
+    <ul id="menu">
+      <li><a href="/index.html">Home</a></li>
+      <li><a href="/crises">Crises</a></li>
+      <li><a href="/people">People</a></li>
+      <li><a href="/orgs">Organizations</a></li>  	
+	  <li><a href="/import">Import</a></li>
+      <li><a href="/importmerge">Merge</a></li>
+      <li><a href="/export">Export</a></li>
+      <li><a href="/test">Tests</a></li>
+    </ul>
+  </div>
+</div><!-- end navbar -->
 
   <!-- begin navbar -->
   <div id="nav-container">
@@ -78,15 +94,17 @@
                 <ul>
          	    <li>{{c.info.info_help}}</li>
 		</ul>
+				<h4>Social Sites</h4>
                 {% for r in c.socials %}
-                <h4>Social Sites</h4>
+                
                     <ul class="capitalize">
                         <li><a href="{{r.url}}" title="{{r.title}}" target="_blank">{{r.title}}</a></li>  
                     </ul>
                 {% endfor %}
-
+				
+				<h4>External Links</h4>
                 {% for r in c.exts %}
-                <h4>Social Sites</h4>
+                
                     <ul class="capitalize">
                         <li><a href="{{r.url}}" title="{{r.title}}" target="_blank">{{r.title}}</a></li>  
                     </ul>
@@ -141,9 +159,39 @@
              <a href="/org/{{c.org.org_id}}" title="{{c.org.name}}"><img src="{{c.orgimage.url}}" title="{{c.org.name}}" /></a>  
              <!-- end single item -->
 	       </div><!-- end related organizations -->            
-            </div><!-- end primary content -->
+         </div><!-- end primary content -->
+	
+
 
   </div><!-- end content-container -->
+<div id="sidebar">
+	<h5>Top Crises</h5>
+     <ul>
+	   <li><a href="/crisis/deepwater">Deepwater Horizon Oil Spill</a></li>
+	   <li><a href="/crisis/polio">Polio</a></li>
+       <li><a href="/crisis/childhoodobesity">Childhood Obesity</a></li>
+       <li><a href="/crisis/greece">Greece Debt Crisis</a></li>
+      </ul>
+	  <p><a href="/crises">More Crises>></a></p>
+      <h5>Top People</h5>
+      <ul>
+	   <li><a href="/person/feinberg">Kenneth Feinberg</a></li>
+	   <li><a href="/person/papandreou">George Papandreou</a></li>
+       <li><a href="/crisis/michelleobama">Michelle Obama</a></li>
+       <li><a href="/crisis/jonassalk">Jonas Salk</a></li>
+      </ul>
+	  <p><a href="/people">More People>></a></p>
+	  <h5>Top Organizations</h5>
+      <ul>
+	   <li><a href="/org/bp">BP</a></li>
+	   <li><a href="/org/tgpei">The Global Polio Eradication Initiative</a></li>
+       <li><a href="/orgs/aap">The American Academy of Pediatrics</a></li>
+       <li><a href="/orgs/imf">International Monetary Fund</a></li>
+      </ul>
+	  <p><a href="/orgs">More Organizations>></a></p>
+	  <p>&copy; 'Byte Me' 2012<br />
+          Connor, Daniel, Kevin J., Calvin, Kevin T.</p>
+   </div>
 </div><!-- end wrap -->
 </body>
 </html>

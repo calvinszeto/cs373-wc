@@ -209,6 +209,7 @@ input[type=text] {
 #content {
 	width:960px;
 	margin: 0 auto;
+	padding: 0 0 50px 0;
 	color:#000;
 	height:100%;
 }
@@ -219,10 +220,6 @@ input[type=text] {
 	list-style-type:none;
 	float:left;
 	margin:0 auto;
-}
-
-#list img {
-	height: 200px;
 }
 
 #list li {
@@ -264,9 +261,9 @@ input[type=text] {
 
 /* Right Sidebar */
 #sidebar {
-    width: 220px;
-    margin: -30px 0 0 80px;
-    float: left;
+    width: 200px;
+    margin: -20px 0 0 80px;
+	float: left;
 }
 
 #sidebar ul {
@@ -286,6 +283,12 @@ input[type=text] {
   font-size:10px;
   text-align:right;
   padding: 0 20px;
+}
+
+#sidebar .names {
+	font-size:9px;
+	text-align:left;
+	margin: 0 -10px;
 }
 
 #sidebar a {
@@ -333,7 +336,7 @@ input[type=text] {
 #primary-content {
 	width:500px;
 	float:left;
-	margin: 25px 20px 0 0;
+	margin: 25px 20px 50px 0;
 }
 
 #primary-content p {
@@ -358,9 +361,10 @@ input[type=text] {
 }
 
 .photos img {
-	width: 240px;
-	height:240px;
+	width: 230px;
+	height:230px;
 	margin: 5px 10px 5px 0;
+	display:inline;
 }
 
 .rel {

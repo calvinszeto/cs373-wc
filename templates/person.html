@@ -1,71 +1,89 @@
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <title>World Crises</title>
 <link rel="stylesheet" type="text/css" a href="/style/style.css" />
-<script src="scripts/typeface-0.15.js"></script>
-<script src="scripts/district_thin.typeface.js"></script>
+<link rel="icon" type="image/png" href="images/favicon.png">
 <script type="text/javascript" src="scripts/jquery-1.7.1.min.js"></script>
 <script type="text/javascript" src="scripts/jquery.nivo.slider.js"></script>
-
 <script type="text/javascript">
-    $(window).load(function() {
-        $('#slider').nivoSlider();
-    });
+	$(window).load(function() {
+		$('#slider').nivoSlider();
+	});
 </script>
-
 </head>
-    
+
+<body>
+<div id = "wrap">
 <!-- begin header -->
 <div id = "header-container">
    <div id = "header">
-     <div id="logo"><a href="..index.html"><img src="/images/logo.jpg" /></a></div>
-     <div id="title"><a href="..index.html"><img src="/images/title.png" /></a></div>
-     <div id="names"><p>&copy; 'Byte Me' 2012<br />
-          Connor, Daniel, Kevin J., Calvin, Kevin T.</p></div>
-   </div>
+     <div id="logo"><a href="/index.html"><img src="/images/logo.jpg" /></a></div>
+     <div id="title"><a href="/index.html"><img src="/images/title.png" /></a></div>
+	 <div id="search">
+     	<form id="search-form" method="get" action="/search">
+        	<input type="text" name="q" id="search-box" placeholder="Search everything, here." />
+     	</form>
+	</div> 
 </div><!-- end header -->
 
 <!-- begin navbar -->
 <div id="nav-container">
-   <div id ="nav">
-     <ul>
-       <li><a href="/index.html">Home</a></li>
-       <li><a href="/crises">Crises</a></li>
-       <li><a href="/people">People</a></li>
-       <li><a href="/orgs">Orgs</a></li>
-    	<li><a href="../import">Import</a></li>
-        <li><a href="../export">Export</a></li>
-        <li><a href="../test">Tests</a></li>
-	 </ul>
-   </div>
+  <div id ="nav">
+    <ul id="menu">
+      <li><a href="/index.html">Home</a></li>
+      <li><a href="/crises">Crises</a></li>
+      <li><a href="/people">People</a></li>
+      <li><a href="/orgs">Organizations</a></li>  	
+	  <li><a href="/import">Import</a></li>
+      <li><a href="/importmerge">Merge</a></li>
+      <li><a href="/export">Export</a></li>
+      <li><a href="/test">Tests</a></li>
+    </ul>
+  </div>
 </div><!-- end navbar -->
 
- <!-- begin content -->
-   <div id="content">
-        <!-- begin attributes -->
-        <div id="attributes">
-            <div class="primary-photo">
-                <img src="{{persons.pimage.url}}" title="Michelle Obama" />
-            </div>
+  <!-- begin navbar -->
+  <div id="nav-container">
+    <div id ="nav">
+      <ul id="menu">
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/crises">Crises</a></li>
+        <li><a href="/people">People</a></li>
+        <li><a href="/orgs">Organizations</a></li>  	
+	    <li><a href="/import">Import</a></li>
+        <li><a href="/importmerge">Merge</a></li>
+        <li><a href="/export">Export</a></li>
+        <li><a href="/test">Tests</a></li>
+      </ul>
+    </div>
+  </div><!-- end navbar -->
+
+  <!-- content-container -->
+  <div id="content-container">
+    <!-- begin content -->
+     <div id="content">
+       <!-- begin attributes -->
+       <div id="attributes">
+         <img src="{{persons.pimage.url}}" class="primary"/>
             <!-- begin stats -->
             <div class="stats">
-                <ul>
+            <ul>
                     <li><strong>Type: </strong>{{persons.info.info_type}}</li>
                     <li><strong>Nationality: </strong>{{persons.info.nationality}}</li>
                 </ul>
-                
+				<h4>Social Sites</h4>
+                <ul>
                 {% for r in persons.socials %}
-                <h5>Social Sites</h5>
-                    <ul class="capitalize">
-                        <li><a href="{{r.url}}" title="{{r.title}}" target="_blank">{{r.title}}</a></li>  
-                    </ul>
+                <li><a href="{{r.url}}" title="{{r.title}}" target="_blank">{{r.title}}</a></li>
                 {% endfor %}
-
+                </ul>
+				<h4>External Links</h4>
                 {% for r in persons.exts %}
-                <h5>Social Sites</h5>
-                    <ul class="capitalize">
-                        <li><a href="{{r.url}}" title="{{r.title}}" target="_blank">{{r.title}}</a></li>  
+                
+                    <ul>
+                       <li><a href="{{r.url}}" title="{{r.title}}" target="_blank">{{r.title}}</a></li>    
                     </ul>
                 {% endfor %}
                 
@@ -78,93 +96,54 @@
         <!-- begin primary content -->
         <div id="primary-content">
             <!-- begin Page Title -->
-            <h1 id="page-title">{{persons.person.name}}</h1>
             <h2>Bio</h2>
             <p>{{persons.info.biography}}</p>
-            <!-- end primary content -->
             <!-- begin media -->
-            <div id="media">
+            <div class="media">
                 <!-- begin photos -->
-                <div id="photos" class="half">
-                    <h3>Photos</h3>
-                    <div id="photo-box">
-                        
-                        <!-- begin single item -->
-                        {% for i in persons.images %}
-                        <div class="item-box">
-                            <div class="display-box">
-                                    <img src="{{i.url}}" title="{{i.title}}" />
-                            </div>
-                        </div>
-                        {% endfor %}
-                        <!-- end single item -->
-                        
-                    </div>
-                    <!-- begin more link -->
-                    
-                    <!-- end more link -->
-                </div>
-                <!-- end photos -->
+                <h3>Photos</h3>
+                <div class="photos">
+                   <!-- begin single item -->
+                   {% for i in persons.images %}
+                    	<a href="{{i.url}}" title="{{i.title}}" /><img src="{{i.url}}" title="{{i.title}}"/></a>
+                    {% endfor %}
+                    <!-- end single item -->
+                </div><!-- end photos -->
+             </div>
+			 <div class="media">
                 <!-- begin videos -->
-                <div id="videos" class="half">
-                    <h3>Videos</h3>
-                    <div id="video-box">
-                        <!-- Video width: 135px, height: 82px -->
-                        
-         
-                        
-                        <!-- begin single item -->
-                        {% for v in persons.videos %}
-                        <div class="item-box">
-                            <div class="display-box">
-                                <iframe width="400" height="200" src="{{v.url}}" frameborder="0" allowfullscreen></iframe>
-                            </div>                        
-                        </div>
-                        {% endfor %}
+                <div class="videos">
+                   <h3>Videos</h3>
+				   <!-- Video width: 135px, height: 82px -->
+                   <!-- begin single item -->
+                   {% for v in persons.videos %}
+						<iframe width="240" height="240" src="{{v.url}}" frameborder="0" allowfullscreen></iframe>
+                   {% endfor %}
                         <!-- end single item -->
-                        
-                        
-                        
-                    </div>
-                    
-                    <!-- begin more link -->
-                    
-                    <!-- end more link -->
-                </div>
-                <!-- end videos -->
-            </div>
-            <!-- end media -->
-            
-            
-            <!-- begin related crises -->
-            <div class="crises">
-                <h2>Related Crises</h2>
-                <!-- begin single item -->
-                <div class="item-box">
-                    <div class="display-box">
-                        <a href="/crisis/{{persons.crisis.crisis_id}}" title="{{persons.crisis.name}}"><img src="{{persons.crisisimage.url}}" title="{{persons.crisis.name}}"/></a>
-                    </div>
-                </div>
-                <!-- end single item -->
-            </div>
-            <!-- end related crises -->
-            <!-- begin related organizations -->
-            <div class="organizations">
-                <h2>Related Organizations</h2>
-                <!-- begin single item -->
-                <div class="item-box">
-                    <div class="display-box">
-                        <a href="/org/{{persons.org.org_id}}" title="{{persons.org.name}}"><img src="{{persons.orgimage.url}}" title="{{persons.org.name}}" /></a>
-                    </div>
-                </div>
-                <!-- end single item -->
-            </div>
-            <!-- end related organizations -->
-            
-            
-        </div>
-        <!-- end primary content -->
-    </div>
+                 </div><!-- end videos -->
+              </div><!--end media -->
+          <!-- begin related item -->
+          <div class="rel">
+          <h3>Related Crises</h3>
+          <!-- begin single item -->
+          <a href="/crisis/{{persons.crisis.crisis_id}}" title="{{persons.crisis.name}}"><img src="{{persons.crisisimage.url}}" title="{{persons.crisis.name}}"/></a>
 
+		  </div><!-- end related item -->
+		  
+		  <!-- begin related organizations -->
+          <div class="rel">
+             <h3>Related Organizations</h3>
+             <!-- begin single item -->
+              <a href="/org/{{persons.org.org_id}}" title="{{persons.org.name}}"><img src="{{persons.orgimage.url}}" title="{{persons.org.name}}" /></a> 
+             <!-- end single item -->
+	       </div><!-- end related organizations -->            
+         </div><!-- end primary content -->
+	
+
+
+  </div><!-- end content-container -->
+
+</div><!-- end wrap -->
 </body>
 </html>
+

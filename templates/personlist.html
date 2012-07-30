@@ -5,51 +5,62 @@
 <title>World Crises</title>
 <link rel="stylesheet" type="text/css" a href="/style/style.css" />
 <link rel="icon" type="image/png" href="images/favicon.png">
-
+<script type="text/javascript" src="scripts/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="scripts/jquery.nivo.slider.js"></script>
+<script type="text/javascript">
+	$(window).load(function() {
+		$('#slider').nivoSlider();
+	});
+</script>
 </head>
+
 <body>
-    <div id = "wrap">
-    <!-- begin header -->
-      <div id = "header-container">
-       <div id = "header">
-         <div id="logo"><a href="/index.html"><img src="/images/logo.jpg" /></a></div>
-         <div id="title"><a href="/index.html"><img src="/images/title.png" /></a></div>
-         <div id="search">
-            <form id="search-form" method="get" action="/search">
-                <input type="text" name="q" id="search-box" placeholder="Search everything, here." />
-            </form>
-        </div> 
-      </div><!-- end header -->
+<div id = "wrap">
+<!-- begin header -->
+<div id = "header-container">
+   <div id = "header">
+     <div id="logo"><a href="..index.html"><img src="images/logo.jpg" /></a></div>
+     <div id="title"><a href="..index.html"><img src="images/title.png" /></a></div>
+	 <div id="search">
+     	<form id="search-form" method="get" action="/search">
+        	<input type="text" name="q" id="search-box" placeholder="Search everything, here." />
+     	</form>
+	</div> 
+</div><!-- end header -->
 
-      <!-- begin navbar -->
-      <div id="nav-container">
-        <div id ="nav">
-          <ul id="menu">
-            <li><a href="/index.html">Home</a></li>
-            <li><a href="/crises">Crises</a></li>
-            <li><a href="/people">People</a></li>
-            <li><a href="/orgs">Organizations</a></li>  	
-            <li><a href="/import">Import</a></li>
-            <li><a href="/importmerge">Merge</a></li>
-            <li><a href="/export">Export</a></li>
-            <li><a href="/test">Tests</a></li>
-          </ul>
-        </div>
-      </div><!-- end navbar -->
-      <!-- content-container -->
-      <div id="content-container">
-        <!-- begin content -->
-        <div id="content">
-            <div id = "list">
-                <h3>People</h3>
-                {% for p in persons %}
-                <img src="{{p.pimage.url}}" />	<h4><a href="/person/{{p.person.person_id}}">{{p.person.name}}</a></h4><p>{{p.info.biography}}</p>
-                <hr noshade size="1">
-                {% endfor %}
+<!-- begin navbar -->
+<div id="nav-container">
+  <div id ="nav">
+    <ul id="menu">
+      <li><a href="/index.html">Home</a></li>
+      <li><a href="/crises">Crises</a></li>
+      <li><a href="/people">People</a></li>
+      <li><a href="/orgs">Organizations</a></li>  	
+	  <li><a href="/import">Import</a></li>
+      <li><a href="/importmerge">Merge</a></li>
+      <li><a href="/export">Export</a></li>
+      <li><a href="/test">Tests</a></li>
+    </ul>
+  </div>
+</div><!-- end navbar -->
+  
+  <!-- begin content -->
+  <div id="content-container">
+    <div id="content">
+      <h3>Crises:</h3>
+	  <ul id = "list">
+		{% for p in persons %}       
+		<li>
+		  <img src="{{p.pimage.url}}" class="limg"/>
+		  <div class="inner">
+		    <h5><a href="/person/{{p.person.person_id}}">{{p.person.name}}</a></h5><p>{{p.info.biography}}</p>
+			<div style='clear:both'></div>
+	    </li>
+        {% endfor %}
+    </div>
+   </div>
+  </div><!-- content -->
+</div><!-- wrap -->
 
-            </div>
-        </div><!-- content -->
-      </div><!-- end content-container -->
-    </div><!-- end wrap -->
 </body>
 </html>
