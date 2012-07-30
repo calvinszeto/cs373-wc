@@ -1,0 +1,20 @@
+What did we do well?
+Splash page is very appealing.
+Easy navigation.
+Search engine works.
+Good tests.
+
+What did we learn?
+Programming in Python.
+Google App Engine.
+ElementTree
+
+What can we do better?
+Wider range of tests.
+
+What puzzles us? 
+
+What did they do well?
+What did we learn from their app?
+What can they do better?
+What puzzles us about their app?
